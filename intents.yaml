@@ -231,7 +231,3 @@
     intent: meya.keyword
     settings:
         keyword: submittestdriverequest
--   flow: zz_doesthiswork
-    intent: meya.keyword
-    settings:
-        keyword: doesthiswork
