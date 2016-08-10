@@ -1,0 +1,237 @@
+-   flow: a_en_catchall
+    intent: meya.catchall
+-   flow: a_en_restart
+    intent: meya.keyword
+    settings:
+        keyword: restart_from_other_flow
+-   flow: a_en_start
+    intent: meya.greetings
+-   flow: a_en_start_sure
+    intent: meya.keyword
+    settings:
+        keyword: menu
+-   flow: a_en_start_unsure
+    intent: meya.keyword
+    settings:
+        keyword: a_en_start_unsure
+-   flow: a_thank_you
+    intent: meya.regex
+    settings:
+        ignorecase: true
+        pattern: (\bthank\b)|(\bthanks\b)
+-   flow: b_book_test_drive_car_confirmed
+    intent: meya.keyword
+    settings:
+        keyword: thisshouldonlybecalledfromotherflows
+-   flow: b_book_test_drive_car_confirmed_plan
+    intent: meya.keyword
+    settings:
+        keyword: _b_book_test_drive_car_confirmed_plan
+-   flow: b_book_test_drive_car_confirmed_unplan
+    intent: meya.keyword
+    settings:
+        keyword: _b_book_test_drive_car_confirmed_unplan
+-   flow: b_exit
+    intent: meya.keyword
+    settings:
+        keyword: exit
+-   flow: b_explore_cars_en
+    intent: meya.keyword
+    settings:
+        keyword: explore cars
+-   flow: b_explore_suv_en
+    intent: meya.keyword
+    settings:
+        keyword: explore suv
+-   flow: b_other
+    intent: meya.keyword
+    settings:
+        keyword: b_other
+-   flow: b_subscribe
+    intent: meya.keyword
+    settings:
+        keyword: subscribe
+-   flow: b_test_drive_location
+    intent: meya.keyword
+    settings:
+        keyword: btestdrivelocation
+-   flow: b_test_drive_location_restart
+    intent: meya.keyword
+    settings:
+        keyword: b_test_drive_location_restart
+-   flow: b_unsubscribe
+    intent: meya.keyword
+    settings:
+        keyword: unsubscribe
+-   flow: c_which_suv_en
+    intent: meya.keyword
+    settings:
+        keyword: which suv
+-   flow: c_which_suv_nred
+    intent: meya.keyword
+    settings:
+        keyword: c_which_suv_nred
+-   flow: c_which_suv_red
+    intent: meya.keyword
+    settings:
+        keyword: c_which_suv_red
+-   flow: c_which_suv_redo
+    intent: meya.keyword
+    settings:
+        keyword: c_which_suv_redo
+-   flow: c_wsuv_d_l_lux
+    intent: meya.keyword
+    settings:
+        keyword: c_wsuv_d_l_lux
+-   flow: c_wsuv_d_l_off
+    intent: meya.keyword
+    settings:
+        keyword: c_wsuv_d_l_off
+-   flow: c_wsuv_d_l_pax
+    intent: meya.keyword
+    settings:
+        keyword: c_wsuv_d_l_pax
+-   flow: c_wsuv_d_p_lux
+    intent: meya.keyword
+    settings:
+        keyword: c_wsuv_d_p_lux
+-   flow: c_wsuv_d_p_pax
+    intent: meya.keyword
+    settings:
+        keyword: c_wsuv_d_p_pax
+-   flow: c_wsuv_d_p_space
+    intent: meya.keyword
+    settings:
+        keyword: c_wsuv_d_p_space
+-   flow: c_wsuv_d_p_trunk
+    intent: meya.keyword
+    settings:
+        keyword: c_wsuv_d_p_trunk
+-   flow: c_wsuv_d_s_off
+    intent: meya.keyword
+    settings:
+        keyword: c_wsuv_d_s_off
+-   flow: c_wsuv_d_s_pax
+    intent: meya.keyword
+    settings:
+        keyword: c_wsuv_d_s_pax
+-   flow: c_wsuv_d_style
+    intent: meya.keyword
+    settings:
+        keyword: c_wsuv_d_style
+-   flow: c_wsuv_freq
+    intent: meya.keyword
+    settings:
+        keyword: c_wsuv_freq
+-   flow: c_wsuv_w_c_l_pax
+    intent: meya.keyword
+    settings:
+        keyword: c_wsuv_w_c_l_pax
+-   flow: c_wsuv_w_c_loc
+    intent: meya.keyword
+    settings:
+        keyword: c_wsuv_w_c_loc
+-   flow: c_wsuv_w_c_s_pax
+    intent: meya.keyword
+    settings:
+        keyword: c_wsuv_w_c_s_pax
+-   flow: c_wsuv_w_c_style
+    intent: meya.keyword
+    settings:
+        keyword: c_wsuv_w_c_style
+-   flow: d_ksa_showroom_selection
+    intent: meya.keyword
+    settings:
+        keyword: ksashowroom
+-   flow: d_uae_showroom_selection
+    intent: meya.keyword
+    settings:
+        keyword: uae
+-   flow: e_abudhabi_showrooms
+    intent: meya.keyword
+    settings:
+        keyword: abudhabishowrooms
+-   flow: e_dubai_showrooms
+    intent: meya.keyword
+    settings:
+        keyword: dubai
+-   flow: e_iraq_showrooms
+    intent: meya.keyword
+    settings:
+        keyword: iraqshowrooms
+-   flow: e_jeddah_showrooms
+    intent: meya.keyword
+    settings:
+        keyword: jeddahshowrooms
+-   flow: e_lebanon_showrooms
+    intent: meya.keyword
+    settings:
+        keyword: lebanonshowrooms
+-   flow: e_riyadh_showrooms
+    intent: meya.keyword
+    settings:
+        keyword: riyadhshowrooms
+-   flow: f_explore_dreamcars
+    intent: meya.keyword
+    settings:
+        keyword: f_explore_dreamcars
+-   flow: f_explore_sedan_coupes
+    intent: meya.keyword
+    settings:
+        keyword: f_explore_sedan_coupes
+-   flow: f_explore_suv_crossover
+    intent: meya.keyword
+    settings:
+        keyword: f_explore_suv_crossover
+-   flow: g_c_class_cars
+    intent: meya.keyword
+    settings:
+        keyword: g_c_class_cars
+-   flow: g_e_class_cars
+    intent: meya.keyword
+    settings:
+        keyword: g_e_class_cars
+-   flow: g_gle_class_cars
+    intent: meya.keyword
+    settings:
+        keyword: g_gle_class_cars
+-   flow: g_s_class_cars
+    intent: meya.keyword
+    settings:
+        keyword: g_s_class_cars
+-   flow: h_recommend_suv_g_class
+    intent: meya.keyword
+    settings:
+        keyword: h_recommend_suv_g_class
+-   flow: h_recommend_suv_gla
+    intent: meya.keyword
+    settings:
+        keyword: h_recommend_suv_gla
+-   flow: h_recommend_suv_glc
+    intent: meya.keyword
+    settings:
+        keyword: h_recommend_suv_glc
+-   flow: h_recommend_suv_gle
+    intent: meya.keyword
+    settings:
+        keyword: h_recommend_suv_gle
+-   flow: h_recommend_suv_gle_coupe
+    intent: meya.keyword
+    settings:
+        keyword: h_recommend_suv_gle_coupe
+-   flow: h_recommend_suv_gls
+    intent: meya.keyword
+    settings:
+        keyword: h_recommend_suv_gls
+-   flow: z_exit_flow
+    intent: meya.keyword
+    settings:
+        keyword: exit
+-   flow: z_submit_test_drive_request
+    intent: meya.keyword
+    settings:
+        keyword: submittestdriverequest
+-   flow: zz_doesthiswork
+    intent: meya.keyword
+    settings:
+        keyword: doesthiswork

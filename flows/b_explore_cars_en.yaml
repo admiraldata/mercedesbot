@@ -1,0 +1,53 @@
+name: b_explore_cars_en
+states:
+    welcome_state:
+        component: meya.text
+        properties:
+            text: Which car would you like to book a test-drive for? Let’s start with
+                selecting the range you’re interested in.
+    card_state:
+        component: meya.cards
+        properties:
+            output: button_click
+            elements:
+            -   title: Sedans & Coupés
+                text: Reign the roads with complete confidence.
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/sedan_coupe.jpg
+                buttons:
+                -   text: Select
+                    flow: f_explore_sedan_coupes
+            -   title: SUVs & Cross-overs
+                text: Luxury meets convenience and control.
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/suv_crossover.jpg
+                buttons:
+                -   text: Which SUV is for me?
+                    flow: c_which_suv_en
+                -   text: I’d like to select
+                    flow: f_explore_suv_crossover
+            -   title: Dream Cars
+                text: The epitome of power and performance.
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/dreamcars.jpg
+                buttons:
+                -   text: Select
+                    flow: f_explore_dreamcars
+            -   title: MPVs
+                text: Where comfort and dependability thrive.
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/mpvs.jpg
+                buttons:
+                -   text: Book a Test-Drive
+                    action: next
+                    data:
+                        test_drive_car_confirmed: v_class
+                    scope: flow
+    confirm_car_selected:
+        component: meya.conditional_exists
+        properties:
+            scope: flow
+            key: test_drive_car_confirmed
+        transitions:
+            exists: submit_test_drive_if_needed
+            notexists: notexists_state
+    notexists_state:
+        flow: a_en_didnotunderstand
+    submit_test_drive_if_needed:
+        flow: b_book_test_drive_car_confirmed

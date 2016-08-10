@@ -1,0 +1,4 @@
+name: b_exit
+states:
+    nothing_state:
+        flow: z_exit_flow

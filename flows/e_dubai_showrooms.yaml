@@ -1,0 +1,68 @@
+name: e_dubai_showrooms
+states:
+    welcome:
+        component: meya.text
+        properties:
+            text: Please select the showroom most convenient for you
+    multi_card_state:
+        component: meya.cards
+        properties:
+            output: button_click
+            elements:
+            -   title: Gargash Enterprises LLC
+                text: Al Ittihad Road, Dubai (+971 4 2099777)
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/dubai_deira.jpg
+                buttons:
+                -   text: Pick this showroom
+                    action: next
+                    data:
+                        test_drive_gdid: 14549
+                    scope: flow
+                -   text: View on Map
+                    url: https://www.google.ae/maps?q=25.2661607303508,55.3377631294998&z=17
+            -   title: Gargash Enterprises LLC
+                text: 'Sheikh Zayed Road, PO Box: 1418 (+971 4 5153838)'
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/dubai_szr_new_cars_al_qouz.jpg
+                buttons:
+                -   text: Pick this showroom
+                    action: next
+                    data:
+                        test_drive_gdid: 14550
+                    scope: flow
+                -   text: View on Map
+                    url: https://www.google.ae/maps?q=25.1386517567337,55.2185613294304&z=17
+            -   title: Gargash Enterprises LLC
+                text: Industrial Area 6, Sharjah (+971 6 5385222)
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/dubai_sharjah.jpg
+                buttons:
+                -   text: Pick this showroom
+                    action: next
+                    data:
+                        test_drive_gdid: 14551
+                    scope: flow
+                -   text: View on Map
+                    url: https://www.google.ae/maps?q=25.3212462403917,55.4293516514164&z=17
+            -   title: Gargash Enterprises LLC
+                text: Al Ittlihad Street, Ras Al Khaimah (+971 7 2355888)
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/dubai_ras_al_khaimah.jpg
+                buttons:
+                -   text: Pick this showroom
+                    action: next
+                    data:
+                        test_drive_gdid: 14552
+                    scope: flow
+                -   text: View on Map
+                    url: https://www.google.ae/maps?q=25.7489285283547,55.9056158375397&z=17
+            -   title: Gargash Enterprises LLC
+                text: Mohammed bin Mattar Road, Fujairah (+971 9 2233999)
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/dubai_fujairah.jpg
+                buttons:
+                -   text: Pick this showroom
+                    action: next
+                    data:
+                        test_drive_gdid: 14554
+                    scope: flow
+                -   text: View on Map
+                    url: https://www.google.ae/maps?q=25.1318249088204,56.3303941845516&z=17
+    submit_test_drive:
+        flow: z_submit_test_drive_request

@@ -1,0 +1,16 @@
+name: c_wsuv_d_style
+states:
+    question:
+        component: meya.text_buttons
+        properties:
+            text: Thank you, {{ user.first_name }}. Which of the following best suits
+                your driving style?
+            mode: quick_reply
+            output: button_click
+            buttons:
+            -   text: In Luxury
+                flow: c_wsuv_d_l_pax
+            -   text: Sporty
+                flow: c_wsuv_d_s_pax
+            -   text: Practical
+                flow: c_wsuv_d_p_pax

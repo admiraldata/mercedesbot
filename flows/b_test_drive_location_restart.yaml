@@ -1,0 +1,127 @@
+name: b_test_drive_location_restart
+states:
+    text_state:
+        component: meya.text
+        properties:
+            text: That doesn’t seem right. I can only book test-drives in UAE, Qatar,
+                Bahrain, Kuwait, Lebanon or KSA.
+    test_drive_location:
+        component: meya.input_string
+        properties:
+            text: Please pick one or type ‘Exit’.
+            output: test_drive_country
+            scope: flow
+    check_small_exit:
+        component: meya.conditional_equal
+        properties:
+            value1: '{{ flow.test_drive_country }}'
+            value2: exit
+        transitions:
+            equal: exit_flow
+            notequal: check_caps_exit
+    check_caps_exit:
+        component: meya.conditional_equal
+        properties:
+            value1: '{{ flow.test_drive_country }}'
+            value2: EXIT
+        transitions:
+            equal: exit_flow
+            notequal: check_proper_exit
+    check_proper_exit:
+        component: meya.conditional_equal
+        properties:
+            value1: '{{ flow.test_drive_country }}'
+            value2: Exit
+        transitions:
+            equal: exit_flow
+            notequal: pass_info_to_component
+    pass_info_to_component:
+        component: test_drive_country_lkup
+        transitions:
+            next: check_if_we_got_gdid
+            notspecified: country_not_known
+    check_if_we_got_gdid:
+        component: meya.conditional_exists
+        properties:
+            scope: flow
+            key: test_drive_gdid
+        transitions:
+            exists: submit_test_drive
+            notexists: check_uae
+    check_uae:
+        component: meya.conditional_equal
+        properties:
+            value1: '{{ flow.test_drive_country }}'
+            value2: uae
+        transitions:
+            equal: country_uae
+            notequal: check_iraq
+    check_iraq:
+        component: meya.conditional_equal
+        properties:
+            value1: '{{ flow.test_drive_country }}'
+            value2: iraq
+        transitions:
+            equal: country_iraq
+            notequal: check_ksa
+    check_ksa:
+        component: meya.conditional_equal
+        properties:
+            value1: '{{ flow.test_drive_country }}'
+            value2: ksa
+        transitions:
+            equal: country_ksa
+            notequal: check_lebanon
+    check_lebanon:
+        component: meya.conditional_equal
+        properties:
+            value1: '{{ flow.test_drive_country }}'
+            value2: lebanon
+        transitions:
+            equal: country_lebanon
+            notequal: check_dxb
+    check_dxb:
+        component: meya.conditional_equal
+        properties:
+            value1: '{{ flow.test_drive_country }}'
+            value2: dubai
+        transitions:
+            equal: city_dxb
+            notequal: check_abudhabi
+    check_abudhabi:
+        component: meya.conditional_equal
+        properties:
+            value1: '{{ flow.test_drive_country }}'
+            value2: abudhabi
+        transitions:
+            equal: city_abudhabi
+            notequal: country_not_known
+    country_uae:
+        flow: d_uae_showroom_selection
+    city_dxb:
+        flow: e_dubai_showrooms
+    city_abudhabi:
+        flow: e_abudhabi_showrooms
+    country_lebanon:
+        flow: e_lebanon_showrooms
+    country_ksa:
+        flow: d_ksa_showroom_selection
+    country_iraq:
+        flow: e_iraq_showrooms
+    submit_test_drive:
+        flow: z_submit_test_drive_request
+        return: true
+    country_not_known:
+        component: meya.text_buttons
+        properties:
+            text: I’m sorry, I seem to be malfunctioning. The bug has been reported
+                to my makers. May I take you back to the main menu?
+            mode: quick_reply
+            output: button_click
+            buttons:
+            -   text: 'Yes'
+                flow: a_en_restart
+            -   text: 'No'
+                flow: z_exit_flow
+    exit_flow:
+        flow: z_exit_flow

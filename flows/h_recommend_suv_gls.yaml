@@ -1,0 +1,50 @@
+name: h_recommend_suv_gls
+states:
+    confirm_proceed:
+        component: meya.text_buttons
+        properties:
+            text: Perfect. I think I’ve found the perfect match for you.
+            mode: quick_reply
+            output: button_click
+            buttons:
+            -   text: See Result
+                action: next
+    recommended_text:
+        component: meya.text
+        properties:
+            text: For a leader that effortlessly commands respect - we recommend a
+                car that does the same. Your perfect match is the S-Class of SUVs
+                - the impressive Mercedes-Benz GLS.
+        delay:
+            relative: 5
+    car_options:
+        component: meya.cards
+        properties:
+            output: button_click
+            elements:
+            -   title: GLS
+                text: S-Class of SUVs.
+                item_url: http://mercedesbenzme.com/me/en/suvs/gls/
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/gls.jpg
+                buttons:
+                -   text: Book a Test-Drive
+                    flow: b_book_test_drive_car_confirmed
+                    data:
+                        test_drive_car_confirmed: gls_suv
+                    scope: bot
+                -   text: Visit Website
+                    url: http://mercedesbenzme.com/me/en/suvs/gls/
+                -   text: Try Again
+                    flow: c_which_suv_redo
+    confirm_car_selected:
+        component: meya.conditional_exists
+        properties:
+            scope: user
+            key: test_drive_car_confirmed
+        transitions:
+            exists: submit_test_drive_if_needed
+            notexists: notexists_state
+    notexists_state:
+        flow: a_en_didnotunderstand
+    submit_test_drive_if_needed:
+        flow: b_book_test_drive_car_confirmed

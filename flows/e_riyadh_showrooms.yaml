@@ -1,0 +1,35 @@
+name: e_riyadh_showrooms
+states:
+    welcome:
+        component: meya.text
+        properties:
+            text: Please select the showroom most convenient for you
+    multi_card_state:
+        component: meya.cards
+        properties:
+            output: button_click
+            elements:
+            -   title: Juffali Automotive Company
+                text: Khurais Rd, Riyadh, Al-Naseem District (+966 11 209 3120)
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/ksa_riyadh_khurais_rd.jpg
+                buttons:
+                -   text: Pick this showroom
+                    action: next
+                    data:
+                        test_drive_gdid: 32567
+                    scope: flow
+                -   text: View on Map
+                    url: https://www.google.ae/maps/place/24%C2%B044'24.7%22N+46%C2%B048'06.8%22E/@24.7402023,46.7996879,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d24.7402023!4d46.8018766
+            -   title: Juffali Automotive Company
+                text: Al Urubah Rd, PO Box 84380, Riyadh 11671 (+966 11 480 9900)
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/ksa_riyadh_urubah_rd.jpg
+                buttons:
+                -   text: Pick this showroom
+                    action: next
+                    data:
+                        test_drive_gdid: 32568
+                    scope: flow
+                -   text: View on Map
+                    url: https://www.google.ae/maps?q=24.7000555621029,46.6425453570431&z=17
+    submit_test_drive:
+        flow: z_submit_test_drive_request

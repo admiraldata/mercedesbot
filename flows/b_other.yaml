@@ -1,0 +1,14 @@
+name: b_other
+states:
+    no_state:
+        component: meya.text_buttons
+        properties:
+            text: I could send you a notification when we launch new cars in the region.
+            output: button_click
+            buttons:
+            -   text: Yes, Let’s Subscribe
+                flow: b_subscribe
+            -   text: No, thanks
+                action: next
+    nothing_state:
+        flow: b_exit

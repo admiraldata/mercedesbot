@@ -1,0 +1,27 @@
+name: z_submit_test_drive_request
+states:
+    submit_test_drive:
+        component: submit_test_drive_request
+    pass_thru_state:
+        component: meya.pass
+    what_to_do_next:
+        component: meya.text_buttons
+        properties:
+            text: Please select ‘more’ to continue chatting or ‘exit’.
+            mode: quick_reply
+            output: button_click
+            buttons:
+            -   text: More
+                action: next
+            -   text: Exit
+                flow: z_exit_flow
+    text_buttons_state:
+        component: meya.text_buttons
+        properties:
+            text: I could send you a notification when we launch new cars in the region.
+            output: button_click
+            buttons:
+            -   text: Yes, Let’s Subscribe
+                flow: b_subscribe
+            -   text: No, thanks
+                flow: z_exit_flow

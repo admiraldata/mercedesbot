@@ -1,0 +1,69 @@
+name: f_explore_suv_crossover
+states:
+    sedan_options:
+        component: meya.cards
+        properties:
+            output: button_click
+            elements:
+            -   title: G-Class
+                text: For those who make their own path.
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/g_class.jpg
+                buttons:
+                -   text: Book a Test-Drive
+                    flow: b_book_test_drive_car_confirmed
+                    data:
+                        test_drive_car_confirmed: g_class_suv
+                    scope: flow
+            -   title: GLA
+                text: Compact and turbo-charged, the best of everything.
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/gla.jpg
+                buttons:
+                -   text: Book a Test-Drive
+                    flow: b_book_test_drive_car_confirmed
+                    data:
+                        test_drive_car_confirmed: gla_suv
+                    scope: flow
+            -   title: GLC
+                text: Raising the bar for luxury SUVs everywhere.
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/glc.jpg
+                buttons:
+                -   text: Book a Test-Drive
+                    flow: b_book_test_drive_car_confirmed
+                    data:
+                        test_drive_car_confirmed: glc_suv
+                    scope: flow
+            -   title: GLE
+                text: There's no pace too fast for the GLE.
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/gle_group.jpg
+                buttons:
+                -   text: Test-Drive GLE
+                    flow: b_book_test_drive_car_confirmed
+                    data:
+                        test_drive_car_confirmed: gle_suv
+                    scope: flow
+                -   text: Test-Drive Coupé
+                    flow: b_book_test_drive_car_confirmed
+                    data:
+                        test_drive_car_confirmed: gle_coupe
+                    scope: flow
+            -   title: GLS
+                text: S-Class of SUVs.
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/gls.jpg
+                buttons:
+                -   text: Book a Test-Drive
+                    flow: b_book_test_drive_car_confirmed
+                    data:
+                        test_drive_car_confirmed: gls_suv
+                    scope: flow
+    confirm_car_selected:
+        component: meya.conditional_exists
+        properties:
+            scope: flow
+            key: test_drive_car_confirmed
+        transitions:
+            exists: submit_test_drive_if_needed
+            notexists: notexists_state
+    notexists_state:
+        flow: a_en_didnotunderstand
+    submit_test_drive_if_needed:
+        flow: b_book_test_drive_car_confirmed

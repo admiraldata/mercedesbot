@@ -1,0 +1,57 @@
+name: e_abudhabi_showrooms
+states:
+    welcome:
+        component: meya.text
+        properties:
+            text: Please select the showroom most convenient for you
+    multi_card_state:
+        component: meya.cards
+        properties:
+            output: button_click
+            elements:
+            -   title: Emirates Motor Company
+                text: Abu Dhabi, Mussafah, M4 10th street (+971  2656 7777)
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/abu_dhabi_mussafah.jpg
+                buttons:
+                -   text: Pick this showroom
+                    action: next
+                    data:
+                        test_drive_gdid: 15636
+                    scope: flow
+                -   text: View on Map
+                    url: https://www.google.ae/maps?q=24.3675823087063,54.5180416474122&z=17
+            -   title: Emirates Motor Company
+                text: Airport Road, 2nd street Beside Carrefour (+971  2444 3171)
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/abu_dhabi_airport_road.jpg
+                buttons:
+                -   text: Pick this showroom
+                    action: next
+                    data:
+                        test_drive_gdid: 15707
+                    scope: flow
+                -   text: View on Map
+                    url: https://www.google.ae/maps?q=24.4247421043535,54.4480273323846&z=17
+            -   title: Emirates Motor Company
+                text: Khalifa Bin Zayed Al Awal street, 122nd St. (+971  3715 7444)
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/abu_dhabi_al_ain.jpg
+                buttons:
+                -   text: Pick this showroom
+                    action: next
+                    data:
+                        test_drive_gdid: 15901
+                    scope: flow
+                -   text: View on Map
+                    url: https://www.google.ae/maps?q=24.1818365154628,55.7556842280682&z=17
+            -   title: Emirates Motor Company
+                text: ' Marina, Marina Mall, Abu Dhabi (+971  2403 7777)'
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/abu_dhabi_al_marina.jpg
+                buttons:
+                -   text: Pick this showroom
+                    action: next
+                    data:
+                        test_drive_gdid: 15902
+                    scope: flow
+                -   text: View on Map
+                    url: https://www.google.ae/maps?q=24.4754108924645,54.3199201674244&z=17
+    submit_test_drive:
+        flow: z_submit_test_drive_request

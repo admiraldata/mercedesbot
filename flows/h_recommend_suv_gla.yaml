@@ -1,0 +1,50 @@
+name: h_recommend_suv_gla
+states:
+    confirm_proceed:
+        component: meya.text_buttons
+        properties:
+            text: Perfect. I think I’ve found the perfect match for you.
+            mode: quick_reply
+            output: button_click
+            buttons:
+            -   text: See Result
+                action: next
+    recommended_text:
+        component: meya.text
+        properties:
+            text: For a frequent driver that doesn’t compromise - the boldly designed
+                Mercedes-Benz GLA is your perfect match. An agile cross-over that
+                uncompromisingly fuses function with passion.
+        delay:
+            relative: 5
+    car_options:
+        component: meya.cards
+        properties:
+            output: button_click
+            elements:
+            -   title: GLA
+                text: Compact and turbo-charged, the best of everything.
+                item_url: http://mercedesbenzme.com/me/en/suvs/gla/
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/gla.jpg
+                buttons:
+                -   text: Book a Test-Drive
+                    flow: b_book_test_drive_car_confirmed
+                    data:
+                        test_drive_car_confirmed: gla_suv
+                    scope: bot
+                -   text: Visit Website
+                    url: http://mercedesbenzme.com/me/en/suvs/gla/
+                -   text: Try Again
+                    flow: c_which_suv_redo
+    confirm_car_selected:
+        component: meya.conditional_exists
+        properties:
+            scope: user
+            key: test_drive_car_confirmed
+        transitions:
+            exists: submit_test_drive_if_needed
+            notexists: notexists_state
+    notexists_state:
+        flow: a_en_didnotunderstand
+    submit_test_drive_if_needed:
+        flow: b_book_test_drive_car_confirmed

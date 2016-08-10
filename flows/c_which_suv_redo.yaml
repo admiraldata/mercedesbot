@@ -1,0 +1,8 @@
+name: c_which_suv_redo
+states:
+    great:
+        component: meya.text
+        properties:
+            text: Okay, let's try again.
+    start_questions:
+        flow: c_wsuv_freq

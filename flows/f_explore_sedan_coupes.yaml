@@ -1,0 +1,93 @@
+name: f_explore_sedan_coupes
+states:
+    sedan_options:
+        component: meya.cards
+        properties:
+            output: button_click
+            elements:
+            -   title: A-Class
+                text: Experience unapologetic power and control.
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/a_class.jpg
+                buttons:
+                -   text: Book a Test-Drive
+                    flow: b_book_test_drive_car_confirmed
+                    data:
+                        test_drive_car_confirmed: a_class_sedan
+                    scope: flow
+            -   title: C-Class
+                text: Respect that is rightfully demanded.
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/c_class_group.jpg
+                buttons:
+                -   text: Test-Drive Sedan
+                    flow: b_book_test_drive_car_confirmed
+                    data:
+                        test_drive_car_confirmed: c_class_sedan
+                    scope: flow
+                -   text: Test-Drive Coupé
+                    flow: b_book_test_drive_car_confirmed
+                    data:
+                        test_drive_car_confirmed: c_class_coupe
+                    scope: flow
+            -   title: CLA
+                text: A true champion of modern auto-engineering.
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/cla.jpg
+                buttons:
+                -   text: Book a Test-Drive
+                    flow: b_book_test_drive_car_confirmed
+                    data:
+                        test_drive_car_confirmed: cla_coupe
+                    scope: flow
+            -   title: CLS
+                text: Sleek and subtle, yet undeniably powerful.
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/cls.jpg
+                buttons:
+                -   text: Book a Test-Drive
+                    flow: b_book_test_drive_car_confirmed
+                    data:
+                        test_drive_car_confirmed: cls_coupe
+                    scope: flow
+            -   title: E-Class
+                text: Exceed new limits with every ride.
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/e_class_group.jpg
+                buttons:
+                -   text: Test-Drive Sedan
+                    flow: b_book_test_drive_car_confirmed
+                    data:
+                        test_drive_car_confirmed: e_class_sedan
+                    scope: flow
+                -   text: Test-Drive Coupé
+                    flow: b_book_test_drive_car_confirmed
+                    data:
+                        test_drive_car_confirmed: e_class_coupe
+                    scope: flow
+                -   text: Test-Drive Cabriolet
+                    flow: b_book_test_drive_car_confirmed
+                    data:
+                        test_drive_car_confirmed: e_class_cabriolet
+                    scope: flow
+            -   title: S-Class
+                text: Iconic, the irrefutable, the S-Class.
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/s_class_group.jpg
+                buttons:
+                -   text: Test-Drive Sedan
+                    flow: b_book_test_drive_car_confirmed
+                    data:
+                        test_drive_car_confirmed: s_class_sedan
+                    scope: flow
+                -   text: Test-Drive Coupé
+                    flow: b_book_test_drive_car_confirmed
+                    data:
+                        test_drive_car_confirmed: s_class_coupe
+                    scope: flow
+    confirm_car_selected:
+        component: meya.conditional_exists
+        properties:
+            scope: flow
+            key: test_drive_car_confirmed
+        transitions:
+            exists: submit_test_drive_if_needed
+            notexists: notexists_state
+    notexists_state:
+        flow: a_en_didnotunderstand
+    submit_test_drive_if_needed:
+        flow: b_book_test_drive_car_confirmed

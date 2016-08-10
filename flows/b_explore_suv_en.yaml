@@ -1,0 +1,13 @@
+name: b_explore_suv_en
+states:
+    yes_no_state:
+        component: meya.text_buttons
+        properties:
+            text: I could suggest an SUV for you or would you prefer to just select
+                one from our range?
+            output: button_click
+            buttons:
+            -   text: Which SUV is for me?
+                flow: c_which_suv_en
+            -   text: I’d like to select
+                flow: f_explore_suv_crossover

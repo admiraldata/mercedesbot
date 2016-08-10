@@ -1,0 +1,20 @@
+name: d_ksa_showroom_selection
+states:
+    check_uae_city:
+        component: meya.text_buttons
+        properties:
+            text: Which city would you like to have your test-drive in?
+            mode: quick_reply
+            output: button_click
+            buttons:
+            -   text: Jeddah
+                flow: e_jeddah_showrooms
+            -   text: Riyadh
+                flow: e_riyadh_showrooms
+            -   text: Dammam
+                action: next
+                data:
+                    test_drive_gdid: 32569
+                scope: flow
+    submit_damman:
+        flow: z_submit_test_drive_request

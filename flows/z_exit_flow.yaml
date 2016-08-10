@@ -1,0 +1,8 @@
+name: z_exit_flow
+states:
+    text_state:
+        component: meya.text
+        properties:
+            text: Thank you for chatting with me, {{ user.first_name }}. If you have
+                any suggestions to help me improve, please email my makers on hello@MBME.com
+        return: true
