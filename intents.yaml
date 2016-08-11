@@ -223,6 +223,10 @@
     intent: meya.keyword
     settings:
         keyword: h_recommend_suv_gls
+-   flow: testshare
+    intent: meya.keyword
+    settings:
+        keyword: testshare
 -   flow: z_exit_flow
     intent: meya.keyword
     settings:
