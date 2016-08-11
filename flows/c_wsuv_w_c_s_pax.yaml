@@ -9,8 +9,8 @@ states:
             output: button_click
             buttons:
             -   text: 1 or 2
-                flow: c_wsuv_d_s_off
+                flow: c_wsuv_w_c_off
             -   text: 3 or 4
-                flow: c_wsuv_d_s_off
+                flow: c_wsuv_w_c_off
             -   text: 5+
-                flow: c_wsuv_d_s_off
+                flow: c_wsuv_w_c_off

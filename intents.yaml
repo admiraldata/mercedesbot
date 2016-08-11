@@ -131,6 +131,10 @@
     intent: meya.keyword
     settings:
         keyword: c_wsuv_w_c_loc
+-   flow: c_wsuv_w_c_off
+    intent: meya.keyword
+    settings:
+        keyword: c_wsuv_w_c_off
 -   flow: c_wsuv_w_c_s_pax
     intent: meya.keyword
     settings:
