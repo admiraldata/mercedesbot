@@ -9,7 +9,7 @@ states:
             output: button_click
             buttons:
             -   text: 1 or 2
-                flow: h_recommend_suv_gle
+                flow: c_wsuv_d_l_off
             -   text: 3 or 4
                 flow: c_wsuv_d_l_off
             -   text: 5+
