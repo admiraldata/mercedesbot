@@ -12,8 +12,8 @@ states:
     recommended_text:
         component: meya.text
         properties:
-            text: For someone who enjoys both strength & spendour - we recommend a
-                car that is excitingly different. The Mercedes-Benz GLE Coupé, in
+            text: For someone who enjoys both strength & splendour - we recommend
+                a car that is excitingly different. The Mercedes-Benz GLE Coupé, in
                 it’s new sensational form, is your perfect match.
         delay:
             relative: 5
