@@ -1,0 +1,12 @@
+name: a_live_chat
+states:
+    first:
+        component: meya.text
+        properties:
+            text: Now calling Live Chat
+    live_chat:
+        component: live_chat
+    final:
+        component: meya.text
+        properties:
+            text: Live Chat called

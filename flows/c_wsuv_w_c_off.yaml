@@ -10,4 +10,4 @@ states:
             -   text: 'Yes'
                 flow: h_recommend_suv_g_class
             -   text: 'No'
-                flow: h_recommend_suv_gle
+                flow: h_recommend_suv_gle_coupe
