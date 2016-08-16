@@ -3,12 +3,11 @@ states:
     question:
         component: meya.text_buttons
         properties:
-            text: Thank you, {{ user.first_name }}. Which of the following best suits
-                your driving style?
+            text: Thank you, {{ user.first_name }}. Which of the following best suits your personality and preference?
             mode: quick_reply
             output: button_click
             buttons:
-            -   text: In Luxury
+            -   text: Luxurious
                 flow: c_wsuv_d_l_pax
             -   text: Sporty
                 flow: c_wsuv_d_s_pax

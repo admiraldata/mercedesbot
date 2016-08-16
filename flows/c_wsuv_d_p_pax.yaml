@@ -3,8 +3,7 @@ states:
     question:
         component: meya.text_buttons
         properties:
-            text: Generally speaking, how many people would you usually have in your
-                car?
+            text: Generally speaking, how many passengers would you usually have in your car?
             mode: quick_reply
             output: button_click
             buttons:

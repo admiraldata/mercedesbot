@@ -1,20 +1,9 @@
 name: h_recommend_suv_gla
 states:
-    confirm_proceed:
-        component: meya.text_buttons
-        properties:
-            text: Perfect. I think I’ve found the perfect match for you.
-            mode: quick_reply
-            output: button_click
-            buttons:
-            -   text: See Result
-                action: next
     recommended_text:
         component: meya.text
         properties:
-            text: For a frequent driver that doesn’t compromise - the boldly designed
-                Mercedes-Benz GLA is your perfect match. An agile cross-over that
-                uncompromisingly fuses function with passion.
+            text: For a frequent driver who doesn't compromise - the boldly designed Mercedes-Benz GLA is your perfect match. An agile cross-over that uncompromisingly fuses function with passion.
         delay:
             relative: 5
     car_options:

@@ -3,7 +3,7 @@ states:
     question:
         component: meya.text_buttons
         properties:
-            text: Are you somewhat of an explorer who enjoys going off-road?
+            text: Are you an explorer at heart, who enjoys going off-road?
             mode: quick_reply
             output: button_click
             buttons:

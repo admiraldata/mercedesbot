@@ -1,20 +1,9 @@
 name: h_recommend_suv_g_class
 states:
-    confirm_proceed:
-        component: meya.text_buttons
-        properties:
-            text: Perfect. I think I’ve found the perfect match for you.
-            mode: quick_reply
-            output: button_click
-            buttons:
-            -   text: See Result
-                action: next
     recommended_text:
         component: meya.text
         properties:
-            text: For a frequent adventurer that pursues greatness with refined taste
-                - the Mercedes-Benz G-Class is the perfect match to take your journey
-                anywhere; both on and off-road.
+            text: For a discerning adventurer who pursues greatness with refined taste - the Mercedes-Benz G-Class is the perfect match to take your journey anywhere; both on and off-road.
         delay:
             relative: 5
     car_options:
