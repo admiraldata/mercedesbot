@@ -10,31 +10,32 @@ states:
             require_match: false
         transitions:
             next: test_drive_contact_num
-            no_match: ambiguous_answer
-    ambiguous_answer:
+            no_match: ambiguous_email_answer
+    ambiguous_email_answer:
         component: meya.input_string
         properties:
             text: Sorry I didn’t get that. Please enter a valid email address to proceed.
                 Or type ‘Exit’.
             output: test_drive_email
             scope: flow
-    equal_check_state:
+#check if user requested exit
+    check_email_small_exit:
         component: meya.conditional_equal
         properties:
             value1: '{{ flow.test_drive_email }}'
             value2: exit
         transitions:
             equal: exit_bot
-            notequal: check_small_exit
-    check_small_exit:
+            notequal: check_email_proper_exit
+    check_email_proper_exit:
         component: meya.conditional_equal
         properties:
             value1: '{{ flow.test_drive_email }}'
             value2: Exit
         transitions:
             equal: exit_bot
-            notequal: check_caps_exit
-    check_caps_exit:
+            notequal: check_email_caps_exit
+    check_email_caps_exit:
         component: meya.conditional_equal
         properties:
             value1: '{{ flow.test_drive_email }}'
@@ -42,13 +43,50 @@ states:
         transitions:
             equal: exit_bot
             notequal: test_drive_contact_num
+#get contact number
     test_drive_contact_num:
         component: meya.input_integer
         properties:
             text: Thank you. Can we have your preferred contact number?
             output: test_drive_contact
             scope: flow
-            require_match: true
+            require_match: false
+        transitions:
+            next: test_location
+            no_match: ambiguous_answer
+    ambiguous_cont_answer:
+        component: meya.input_string
+        properties:
+            text: Sorry I didn’t get that. Please enter a valid phone number to proceed.
+                Or type ‘Exit’.
+            output: test_drive_contact
+            scope: flow
+#check if user requested exit
+    check_cont_small_exit:
+        component: meya.conditional_equal
+        properties:
+            value1: '{{ flow.test_drive_contact }}'
+            value2: exit
+        transitions:
+            equal: exit_bot
+            notequal: check_cont_proper_exit
+    check_cont_proper_exit:
+        component: meya.conditional_equal
+        properties:
+            value1: '{{ flow.test_drive_contact }}'
+            value2: Exit
+        transitions:
+            equal: exit_bot
+            notequal: check_cont_caps_exit
+    check_cont_caps_exit:
+        component: meya.conditional_equal
+        properties:
+            value1: '{{ flow.test_drive_contact }}'
+            value2: EXIT
+        transitions:
+            equal: exit_bot
+            notequal: test_location
+#submit test drive request
     test_location:
         flow: b_test_drive_location
     exit_bot:
