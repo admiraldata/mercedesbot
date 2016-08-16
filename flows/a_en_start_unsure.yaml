@@ -3,5 +3,4 @@ states:
     no_state:
         component: meya.text
         properties:
-            text: If you change your mind, you may view my chat options anytime by
-                just typing ‘Menu’.
+            text: If you change your mind, you can view my chat options anytime by typing ‘Menu’.

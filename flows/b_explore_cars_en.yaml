@@ -3,8 +3,7 @@ states:
     welcome_state:
         component: meya.text
         properties:
-            text: Which car would you like to book a test-drive for? Let’s start with
-                selecting the range you’re interested in.
+            text: Which car would you like to test drive? Let’s start with selecting the range you’re interested in.
     card_state:
         component: meya.cards
         properties:
@@ -22,7 +21,7 @@ states:
                 buttons:
                 -   text: Which SUV is for me?
                     flow: c_which_suv_en
-                -   text: I’d like to select
+                -   text: Select
                     flow: f_explore_suv_crossover
             -   title: Dream Cars
                 text: The epitome of power and performance.

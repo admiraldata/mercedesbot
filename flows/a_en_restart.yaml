@@ -11,24 +11,24 @@ states:
     restart_without_drive:
         component: meya.text_buttons
         properties:
-            text: Let us know below how we can help you today.
+            text: How can I help you today?
             output: button_click
             buttons:
             -   text: Book a Test-Drive
                 flow: b_explore_cars_en
             -   text: Explore Our SUVs
                 flow: b_explore_suv_en
-            -   text: What else?
+            -   text: Anything else?
                 flow: b_other
     restart_with_drive:
         component: meya.text_buttons
         properties:
-            text: Let us know below how we can help you today.
+            text: How can I help you today?
             output: button_click
             buttons:
             -   text: Book a Test-Drive
                 flow: b_explore_cars_en
             -   text: Explore Our SUVs
                 flow: b_explore_suv_en
-            -   text: What else?
+            -   text: Anything else?
                 flow: b_other

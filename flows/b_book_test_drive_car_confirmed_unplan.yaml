@@ -3,8 +3,7 @@ states:
     contact_email:
         component: meya.input_pattern
         properties:
-            text: Maybe getting behind the wheel of one will change your mind!  What
-                email address may we send the booking confirmation to?
+            text: Maybe getting behind the wheel of one will change your mind! What email address can we send the booking confirmation to?
             pattern: (^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)
             output: test_drive_email
             scope: flow
@@ -46,7 +45,7 @@ states:
     test_drive_contact_num:
         component: meya.input_integer
         properties:
-            text: Thank you. Also may we have your preferred contact number?
+            text: Thank you. Can we have your preferred contact number?
             output: test_drive_contact
             scope: flow
             require_match: true

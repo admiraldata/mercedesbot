@@ -14,5 +14,5 @@ states:
                 flow: b_explore_cars_en
             -   text: Explore Our SUVs
                 flow: b_explore_suv_en
-            -   text: What else?
+            -   text: Anything else?
                 flow: b_other

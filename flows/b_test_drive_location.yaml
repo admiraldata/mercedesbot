@@ -3,8 +3,7 @@ states:
     test_drive_location:
         component: meya.input_string
         properties:
-            text: Lastly, which Middle East country would you like to have your test-drive
-                in?
+            text: Lastly, in which Middle Eastern country would you like to book your test-drive?
             output: test_drive_country
             scope: flow
     pass_info_to_component:

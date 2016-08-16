@@ -11,6 +11,4 @@ states:
     notification:
         component: meya.text
         properties:
-            text: Thank you. I will send a notification directly to your messenger
-                when I have something exciting to share. Or, if you don’t want to
-                receive our updates, you can message me with ‘unsubscribe’ anytime.
+            text: Thank you, I will send a notification directly to your messenger when I have something exciting to share. If you wish to stop receiving our updates, you can message me ‘unsubscribe’ anytime.

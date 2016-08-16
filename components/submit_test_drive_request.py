@@ -35,7 +35,7 @@ class HelloWorld(Component):
             headers=headers,
             json=data
         )
-        text='Thank you, your booking request has been received and we will contact you shortly.'
+        text='Thank you, we have received your booking request and we will contact you shortly.'
         message = self.create_message(text=text)
 
         return self.respond(message=message, action="next")
