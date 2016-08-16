@@ -44,20 +44,9 @@ states:
             equal: exit_bot
             notequal: test_drive_contact_num
     test_drive_contact_num:
-        component: meya.input_integer
-        properties:
-            text: Thank you. Can we have your preferred contact number?
-            output: test_drive_contact
-            scope: flow
-            require_match: false
-        transitions:
-            next: test_location
-            no_match: ambiguous_answer
-    ambiguous_cont_answer:
         component: meya.input_string
         properties:
-            text: Sorry I didn’t get that. Please enter a valid phone number to proceed.
-                Or type ‘Exit’.
+            text: Thank you. Can we have your preferred contact number?
             output: test_drive_contact
             scope: flow
     check_cont_small_exit:
