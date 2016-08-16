@@ -1,11 +1,5 @@
 name: a_live_chat
 states:
-    first:
-        component: meya.text
-        properties:
-            text: Please wait while we initiate a live chat.
-        delay:
-            relative: 2
     live_chat:
         component: live_chat
         return: true
