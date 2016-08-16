@@ -17,7 +17,7 @@
 -   flow: a_live_chat
     intent: meya.keyword
     settings:
-        keyword: help
+        keyword: human
 -   flow: a_thank_you
     intent: meya.regex
     settings:

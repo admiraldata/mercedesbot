@@ -7,7 +7,7 @@ states:
             mode: quick_reply
             output: button_click
             buttons:
-            -   text: Daily
+            -   text: Everyday
                 flow: c_wsuv_d_style
             -   text: Weekends
                 flow: c_wsuv_w_c_loc
