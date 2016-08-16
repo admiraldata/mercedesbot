@@ -3,7 +3,8 @@ states:
     question:
         component: meya.text_buttons
         properties:
-            text: Thank you, {{ user.first_name }}. Which of the following best suits your personality and preference?
+            text: Thank you, {{ user.first_name }}. Which of the following best suits
+                your personality and preference?
             mode: quick_reply
             output: button_click
             buttons:

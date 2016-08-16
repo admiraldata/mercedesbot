@@ -3,7 +3,9 @@ states:
     recommended_text:
         component: meya.text
         properties:
-            text: For a frequent driver who doesn't compromise - the boldly designed Mercedes-Benz GLA is your perfect match. An agile cross-over that uncompromisingly fuses function with passion.
+            text: For a frequent driver who doesn't compromise - the boldly designed
+                Mercedes-Benz GLA is your perfect match. An agile cross-over that
+                uncompromisingly fuses function with passion.
         delay:
             relative: 5
     car_options:

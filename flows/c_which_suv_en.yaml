@@ -3,7 +3,9 @@ states:
     confirmation:
         component: meya.text_buttons
         properties:
-            text: Glad you asked. I have a few questions which will help me understand your driving personality and recommend the best SUV for you. Ready to start?
+            text: Glad you asked. I have a few questions which will help me understand
+                your driving personality and recommend the best SUV for you. Ready
+                to start?
             mode: quick_reply
             output: button_click
             buttons:

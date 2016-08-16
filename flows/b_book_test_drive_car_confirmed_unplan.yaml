@@ -3,7 +3,8 @@ states:
     contact_email:
         component: meya.input_pattern
         properties:
-            text: Maybe getting behind the wheel of one will change your mind! What email address can we send the booking confirmation to?
+            text: Maybe getting behind the wheel of one will change your mind! What
+                email address can we send the booking confirmation to?
             pattern: (^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)
             output: test_drive_email
             scope: flow
@@ -18,7 +19,6 @@ states:
                 Or type ‘Exit’.
             output: test_drive_email
             scope: flow
-#check if user requested exit
     check_email_small_exit:
         component: meya.conditional_equal
         properties:
@@ -43,7 +43,6 @@ states:
         transitions:
             equal: exit_bot
             notequal: test_drive_contact_num
-#get contact number
     test_drive_contact_num:
         component: meya.input_integer
         properties:
@@ -61,7 +60,6 @@ states:
                 Or type ‘Exit’.
             output: test_drive_contact
             scope: flow
-#check if user requested exit
     check_cont_small_exit:
         component: meya.conditional_equal
         properties:
@@ -86,7 +84,6 @@ states:
         transitions:
             equal: exit_bot
             notequal: test_location
-#submit test drive request
     test_location:
         flow: b_test_drive_location
     exit_bot:
