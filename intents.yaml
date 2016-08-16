@@ -1,9 +1,5 @@
 -   flow: a_en_catchall
     intent: meya.catchall
--   flow: a_en_catchall_2
-    intent: meya.keyword
-    settings:
-        keyword: _a_en_catchall_2
 -   flow: a_en_restart
     intent: meya.keyword
     settings:

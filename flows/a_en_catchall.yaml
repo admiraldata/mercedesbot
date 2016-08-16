@@ -1,25 +1,10 @@
 name: a_en_catchall
 states:
-    was_this_run_before:
-        component: meya.conditional_exists
-        properties:
-            scope: user
-            key: check_catch_all
-        transitions:
-            exists: second_time_around
-            notexists: set_invidual_call
-    second_time_around:
-        flow: a_en_catchall_2
-    set_invidual_call:
-        component: meya.set
-        properties:
-            key: check_catch_all
-            value: runonce
-            scope: user
     sorry_didnt_understand:
         component: meya.text
         properties:
-            text: Sorry, I did not understand what you meant.
+            text: Sorry, I did not understand what you meant. You can type ‘human’
+                at any time to speak to someone from our team.
     text_buttons_state:
         component: meya.text_buttons
         properties:
