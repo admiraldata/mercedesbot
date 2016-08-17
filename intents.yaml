@@ -1,3 +1,9 @@
+-   flow: a_ar_start
+    intent: meya.regex
+    settings:
+        ignorecase: true
+        pattern: (\barabichello\b)|(\bمرحب\b)|(\b سلام \b)|(\bلام عل\b)|(\bيفك\b)|(\b
+            كيفك\b)
 -   flow: a_en_catchall
     intent: meya.catchall
 -   flow: a_en_restart

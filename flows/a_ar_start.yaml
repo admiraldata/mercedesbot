@@ -1,0 +1,13 @@
+name: a_ar_start
+states:
+    text_buttons_state:
+        component: meya.text_buttons
+        properties:
+            text: مرحبا {{ user.first_name }} لقد وصلت مرسيدس-بنز الشرق الأوسط. جاهز
+                للبدء؟
+            output: button_click
+            buttons:
+            -   text: نعم فعلا
+                flow: a_en_start_sure
+            -   text: لا
+                flow: a_en_start_unsure
