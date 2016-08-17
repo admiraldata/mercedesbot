@@ -242,9 +242,10 @@
     settings:
         keyword: testshare
 -   flow: z_exit_flow
-    intent: meya.keyword
+    intent: meya.regex
     settings:
-        keyword: exit
+        ignorecase: true
+        pattern: (\bexit\b)|(\bbye\b)
 -   flow: z_submit_test_drive_request
     intent: meya.keyword
     settings:
