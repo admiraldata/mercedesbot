@@ -5,5 +5,5 @@ states:
         properties:
             text: Thank you for chatting with me, {{ user.first_name }}. If you have
                 any suggestions to help me improve, please get in touch with my creators
-                on Hello@mercedesbenzme.com
+                on Hi@mercedesbenzme.com
         return: true
