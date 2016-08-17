@@ -14,6 +14,15 @@ states:
                     data:
                         test_drive_car_confirmed: a_class_sedan
                     scope: flow
+            -   title: CLA
+                text: A true champion of modern auto-engineering.
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/cla.jpg
+                buttons:
+                -   text: Book a Test-Drive
+                    flow: b_book_test_drive_car_confirmed
+                    data:
+                        test_drive_car_confirmed: cla_coupe
+                    scope: flow
             -   title: C-Class
                 text: Respect that is rightfully demanded.
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/c_class_group.jpg
@@ -27,24 +36,6 @@ states:
                     flow: b_book_test_drive_car_confirmed
                     data:
                         test_drive_car_confirmed: c_class_coupe
-                    scope: flow
-            -   title: CLA
-                text: A true champion of modern auto-engineering.
-                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/cla.jpg
-                buttons:
-                -   text: Book a Test-Drive
-                    flow: b_book_test_drive_car_confirmed
-                    data:
-                        test_drive_car_confirmed: cla_coupe
-                    scope: flow
-            -   title: CLS
-                text: Sleek and subtle, yet undeniably powerful.
-                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/cls.jpg
-                buttons:
-                -   text: Book a Test-Drive
-                    flow: b_book_test_drive_car_confirmed
-                    data:
-                        test_drive_car_confirmed: cls_coupe
                     scope: flow
             -   title: E-Class
                 text: Exceed new limits with every ride.
@@ -64,6 +55,15 @@ states:
                     flow: b_book_test_drive_car_confirmed
                     data:
                         test_drive_car_confirmed: e_class_cabriolet
+                    scope: flow
+            -   title: CLS
+                text: Sleek and subtle, yet undeniably powerful.
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/cls.jpg
+                buttons:
+                -   text: Book a Test-Drive
+                    flow: b_book_test_drive_car_confirmed
+                    data:
+                        test_drive_car_confirmed: cls_coupe
                     scope: flow
             -   title: S-Class
                 text: Iconic, the irrefutable, the S-Class.

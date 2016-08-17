@@ -5,14 +5,14 @@ states:
         properties:
             output: button_click
             elements:
-            -   title: AMG-GT
-                text: Turn heads at every turn.
-                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/amt_gt.jpg
+            -   title: SLC
+                text: The embodiment of power and performance.
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/slc.jpg
                 buttons:
                 -   text: Book a Test-Drive
                     flow: b_book_test_drive_car_confirmed
                     data:
-                        test_drive_car_confirmed: amg_gt
+                        test_drive_car_confirmed: slc
                     scope: flow
             -   title: SL
                 text: Sleek, luxurious and unstoppably powerful.
@@ -23,14 +23,14 @@ states:
                     data:
                         test_drive_car_confirmed: sl
                     scope: flow
-            -   title: SLC
-                text: The embodiment of power and performance.
-                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/slc.jpg
+            -   title: AMG-GT
+                text: Turn heads at every turn.
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/amt_gt.jpg
                 buttons:
                 -   text: Book a Test-Drive
                     flow: b_book_test_drive_car_confirmed
                     data:
-                        test_drive_car_confirmed: slc
+                        test_drive_car_confirmed: amg_gt
                     scope: flow
     confirm_car_selected:
         component: meya.conditional_exists
