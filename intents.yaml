@@ -1,3 +1,11 @@
+-   flow: a_ar_catchall
+    intent: meya.keyword
+    settings:
+        keyword: a_ar_catchall
+-   flow: a_ar_restart
+    intent: meya.keyword
+    settings:
+        keyword: a_ar_restart
 -   flow: a_ar_start
     intent: meya.regex
     settings:
@@ -49,14 +57,26 @@
     intent: meya.keyword
     settings:
         keyword: thisshouldonlybecalledfromotherflows
+-   flow: b_book_test_drive_car_confirmed_ar
+    intent: meya.keyword
+    settings:
+        keyword: b_book_test_drive_car_confirmed_ar
 -   flow: b_book_test_drive_car_confirmed_plan
     intent: meya.keyword
     settings:
         keyword: _b_book_test_drive_car_confirmed_plan
+-   flow: b_book_test_drive_car_confirmed_plan_ar
+    intent: meya.keyword
+    settings:
+        keyword: b_book_test_drive_car_confirmed_plan_ar
 -   flow: b_book_test_drive_car_confirmed_unplan
     intent: meya.keyword
     settings:
         keyword: _b_book_test_drive_car_confirmed_unplan
+-   flow: b_book_test_drive_car_confirmed_unplan_ar
+    intent: meya.keyword
+    settings:
+        keyword: b_book_test_drive_car_confirmed_unplan_ar
 -   flow: b_exit
     intent: meya.keyword
     settings:

@@ -1,0 +1,34 @@
+name: a_ar_restart
+states:
+    existing_test_drive_check:
+        component: meya.conditional_exists
+        properties:
+            scope: flow
+            key: test_drive_gdid
+        transitions:
+            exists: restart_with_drive
+            notexists: restart_without_drive
+    restart_without_drive:
+        component: meya.text_buttons
+        properties:
+            text: كيف يمكننا مساعدتك اليوم؟
+            output: button_click
+            buttons:
+            -   text: احجز تجربة قيادة
+                flow: b_explore_cars_en
+            -   text: استكشف طرازاتنا للـ SUV
+                flow: b_explore_suv_en
+            -   text: ماذا أيضا؟
+                flow: b_other
+    restart_with_drive:
+        component: meya.text_buttons
+        properties:
+            text: كيف يمكننا مساعدتك اليوم؟
+            output: button_click
+            buttons:
+            -   text: احجز تجربة قيادة
+                flow: b_explore_cars_en
+            -   text: استكشف طرازاتنا للـ SUV
+                flow: b_explore_suv_en
+            -   text: ماذا أيضا؟
+                flow: b_other
