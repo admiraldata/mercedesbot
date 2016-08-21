@@ -1,0 +1,5 @@
+name: a_live_chat_ar
+states:
+    live_chat:
+        component: live_chat_ar
+        return: true

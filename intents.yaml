@@ -4,6 +4,14 @@
         ignorecase: true
         pattern: (\barabichello\b)|(\bمرحب\b)|(\b سلام \b)|(\bلام عل\b)|(\bيفك\b)|(\b
             كيفك\b)
+-   flow: a_ar_start_sure
+    intent: meya.keyword
+    settings:
+        keyword: a_ar_start_sure
+-   flow: a_ar_start_unsure
+    intent: meya.keyword
+    settings:
+        keyword: a_ar_start_unsure
 -   flow: a_en_catchall
     intent: meya.catchall
 -   flow: a_en_restart
@@ -24,11 +32,19 @@
     intent: meya.keyword
     settings:
         keyword: human
+-   flow: a_live_chat_ar
+    intent: meya.keyword
+    settings:
+        keyword: a_live_chat_ar
 -   flow: a_thank_you
     intent: meya.regex
     settings:
         ignorecase: true
         pattern: (\bthank\b)|(\bthanks\b)
+-   flow: a_thank_you_ar
+    intent: meya.keyword
+    settings:
+        keyword: a_thank_you_ar
 -   flow: b_book_test_drive_car_confirmed
     intent: meya.keyword
     settings:
