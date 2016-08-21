@@ -1,0 +1,52 @@
+name: b_explore_cars_ar
+states:
+    welcome_state:
+        component: meya.text
+        properties:
+            text: مع أية سيارة تود حجز تجربة قيادة؟ هيا نبدأ باختيار الطراز الذي تفضله.
+    card_state:
+        component: meya.cards
+        properties:
+            output: button_click
+            elements:
+            -   title: السيدان والكوبيه
+                text: سيطر على الطريق بثقة تامة.
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/sedan_coupe.jpg
+                buttons:
+                -   text: اختار
+                    flow: f_explore_sedan_coupes
+            -   title: سيارات الدفع الرباعي و الكروس أوفر
+                text: لقاء الفخامة مع الراحة والسيطرة.
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/suv_crossover.jpg
+                buttons:
+                -   text: أية SUV تناسبني؟
+                    flow: c_which_suv_en
+                -   text: اختار
+                    flow: f_explore_suv_crossover
+            -   title: سيارات الحلم
+                text: رمز القوة والأداء.
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/dreamcars.jpg
+                buttons:
+                -   text: اختار
+                    flow: f_explore_dreamcars
+            -   title: المركبات المتعددة الأغراض
+                text: حيث تزدهر الراحة والثقة.
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/mpvs.jpg
+                buttons:
+                -   text: احجز تجربة قيادة
+                    action: next
+                    data:
+                        test_drive_car_confirmed: v_class
+                    scope: flow
+    confirm_car_selected:
+        component: meya.conditional_exists
+        properties:
+            scope: flow
+            key: test_drive_car_confirmed
+        transitions:
+            exists: submit_test_drive_if_needed
+            notexists: notexists_state
+    notexists_state:
+        flow: a_en_didnotunderstand
+    submit_test_drive_if_needed:
+        flow: b_book_test_drive_car_confirmed

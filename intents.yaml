@@ -81,10 +81,22 @@
     intent: meya.keyword
     settings:
         keyword: exit
+-   flow: b_exit_ar
+    intent: meya.keyword
+    settings:
+        keyword: b_exit_ar
+-   flow: b_explore_cars_ar
+    intent: meya.keyword
+    settings:
+        keyword: b_explore_cars_ar
 -   flow: b_explore_cars_en
     intent: meya.keyword
     settings:
         keyword: explore cars
+-   flow: b_explore_suv_ar
+    intent: meya.keyword
+    settings:
+        keyword: b_explore_suv_ar
 -   flow: b_explore_suv_en
     intent: meya.keyword
     settings:
@@ -93,22 +105,42 @@
     intent: meya.keyword
     settings:
         keyword: b_other
+-   flow: b_other_ar
+    intent: meya.keyword
+    settings:
+        keyword: b_other_ar
 -   flow: b_subscribe
     intent: meya.keyword
     settings:
         keyword: subscribe
+-   flow: b_subscribe_ar
+    intent: meya.keyword
+    settings:
+        keyword: b_subscribe_ar
 -   flow: b_test_drive_location
     intent: meya.keyword
     settings:
         keyword: btestdrivelocation
+-   flow: b_test_drive_location_ar
+    intent: meya.keyword
+    settings:
+        keyword: b_test_drive_location_ar
 -   flow: b_test_drive_location_restart
     intent: meya.keyword
     settings:
         keyword: b_test_drive_location_restart
+-   flow: b_test_drive_location_restart_ar
+    intent: meya.keyword
+    settings:
+        keyword: b_test_drive_location_restart_ar
 -   flow: b_unsubscribe
     intent: meya.keyword
     settings:
         keyword: unsubscribe
+-   flow: b_unsubscribe_ar
+    intent: meya.keyword
+    settings:
+        keyword: b_unsubscribe_ar
 -   flow: c_which_suv_en
     intent: meya.keyword
     settings:
