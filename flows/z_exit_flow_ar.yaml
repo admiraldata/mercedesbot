@@ -1,0 +1,7 @@
+name: z_exit_flow_ar
+states:
+    text_state:
+        component: meya.text
+        properties:
+            text: "شكرا على الدردشة معي {{ user.first_name }}. لو كان لديك أية نصائح تساعدني على التحسّن، فأرجو أن تراسل مبرمجي على hello@MBME.com"
+        return: true

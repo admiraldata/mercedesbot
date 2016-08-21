@@ -1,0 +1,41 @@
+name: h_recommend_suv_g_class_ar
+states:
+    recommended_text:
+        component: meya.text
+        properties:
+            text: For a discerning adventurer who pursues greatness with refined taste
+                - the Mercedes-Benz G-Class is the perfect match to take your journey
+                anywhere; both on and off-road.
+        delay:
+            relative: 5
+    car_options:
+        component: meya.cards
+        properties:
+            output: button_click
+            elements:
+            -   title: G-Class
+                text: "لأولئك الذين يشقون طريقهم الخاص."
+                item_url: http://mercedesbenzme.com/me/en/suvs/g-class/
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/g_class.jpg
+                buttons:
+                -   text: "احجز تجربة قيادة"
+                    flow: b_book_test_drive_car_confirmed
+                    data:
+                        test_drive_car_confirmed: g_class_suv
+                    scope: bot
+                -   text: Visit Website
+                    url: http://mercedesbenzme.com/me/en/suvs/g-class/
+                -   text: Try Again
+                    flow: c_which_suv_redo
+    confirm_car_selected:
+        component: meya.conditional_exists
+        properties:
+            scope: user
+            key: test_drive_car_confirmed
+        transitions:
+            exists: submit_test_drive_if_needed
+            notexists: notexists_state
+    notexists_state:
+        flow: a_en_didnotunderstand
+    submit_test_drive_if_needed:
+        flow: b_book_test_drive_car_confirmed
