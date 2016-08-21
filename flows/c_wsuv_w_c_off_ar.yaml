@@ -1,0 +1,13 @@
+name: c_wsuv_w_c_off_ar
+states:
+    question:
+        component: meya.text_buttons
+        properties:
+            text: هل تحب الاستكشاف والقيادة في المناطق الوعرة؟
+            mode: quick_reply
+            output: button_click
+            buttons:
+            -   text: نعم
+                flow: h_recommend_suv_g_class
+            -   text: لا
+                flow: h_recommend_suv_gle_coupe

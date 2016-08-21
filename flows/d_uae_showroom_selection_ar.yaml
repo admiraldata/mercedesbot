@@ -1,0 +1,29 @@
+name: d_uae_showroom_selection_ar
+states:
+    check_uae_city:
+        component: meya.text_buttons
+        properties:
+            text: في أي مدينة تود أن تجرب قيادة السيارة؟
+            mode: quick_reply
+            output: button_click
+            buttons:
+            -   text: أبوظبي / العين
+                action: next
+                data:
+                    uae_loc: abudhabi
+            -   text: دبي / غيرها
+                action: next
+                data:
+                    uae_loc: dubai
+    equal_check_state:
+        component: meya.conditional_equal
+        properties:
+            value1: '{{ flow.uae_loc }}'
+            value2: abudhabi
+        transitions:
+            equal: abudhabi_flow
+            notequal: dubai_flow
+    abudhabi_flow:
+        flow: e_abudhabi_showrooms
+    dubai_flow:
+        flow: e_dubai_showrooms

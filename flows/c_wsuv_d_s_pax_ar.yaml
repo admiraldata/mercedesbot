@@ -1,0 +1,16 @@
+name: c_wsuv_d_s_pax_ar
+states:
+    question:
+        component: meya.text_buttons
+        properties:
+            text: Generally speaking, how many passengers would you usually have in
+                your car?
+            mode: quick_reply
+            output: button_click
+            buttons:
+            -   text: 1 أو 2
+                flow: c_wsuv_d_s_off
+            -   text: 3 أو 4
+                flow: c_wsuv_d_s_off
+            -   text: 5 و أكثر
+                flow: c_wsuv_d_s_off

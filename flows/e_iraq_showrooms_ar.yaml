@@ -1,0 +1,35 @@
+name: e_iraq_showrooms_ar
+states:
+    welcome:
+        component: meya.text
+        properties:
+            text: يرجى اختيار صالة العرض التي تناسبك أكثر
+    multi_card_state:
+        component: meya.cards
+        properties:
+            output: button_click
+            elements:
+            -   title: برايت كاسل موتورز
+                text: شارع 100م، اربيل، العراق (+964 750 1000 100)
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/iraq_100_meter_road.jpg
+                buttons:
+                -   text: اختر هذه الصالة
+                    action: next
+                    data:
+                        test_drive_gdid: 36271
+                    scope: flow
+                -   text: شاهدها على الخريطة
+                    url: https://www.google.ae/maps?q=36.1604047625373,43.9702118331352&z=17
+            -   title: برايت كاسل موتورز
+                text: السليمانية، كردستان، العراق
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/iraq_sulaimaniya.jpg
+                buttons:
+                -   text: اختر هذه الصالة
+                    action: next
+                    data:
+                        test_drive_gdid: 47433
+                    scope: flow
+                -   text: شاهدها على الخريطة
+                    url: https://www.google.ae/maps?q=35.550681728405,45.4074933248535&z=17
+    submit_test_drive:
+        flow: z_submit_test_drive_request

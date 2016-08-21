@@ -1,0 +1,20 @@
+name: d_ksa_showroom_selection_ar
+states:
+    check_uae_city:
+        component: meya.text_buttons
+        properties:
+            text: في أي مدينة تود أن تجرب قيادة السيارة؟
+            mode: quick_reply
+            output: button_click
+            buttons:
+            -   text: جدة
+                flow: e_jeddah_showrooms
+            -   text: الرياض
+                flow: e_riyadh_showrooms
+            -   text: الدمام
+                action: next
+                data:
+                    test_drive_gdid: 32569
+                scope: flow
+    submit_damman:
+        flow: z_submit_test_drive_request

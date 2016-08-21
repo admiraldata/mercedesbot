@@ -1,0 +1,13 @@
+name: c_wsuv_d_p_lux_ar
+states:
+    question:
+        component: meya.text_buttons
+        properties:
+            text: هل تفضل طرز مرسيدس-بنز أكثر فخامة؟
+            mode: quick_reply
+            output: button_click
+            buttons:
+            -   text: نعم
+                flow: h_recommend_suv_gle
+            -   text: لا
+                flow: h_recommend_suv_glc

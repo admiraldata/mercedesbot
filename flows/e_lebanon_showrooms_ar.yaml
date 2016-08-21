@@ -1,0 +1,35 @@
+name: e_lebanon_showrooms_ar
+states:
+    welcome:
+        component: meya.text
+        properties:
+            text: يرجى اختيار صالة العرض التي تناسبك أكثر
+    multi_card_state:
+        component: meya.cards
+        properties:
+            output: button_click
+            elements:
+            -   title: 'شركة توفيق جرجور وأبنائه '
+                text: 'طريق الدورة، بيروت، مبنى مرسيدس-بنز ص.ب: 110371 (+961 1 255366)'
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/lebanon_dora.jpg
+                buttons:
+                -   text: اختر هذه الصالة
+                    action: next
+                    data:
+                        test_drive_gdid: 24390
+                    scope: flow
+                -   text: شاهدها على الخريطة
+                    url: https://www.google.ae/maps?q=33.8943368477594,35.5554751728776&z=17
+            -   title: 'شركة توفيق جرجور وأبنائه '
+                text: بور، طريق طرابلس، مبنى مرسيدس-بنز (+961 9 446222)
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/lebanon_bouar.jpg
+                buttons:
+                -   text: اختر هذه الصالة
+                    action: next
+                    data:
+                        test_drive_gdid: 24391
+                    scope: flow
+                -   text: شاهدها على الخريطة
+                    url: https://www.google.ae/maps?q=34.0465993111492,35.6356127729656&z=17
+    submit_test_drive:
+        flow: z_submit_test_drive_request

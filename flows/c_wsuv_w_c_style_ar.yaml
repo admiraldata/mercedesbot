@@ -1,0 +1,16 @@
+name: c_wsuv_w_c_style_ar
+states:
+    question:
+        component: meya.text_buttons
+        properties:
+            text: شكرا لك، {{ user.first_name }}. أي الخيارات التالية تعبّر عن أسلوب
+                قيادتك أكثر؟
+            mode: quick_reply
+            output: button_click
+            buttons:
+            -   text: راقي
+                flow: c_wsuv_w_c_l_pax
+            -   text: رياضي
+                flow: c_wsuv_w_c_s_pax
+            -   text: عملي
+                flow: h_recommend_suv_gle_coupe

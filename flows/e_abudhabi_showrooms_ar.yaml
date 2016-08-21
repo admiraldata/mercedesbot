@@ -1,0 +1,57 @@
+name: e_abudhabi_showrooms_ar
+states:
+    welcome:
+        component: meya.text
+        properties:
+            text: يرجى اختيار صالة العرض التي تناسبك أكثر
+    multi_card_state:
+        component: meya.cards
+        properties:
+            output: button_click
+            elements:
+            -   title: شركة الإمارات للسيارات
+                text: أبوظبي، المصفح، M4 شارع 10 (+971  2656 7777)
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/abu_dhabi_mussafah.jpg
+                buttons:
+                -   text: اختر هذه الصالة
+                    action: next
+                    data:
+                        test_drive_gdid: 15636
+                    scope: flow
+                -   text: شاهدها على الخريطة
+                    url: https://www.google.ae/maps?q=24.3675823087063,54.5180416474122&z=17
+            -   title: شركة الإمارات للسيارات
+                text: شارع المطار، الشارع الثاني بجوار كارفور (+971  2444 3171)
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/abu_dhabi_airport_road.jpg
+                buttons:
+                -   text: اختر هذه الصالة
+                    action: next
+                    data:
+                        test_drive_gdid: 15707
+                    scope: flow
+                -   text: شاهدها على الخريطة
+                    url: https://www.google.ae/maps?q=24.4247421043535,54.4480273323846&z=17
+            -   title: شركة الإمارات للسيارات
+                text: شارع خليفة بن زايد الأول، شارع 122 (+971  3715 7444)
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/abu_dhabi_al_ain.jpg
+                buttons:
+                -   text: اختر هذه الصالة
+                    action: next
+                    data:
+                        test_drive_gdid: 15901
+                    scope: flow
+                -   text: شاهدها على الخريطة
+                    url: https://www.google.ae/maps?q=24.1818365154628,55.7556842280682&z=17
+            -   title: شركة الإمارات للسيارات
+                text: المرسى، مارينا مول، أبوظبي (+971  2403 7777 )
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/abu_dhabi_al_marina.jpg
+                buttons:
+                -   text: اختر هذه الصالة
+                    action: next
+                    data:
+                        test_drive_gdid: 15902
+                    scope: flow
+                -   text: شاهدها على الخريطة
+                    url: https://www.google.ae/maps?q=24.4754108924645,54.3199201674244&z=17
+    submit_test_drive:
+        flow: z_submit_test_drive_request
