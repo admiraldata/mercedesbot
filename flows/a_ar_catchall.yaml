@@ -3,8 +3,7 @@ states:
     sorry_didnt_understand:
         component: meya.text
         properties:
-            text: Sorry, I did not understand what you meant. You can type ‘human’
-                at any time to speak to someone from our team.
+            text: عذرا، لم أفهم قصدك. اطبع كلمة ‘human’ إن أردت التحدث مع شخص من فريقنا.
     text_buttons_state:
         component: meya.text_buttons
         properties:

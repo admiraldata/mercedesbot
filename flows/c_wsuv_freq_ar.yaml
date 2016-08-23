@@ -3,7 +3,7 @@ states:
     question:
         component: meya.text_buttons
         properties:
-            text: How often do you use your car?
+            text: كم مرة تقود سيارتك عادة؟
             mode: quick_reply
             output: button_click
             buttons:

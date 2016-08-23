@@ -3,9 +3,8 @@ states:
     recommended_text:
         component: meya.text
         properties:
-            text: For someone who enjoys both strength & splendour - we recommend
-                a car that is excitingly different. The Mercedes-Benz GLE Coupé, in
-                it’s new sensational form, is your perfect match.
+            text: لكل من تمتعه القوة و الفخامة، ننصحك بسيارة مثيرة بتميزها. ستجد مرآتك
+                في مرسيدس-بنز GLE كوبيه بتصميمها الخيالي الجديد.
         delay:
             relative: 5
     car_options:
@@ -13,19 +12,19 @@ states:
         properties:
             output: button_click
             elements:
-            -   title: "GLE كوبيه"
-                text: "لا تقبل المقاييس، حددها."
+            -   title: GLE كوبيه
+                text: لا تقبل المقاييس، حددها.
                 item_url: http://mercedesbenzme.com/me/en/suvs/gle/mercedes-amg-gle-63/
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/gle_coupe.jpg
                 buttons:
-                -   text: "احجز تجربة قيادة"
+                -   text: احجز تجربة قيادة
                     flow: b_book_test_drive_car_confirmed
                     data:
                         test_drive_car_confirmed: gle_coupe
                     scope: bot
-                -   text: Visit Website
+                -   text: زر موقعنا الإلكتروني
                     url: http://mercedesbenzme.com/me/en/suvs/gle/mercedes-amg-gle-63/
-                -   text: Try Again
+                -   text: حاول ثانية
                     flow: c_which_suv_redo
     confirm_car_selected:
         component: meya.conditional_exists

@@ -3,11 +3,11 @@ states:
     confirm:
         component: meya.text_buttons
         properties:
-            text: Are you sure? It only takes 3 minutes.
+            text: متأكد؟ سيستغرق الأمر 3 دقائق فقط.
             mode: quick_reply
             output: button_click
             buttons:
-            -   text: Exit Chat
+            -   text: اخرج من الدردشة
                 flow: z_exit_flow
             -   text: Start Questions
                 flow: c_which_suv_red

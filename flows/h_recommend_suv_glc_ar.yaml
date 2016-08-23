@@ -3,9 +3,8 @@ states:
     recommended_text:
         component: meya.text
         properties:
-            text: For someone who radiates effortless confidence, we recommend a car
-                that combines the best of performance, space and efficiency. The new
-                Mercedes-Benz GLC is your perfect match.
+            text: لكل من يشع ثقة، ننصحك بسيارة تجمع أفضل ما في الأداء و الرحابة و
+                الكفاءة. مرسيدس-بنز GLC الجديدة، شريكتك المثالية.
         delay:
             relative: 5
     car_options:
@@ -14,18 +13,18 @@ states:
             output: button_click
             elements:
             -   title: GLC
-                text: "نصعد بمعايير فخامة سيارات الدفع الرباعي في كل مكان."
+                text: نصعد بمعايير فخامة سيارات الدفع الرباعي في كل مكان.
                 item_url: http://mercedesbenzme.com/me/en/suvs/glc/
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/glc.jpg
                 buttons:
-                -   text: "احجز تجربة قيادة"
+                -   text: احجز تجربة قيادة
                     flow: b_book_test_drive_car_confirmed
                     data:
                         test_drive_car_confirmed: glc_suv
                     scope: bot
-                -   text: Visit Website
+                -   text: زر موقعنا الإلكتروني
                     url: http://mercedesbenzme.com/me/en/suvs/glc/
-                -   text: Try Again
+                -   text: حاول ثانية
                     flow: c_which_suv_redo
     confirm_car_selected:
         component: meya.conditional_exists

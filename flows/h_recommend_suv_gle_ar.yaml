@@ -3,9 +3,8 @@ states:
     recommended_text:
         component: meya.text
         properties:
-            text: For someone who embarks on a new journey everyday, your perfect
-                match is a car that’s equally dynamic and assertive. The new Mercedes-Benz
-                GLE will make you feel at home, whatever route you take.
+            text: لكل من يبدأ رحلة جديدة في كل يوم، على سيارتك المثالية أن تكون بمرونتك
+                و جرأتك. مع مرسيدس-بنز GLE ستشعر بالراحة المطلقة، كيفما كان دربك.
         delay:
             relative: 5
     car_options:
@@ -14,18 +13,18 @@ states:
             output: button_click
             elements:
             -   title: GLE
-                text: "اصعد لمقدمة الركب في GLE."
+                text: اصعد لمقدمة الركب في GLE.
                 item_url: http://mercedesbenzme.com/me/en/suvs/gle/gle/
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/gle_suv.jpg
                 buttons:
-                -   text: "احجز تجربة قيادة"
+                -   text: احجز تجربة قيادة
                     flow: b_book_test_drive_car_confirmed
                     data:
                         test_drive_car_confirmed: gle_suv
                     scope: bot
-                -   text: Visit Website
+                -   text: زر موقعنا الإلكتروني
                     url: http://mercedesbenzme.com/me/en/suvs/gle/gle/
-                -   text: Try Again
+                -   text: حاول ثانية
                     flow: c_which_suv_redo
     confirm_car_selected:
         component: meya.conditional_exists

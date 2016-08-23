@@ -3,7 +3,7 @@ states:
     question:
         component: meya.text_buttons
         properties:
-            text: Is a spacious car important to you?
+            text: هل تعتبر رحابة السيارة أمرا مهما؟
             mode: quick_reply
             output: button_click
             buttons:

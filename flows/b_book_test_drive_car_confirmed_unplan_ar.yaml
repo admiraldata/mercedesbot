@@ -46,7 +46,7 @@ states:
     test_drive_contact_num:
         component: meya.input_string
         properties:
-            text: Thank you. Can we have your preferred contact number?
+            text: 'شكرا. هلاّ زودتنا برقم الهاتف الذي تفضله؟ '
             output: test_drive_contact
             scope: flow
     check_cont_small_exit:

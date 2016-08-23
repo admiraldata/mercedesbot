@@ -3,6 +3,6 @@ states:
     great:
         component: meya.text
         properties:
-            text: Okay, let's try again.
+            text: طيب. هيا نحاول ثانية.
     start_questions:
         flow: c_wsuv_freq

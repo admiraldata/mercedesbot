@@ -24,7 +24,7 @@ states:
                         test_drive_car_confirmed: sl
                     scope: flow
             -   title: AMG-GT
-                text: Turn heads at every turn.
+                text: اجذب الأنظار في كل زاوية.
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/amt_gt.jpg
                 buttons:
                 -   text: احجز تجربة قيادة

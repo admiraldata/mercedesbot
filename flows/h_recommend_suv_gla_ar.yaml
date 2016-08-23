@@ -3,9 +3,8 @@ states:
     recommended_text:
         component: meya.text
         properties:
-            text: For a frequent driver who doesn't compromise - the boldly designed
-                Mercedes-Benz GLA is your perfect match. An agile cross-over that
-                uncompromisingly fuses function with passion.
+            text: لكل سائق لا يساوم. مرسيدس-بنز GLA بتصميمها الجريء مخصصة لك أنت بالذات.
+                طراز كروس أوفر مرن يدمج كل ما تطمح إليه في أداء سيارتك.
         delay:
             relative: 5
     car_options:
@@ -14,18 +13,18 @@ states:
             output: button_click
             elements:
             -   title: GLA
-                text: "صغيرة وسريعة، إنها الأفضل في كل شيء."
+                text: صغيرة وسريعة، إنها الأفضل في كل شيء.
                 item_url: http://mercedesbenzme.com/me/en/suvs/gla/
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/gla.jpg
                 buttons:
-                -   text: "احجز تجربة قيادة"
+                -   text: احجز تجربة قيادة
                     flow: b_book_test_drive_car_confirmed
                     data:
                         test_drive_car_confirmed: gla_suv
                     scope: bot
-                -   text: Visit Website
+                -   text: زر موقعنا الإلكتروني
                     url: http://mercedesbenzme.com/me/en/suvs/gla/
-                -   text: Try Again
+                -   text: حاول ثانية
                     flow: c_which_suv_redo
     confirm_car_selected:
         component: meya.conditional_exists

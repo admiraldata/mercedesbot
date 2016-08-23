@@ -3,11 +3,11 @@ states:
     yes_no_state:
         component: meya.text_buttons
         properties:
-            text: I can suggest an SUV for you or would you prefer to select one from
-                our range?
+            text: يمكنني اقتراح سيارة دفع رباعي، أم تفضل اختيار واحدة من ضمن مجموعة
+                طرازاتنا؟
             output: button_click
             buttons:
-            -   text: Which SUV is for me?
+            -   text: أية سيارة دفع رباعي تناسبني؟
                 flow: c_which_suv_en
-            -   text: I’d like to select
+            -   text: أرغب بالاختيار
                 flow: f_explore_suv_crossover

@@ -4,4 +4,4 @@ states:
         component: meya.random_text
         properties:
             responses:
-            - You’re most welcome, {{ user.first_name }}.
+            - أهلا بك في أي وقت {{ user.first_name }}.
