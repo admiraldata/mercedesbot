@@ -7,8 +7,8 @@ states:
             output: button_click
             buttons:
             -   text: احجز تجربة قيادة
-                flow: b_explore_cars_en
+                flow: b_explore_cars_ar
             -   text: استكشف طرازاتنا للـSUV
-                flow: b_explore_suv_en
+                flow: b_explore_suv_ar
             -   text: أية خدمة أخرى؟
-                flow: b_other
+                flow: b_other_ar

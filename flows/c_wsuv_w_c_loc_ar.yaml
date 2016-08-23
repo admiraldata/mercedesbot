@@ -8,6 +8,6 @@ states:
             output: button_click
             buttons:
             -   text: شوارع المدينة
-                flow: c_wsuv_w_c_style
+                flow: c_wsuv_w_c_style_ar
             -   text: في المناطق الوعرة
-                flow: h_recommend_suv_g_class
+                flow: h_recommend_suv_g_class_ar

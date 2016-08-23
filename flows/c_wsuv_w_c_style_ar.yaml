@@ -9,8 +9,8 @@ states:
             output: button_click
             buttons:
             -   text: راقي
-                flow: c_wsuv_w_c_l_pax
+                flow: c_wsuv_w_c_l_pax_ar
             -   text: رياضي
-                flow: c_wsuv_w_c_s_pax
+                flow: c_wsuv_w_c_s_pax_ar
             -   text: عملي
-                flow: h_recommend_suv_gle_coupe
+                flow: h_recommend_suv_gle_coupe_ar

@@ -74,6 +74,6 @@ states:
             equal: exit_bot
             notequal: test_location
     test_location:
-        flow: b_test_drive_location
+        flow: b_test_drive_location_ar
     exit_bot:
-        flow: z_exit_flow
+        flow: z_exit_flow_ar

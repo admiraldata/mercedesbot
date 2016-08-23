@@ -8,8 +8,8 @@ states:
             output: button_click
             buttons:
             -   text: 1 أو 2
-                flow: c_wsuv_w_c_off
+                flow: c_wsuv_w_c_off_ar
             -   text: 3 أو 4
-                flow: c_wsuv_w_c_off
+                flow: c_wsuv_w_c_off_ar
             -   text: 5 و أكثر
-                flow: h_recommend_suv_gle_coupe
+                flow: h_recommend_suv_gle_coupe_ar

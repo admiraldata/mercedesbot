@@ -24,6 +24,6 @@ states:
             equal: abudhabi_flow
             notequal: dubai_flow
     abudhabi_flow:
-        flow: e_abudhabi_showrooms
+        flow: e_abudhabi_showrooms_ar
     dubai_flow:
-        flow: e_dubai_showrooms
+        flow: e_dubai_showrooms_ar

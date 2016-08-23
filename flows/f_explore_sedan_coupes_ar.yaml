@@ -10,7 +10,7 @@ states:
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/a_class.jpg
                 buttons:
                 -   text: احجز تجربة قيادة
-                    flow: b_book_test_drive_car_confirmed
+                    flow: b_book_test_drive_car_confirmed_ar
                     data:
                         test_drive_car_confirmed: a_class_sedan
                     scope: flow
@@ -19,7 +19,7 @@ states:
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/cla.jpg
                 buttons:
                 -   text: احجز تجربة قيادة
-                    flow: b_book_test_drive_car_confirmed
+                    flow: b_book_test_drive_car_confirmed_ar
                     data:
                         test_drive_car_confirmed: cla_coupe
                     scope: flow
@@ -28,12 +28,12 @@ states:
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/c_class_group.jpg
                 buttons:
                 -   text: جرب قيادة سيدان
-                    flow: b_book_test_drive_car_confirmed
+                    flow: b_book_test_drive_car_confirmed_ar
                     data:
                         test_drive_car_confirmed: c_class_sedan
                     scope: flow
                 -   text: جرب قيادة كوبيه
-                    flow: b_book_test_drive_car_confirmed
+                    flow: b_book_test_drive_car_confirmed_ar
                     data:
                         test_drive_car_confirmed: c_class_coupe
                     scope: flow
@@ -42,17 +42,17 @@ states:
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/e_class_group.jpg
                 buttons:
                 -   text: جرب قيادة سيدان
-                    flow: b_book_test_drive_car_confirmed
+                    flow: b_book_test_drive_car_confirmed_ar
                     data:
                         test_drive_car_confirmed: e_class_sedan
                     scope: flow
                 -   text: جرب قيادة كوبيه
-                    flow: b_book_test_drive_car_confirmed
+                    flow: b_book_test_drive_car_confirmed_ar
                     data:
                         test_drive_car_confirmed: e_class_coupe
                     scope: flow
                 -   text: جرب قيادة كابريوليه
-                    flow: b_book_test_drive_car_confirmed
+                    flow: b_book_test_drive_car_confirmed_ar
                     data:
                         test_drive_car_confirmed: e_class_cabriolet
                     scope: flow
@@ -61,7 +61,7 @@ states:
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/cls.jpg
                 buttons:
                 -   text: احجز تجربة قيادة
-                    flow: b_book_test_drive_car_confirmed
+                    flow: b_book_test_drive_car_confirmed_ar
                     data:
                         test_drive_car_confirmed: cls_coupe
                     scope: flow
@@ -70,12 +70,12 @@ states:
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/s_class_group.jpg
                 buttons:
                 -   text: جرب قيادة سيدان
-                    flow: b_book_test_drive_car_confirmed
+                    flow: b_book_test_drive_car_confirmed_ar
                     data:
                         test_drive_car_confirmed: s_class_sedan
                     scope: flow
                 -   text: جرب قيادة كوبيه
-                    flow: b_book_test_drive_car_confirmed
+                    flow: b_book_test_drive_car_confirmed_ar
                     data:
                         test_drive_car_confirmed: s_class_coupe
                     scope: flow
@@ -88,6 +88,6 @@ states:
             exists: submit_test_drive_if_needed
             notexists: notexists_state
     notexists_state:
-        flow: a_en_didnotunderstand
+        flow: a_ar_catchall
     submit_test_drive_if_needed:
-        flow: b_book_test_drive_car_confirmed
+        flow: b_book_test_drive_car_confirmed_ar

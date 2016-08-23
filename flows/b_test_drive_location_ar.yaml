@@ -68,20 +68,20 @@ states:
             equal: city_abudhabi
             notequal: country_not_known
     country_uae:
-        flow: d_uae_showroom_selection
+        flow: d_uae_showroom_selection_ar
     city_dxb:
-        flow: e_dubai_showrooms
+        flow: e_dubai_showrooms_ar
     city_abudhabi:
-        flow: e_abudhabi_showrooms
+        flow: e_abudhabi_showrooms_ar
     country_lebanon:
-        flow: e_lebanon_showrooms
+        flow: e_lebanon_showrooms_ar
     country_ksa:
-        flow: d_ksa_showroom_selection
+        flow: d_ksa_showroom_selection_ar
     country_iraq:
-        flow: e_iraq_showrooms
+        flow: e_iraq_showrooms_ar
     country_not_known:
-        flow: b_test_drive_location_restart
+        flow: b_test_drive_location_restart_ar
         return: true
     submit_test_drive:
-        flow: z_submit_test_drive_request
+        flow: z_submit_test_drive_request_ar
         return: true

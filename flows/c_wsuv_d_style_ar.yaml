@@ -9,8 +9,8 @@ states:
             output: button_click
             buttons:
             -   text: الفخامة
-                flow: c_wsuv_d_l_pax
+                flow: c_wsuv_d_l_pax_ar
             -   text: الرياضية
-                flow: c_wsuv_d_s_pax
+                flow: c_wsuv_d_s_pax_ar
             -   text: العملية
-                flow: c_wsuv_d_p_pax
+                flow: c_wsuv_d_p_pax_ar

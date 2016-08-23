@@ -10,6 +10,6 @@ states:
             output: button_click
             buttons:
             -   text: نعم
-                flow: c_which_suv_red
+                flow: c_which_suv_red_ar
             -   text: لا
-                flow: c_which_suv_nred
+                flow: c_which_suv_nred_ar

@@ -8,6 +8,6 @@ states:
             output: button_click
             buttons:
             -   text: اخرج من الدردشة
-                flow: z_exit_flow
+                flow: z_exit_flow_ar
             -   text: Start Questions
-                flow: c_which_suv_red
+                flow: c_which_suv_red_ar

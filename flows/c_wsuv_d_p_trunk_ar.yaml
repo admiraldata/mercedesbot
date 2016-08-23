@@ -8,6 +8,6 @@ states:
             output: button_click
             buttons:
             -   text: نعم
-                flow: h_recommend_suv_glc
+                flow: h_recommend_suv_glc_ar
             -   text: لا
-                flow: h_recommend_suv_gla
+                flow: h_recommend_suv_gla_ar

@@ -8,6 +8,6 @@ states:
             output: button_click
             buttons:
             -   text: كل يوم
-                flow: c_wsuv_d_style
+                flow: c_wsuv_d_style_ar
             -   text: عطلة نهاية الأسبوع
-                flow: c_wsuv_w_c_loc
+                flow: c_wsuv_w_c_loc_ar

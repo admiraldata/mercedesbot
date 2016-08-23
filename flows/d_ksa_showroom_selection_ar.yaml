@@ -8,13 +8,13 @@ states:
             output: button_click
             buttons:
             -   text: جدة
-                flow: e_jeddah_showrooms
+                flow: e_jeddah_showrooms_ar
             -   text: الرياض
-                flow: e_riyadh_showrooms
+                flow: e_riyadh_showrooms_ar
             -   text: الدمام
                 action: next
                 data:
                     test_drive_gdid: 32569
                 scope: flow
     submit_damman:
-        flow: z_submit_test_drive_request
+        flow: z_submit_test_drive_request_ar

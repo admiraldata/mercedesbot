@@ -18,7 +18,7 @@ states:
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/gle_suv.jpg
                 buttons:
                 -   text: احجز تجربة قيادة
-                    flow: b_book_test_drive_car_confirmed
+                    flow: b_book_test_drive_car_confirmed_ar
                     data:
                         test_drive_car_confirmed: gle_suv
                     scope: bot
@@ -35,6 +35,6 @@ states:
             exists: submit_test_drive_if_needed
             notexists: notexists_state
     notexists_state:
-        flow: a_en_didnotunderstand
+        flow: a_ar_catchall
     submit_test_drive_if_needed:
-        flow: b_book_test_drive_car_confirmed
+        flow: b_book_test_drive_car_confirmed_ar

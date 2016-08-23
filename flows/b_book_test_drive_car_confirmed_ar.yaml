@@ -12,7 +12,7 @@ states:
             -   text: 'Yes'
                 action: next
             -   text: 'No'
-                flow: b_other
+                flow: b_other_ar
     start_booking:
         component: meya.text
         properties:
@@ -37,7 +37,7 @@ states:
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/when_buy/0_3.png
                 buttons:
                 -   text: اختار
-                    flow: b_book_test_drive_car_confirmed_plan
+                    flow: b_book_test_drive_car_confirmed_plan_ar
                     data:
                         test_drive_purchase: 0_to_3
                     scope: flow
@@ -45,7 +45,7 @@ states:
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/when_buy/3_6.png
                 buttons:
                 -   text: اختار
-                    flow: b_book_test_drive_car_confirmed_plan
+                    flow: b_book_test_drive_car_confirmed_plan_ar
                     data:
                         test_drive_purchase: 3_to_6
                     scope: flow
@@ -53,7 +53,7 @@ states:
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/when_buy/over_6.png
                 buttons:
                 -   text: اختار
-                    flow: b_book_test_drive_car_confirmed_plan
+                    flow: b_book_test_drive_car_confirmed_plan_ar
                     data:
                         test_drive_purchase: over_6
                     scope: flow
@@ -61,7 +61,7 @@ states:
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/when_buy/not_plan.png
                 buttons:
                 -   text: اختار
-                    flow: b_book_test_drive_car_confirmed_unplan
+                    flow: b_book_test_drive_car_confirmed_unplan_ar
                     data:
                         test_drive_purchase: not_planning
                     scope: flow

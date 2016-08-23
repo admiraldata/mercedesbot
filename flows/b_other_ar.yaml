@@ -7,8 +7,8 @@ states:
             output: button_click
             buttons:
             -   text: نعم، هيا نشترك
-                flow: b_subscribe
+                flow: b_subscribe_ar
             -   text: لا شكرا
                 action: next
     nothing_state:
-        flow: b_exit
+        flow: b_exit_ar

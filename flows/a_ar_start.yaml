@@ -8,6 +8,6 @@ states:
             output: button_click
             buttons:
             -   text: نعم فعلا
-                flow: a_en_start_sure
+                flow: a_ar_start_sure
             -   text: لا
-                flow: a_en_start_unsure
+                flow: a_ar_start_unsure

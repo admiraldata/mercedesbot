@@ -97,19 +97,19 @@ states:
             equal: city_abudhabi
             notequal: country_not_known
     country_uae:
-        flow: d_uae_showroom_selection
+        flow: d_uae_showroom_selection_ar
     city_dxb:
-        flow: e_dubai_showrooms
+        flow: e_dubai_showrooms_ar
     city_abudhabi:
-        flow: e_abudhabi_showrooms
+        flow: e_abudhabi_showrooms_ar
     country_lebanon:
-        flow: e_lebanon_showrooms
+        flow: e_lebanon_showrooms_ar
     country_ksa:
-        flow: d_ksa_showroom_selection
+        flow: d_ksa_showroom_selection_ar
     country_iraq:
-        flow: e_iraq_showrooms
+        flow: e_iraq_showrooms_ar
     submit_test_drive:
-        flow: z_submit_test_drive_request
+        flow: z_submit_test_drive_request_ar
         return: true
     country_not_known:
         component: meya.text_buttons
@@ -120,8 +120,8 @@ states:
             output: button_click
             buttons:
             -   text: 'Yes'
-                flow: a_en_restart
+                flow: a_ar_restart
             -   text: 'No'
-                flow: z_exit_flow
+                flow: z_exit_flow_ar
     exit_flow:
-        flow: z_exit_flow
+        flow: z_exit_flow_ar

@@ -65,4 +65,4 @@ states:
                 -   text: شاهدها على الخريطة
                     url: https://www.google.ae/maps?q=25.1318249088204,56.3303941845516&z=17
     submit_test_drive:
-        flow: z_submit_test_drive_request
+        flow: z_submit_test_drive_request_ar

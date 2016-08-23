@@ -8,8 +8,8 @@ states:
             output: button_click
             buttons:
             -   text: 1 أو 2
-                flow: c_wsuv_d_p_trunk
+                flow: c_wsuv_d_p_trunk_ar
             -   text: 3 أو 4
-                flow: c_wsuv_d_p_lux
+                flow: c_wsuv_d_p_lux_ar
             -   text: 5 و أكثر
-                flow: c_wsuv_d_p_space
+                flow: c_wsuv_d_p_space_ar

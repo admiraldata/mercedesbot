@@ -8,6 +8,6 @@ states:
             output: button_click
             buttons:
             -   text: أية سيارة دفع رباعي تناسبني؟
-                flow: c_which_suv_en
+                flow: c_which_suv_ar
             -   text: أرغب بالاختيار
-                flow: f_explore_suv_crossover
+                flow: f_explore_suv_crossover_ar
