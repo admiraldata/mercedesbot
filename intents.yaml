@@ -36,6 +36,10 @@
     intent: meya.keyword
     settings:
         keyword: a_en_start_unsure
+-   flow: a_enar_get_started
+    intent: meya.keyword
+    settings:
+        keyword: a_enar_get_started
 -   flow: a_live_chat
     intent: meya.keyword
     settings:
