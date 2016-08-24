@@ -25,7 +25,7 @@ states:
                 -   text: زر موقعنا الإلكتروني
                     url: http://mercedesbenzme.com/me/en/suvs/gle/gle/
                 -   text: حاول ثانية
-                    flow: c_which_suv_redo
+                    flow: c_which_suv_redo_ar
     confirm_car_selected:
         component: meya.conditional_exists
         properties:
