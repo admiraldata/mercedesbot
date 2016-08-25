@@ -9,9 +9,9 @@ states:
             mode: quick_reply
             output: button_click
             buttons:
-            -   text: 'Yes'
+            -   text: نعم
                 action: next
-            -   text: 'No'
+            -   text: لا
                 flow: b_other_ar
     start_booking:
         component: meya.text
