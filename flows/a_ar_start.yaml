@@ -6,6 +6,7 @@ states:
             text: مرحبا {{ user.first_name }} لقد وصلت مرسيدس-بنز الشرق الأوسط. جاهز
                 للبدء؟
             output: button_click
+            mode: quick_reply
             buttons:
             -   text: نعم فعلا
                 flow: a_ar_start_sure

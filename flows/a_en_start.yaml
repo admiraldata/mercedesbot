@@ -6,6 +6,7 @@ states:
             text: Hello {{ user.first_name }}, you’re through to Mercedes-Benz Middle
                 East. Ready to chat with me?
             output: button_click
+            mode: quick_reply
             buttons:
             -   text: 'Yes'
                 flow: a_en_start_sure
