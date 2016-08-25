@@ -1,7 +1,7 @@
 name: z_submit_test_drive_request_ar
 states:
     submit_test_drive:
-        component: submit_test_drive_request
+        component: submit_test_drive_request_ar
     pass_thru_state:
         component: meya.pass
     what_to_do_next:
