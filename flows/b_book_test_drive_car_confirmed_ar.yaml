@@ -1,7 +1,7 @@
 name: b_book_test_drive_car_confirmed_ar
 states:
     welcome_block:
-        component: test_drive_car_print
+        component: test_drive_car_print_ar
     continue_check:
         component: meya.text_buttons
         properties:
