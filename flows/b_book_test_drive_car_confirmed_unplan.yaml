@@ -44,11 +44,13 @@ states:
             equal: exit_bot
             notequal: test_drive_contact_num
     test_drive_contact_num:
-        component: meya.input_string
+        component: meya.input_integer
         properties:
             text: Thank you. Can we have your preferred contact number?
             output: test_drive_contact
             scope: flow
+            require_match: true
+            error_message: Sorry, that's not a valid number. Please enter your phone number so we can contact you.
     check_cont_small_exit:
         component: meya.conditional_equal
         properties:
