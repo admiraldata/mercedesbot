@@ -41,9 +41,10 @@
     settings:
         keyword: a_enar_get_started
 -   flow: a_live_chat
-    intent: meya.keyword
+    intent: meya.regex
     settings:
-        keyword: human
+        ignorecase: true
+        pattern: (\bhuman\b)
 -   flow: a_live_chat_ar
     intent: meya.keyword
     settings:
