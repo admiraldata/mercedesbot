@@ -3,3 +3,5 @@ states:
     live_chat:
         component: live_chat_ar
         return: true
+    pausing_bot:
+        component: pause_bot

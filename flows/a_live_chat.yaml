@@ -2,4 +2,5 @@ name: a_live_chat
 states:
     live_chat:
         component: live_chat
-        return: true
+    pausing_bot:
+        component: pause_bot

@@ -6,10 +6,11 @@ from meya import Component
 class HelloWorld(Component):
 
     def start(self):
-        url = 'http://slz.io/mb-bot/api/livechat'
+        url = 'https://slz.io/mb-bot/api/livechat'
         data = {
             'first_name': self.db.user.get('first_name'),
             'last_name': self.db.user.get('last_name'),
+            'user_id': self.db.user.user_id,
             'locale': self.db.user.get('locale'),
             'timezone': self.db.user.get('timezone'),
             'gender': self.db.user.get('gender')
