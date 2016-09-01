@@ -8,13 +8,37 @@ states:
             output: button_click
             buttons:
             -   text: جدة
-                flow: e_jeddah_showrooms_ar
+                action: next
+                data:
+                    ksa_loc: jeddah
             -   text: الرياض
-                flow: e_riyadh_showrooms_ar
+                action: next
+                data:
+                    ksa_loc: riyadh
             -   text: الدمام
                 action: next
                 data:
                     test_drive_gdid: 32569
                 scope: flow
+    check_jeddah:
+        component: meya.conditional_equal
+        properties:
+            value1: '{{ flow.ksa_loc }}'
+            value2: jeddah
+        transitions:
+            equal: select_jeddah
+            notequal: check_riyadh_damman
+    check_riyadh_damman:
+        component: meya.conditional_equal
+        properties:
+            value1: '{{ flow.ksa_loc }}'
+            value2: riyadh
+        transitions:
+            equal: select_riyadh
+            notequal: submit_damman
+    select_jeddah:
+        flow: e_jeddah_showrooms
+    select_riyadh:
+        flow: e_riyadh_showrooms
     submit_damman:
-        flow: z_submit_test_drive_request_ar
+        flow: z_submit_test_drive_request
