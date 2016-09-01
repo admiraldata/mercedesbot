@@ -8,7 +8,7 @@ class HelloWorld(Component):
     def start(self):
         car_label = str(self.db.flow.get('test_drive_car_name'))
         phone_str = str(self.db.flow.get('test_drive_contact'))
-        url = 'http://slz.io/mb-bot/api/testdrives'#'https://requestb.in/xym3x5xy'
+        url = 'http://slz.io/mb-bot/api/testdrives'
         print self.db.flow.get('test_drive_name')
         data = {
             'facebook_msg_id': self.db.user.user_id,
