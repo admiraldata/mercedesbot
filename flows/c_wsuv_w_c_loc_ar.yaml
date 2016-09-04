@@ -9,5 +9,5 @@ states:
             buttons:
             -   text: شوارع المدينة
                 flow: c_wsuv_w_c_style_ar
-            -   text: في المناطق الوعرة
+            -   text: على الطرق الوعرة
                 flow: h_recommend_suv_g_class_ar

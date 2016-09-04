@@ -8,7 +8,7 @@ states:
             output: button_click
             mode: quick_reply
             buttons:
-            -   text: نعم فعلا
+            -   text: نعم
                 flow: a_ar_start_sure
             -   text: لا
                 flow: a_ar_start_unsure

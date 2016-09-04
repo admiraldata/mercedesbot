@@ -7,7 +7,7 @@ states:
                 طرازاتنا؟
             output: button_click
             buttons:
-            -   text: أية سيارة دفع رباعي تناسبني؟
+            -   text: أية SUV تناسبني؟
                 flow: c_which_suv_ar
             -   text: أرغب بالاختيار
                 flow: f_explore_suv_crossover_ar

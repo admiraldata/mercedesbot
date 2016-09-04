@@ -3,7 +3,7 @@ states:
     welcome_state:
         component: meya.text
         properties:
-            text: مع أية سيارة تود حجز تجربة قيادة؟ هيا نبدأ باختيار الطراز الذي تفضله.
+            text: أية سيارة تود حجز تجربة قيادتها؟‎ هيا نبدأ باختيار الطراز الذي تفضله.
     card_state:
         component: meya.cards
         properties:

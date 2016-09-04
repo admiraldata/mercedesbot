@@ -3,8 +3,8 @@ states:
     contact_email:
         component: meya.input_pattern
         properties:
-            text: ربما تغير رأيك إن جربت قيادة واحدة! لأي بريد إلكتروني يمكننا إرسال
-                تأكيد الحجز؟
+            text: ربما تقوم بتغيير رأيك بعد تجربة القيادة. على أي بريد إلكتروني يمكننا
+                إرسال تأكيد الحجز؟
             pattern: (^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)
             output: test_drive_email
             scope: flow

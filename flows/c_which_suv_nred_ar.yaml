@@ -9,5 +9,5 @@ states:
             buttons:
             -   text: اخرج من الدردشة
                 flow: z_exit_flow_ar
-            -   text: Start Questions
+            -   text: ابدأ الأسئلة‎
                 flow: c_which_suv_red_ar

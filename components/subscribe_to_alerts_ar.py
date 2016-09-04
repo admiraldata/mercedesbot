@@ -28,7 +28,6 @@ class HelloWorld(Component):
             headers=headers,
             json=data
         )
-        text="شكرا لك. سأرسل إشعارا مباشرة إلى مسنجرك عندما أملك أنباء مثيرة لأشاركها. أو إن لم ترغب باستلام إشعارات عن جديدنا، فيمكنك مراسلتي بكلمة 'unsubscribe' في أي وقت."
-        message = self.create_message(text=text)
+
 
         return self.respond(message=None, action="next")

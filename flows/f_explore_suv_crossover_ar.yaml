@@ -42,7 +42,7 @@ states:
                         test_drive_car_confirmed: gle_coupe
                     scope: flow
             -   title: GLS
-                text: الفئة S لسيارات الدفع الرباعي.
+                text: شموخ. الريادة. أينما تذهب.‎
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/gls.jpg
                 buttons:
                 -   text: احجز تجربة قيادة
