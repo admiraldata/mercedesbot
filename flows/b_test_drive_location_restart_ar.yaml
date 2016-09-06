@@ -3,8 +3,8 @@ states:
     text_state:
         component: meya.text
         properties:
-            text: خيار خاطئ. يمكن حجز تجربة قيادة في:الإمارات،قطر،البحرين،الكويت،لبنان
-                أو السعودية
+            text: خيار خاطئ. يمكن حجز تجربة قيادة في:الإمارات، قطر، البحرين، الكويت،
+                لبنان، الأردن أو السعودية.‎
     test_drive_location:
         component: meya.input_string
         properties:

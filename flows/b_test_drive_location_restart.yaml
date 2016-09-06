@@ -3,8 +3,8 @@ states:
     text_state:
         component: meya.text
         properties:
-            text: That doesn’t seem right. I can only book test-drives in UAE, Qatar,
-                Bahrain, Kuwait, Lebanon or KSA.
+            text: That doesn’t seem right. I can only book test-drives in United Arab
+                Emirates, Qatar, Bahrain, Kuwait, Lebanon, Jordan or Saudi Arabia.
     test_drive_location:
         component: meya.input_string
         properties:
