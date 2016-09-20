@@ -474,6 +474,10 @@
     intent: meya.keyword
     settings:
         keyword: h_recommend_suv_gls_ar
+-   flow: test_imagereply
+    intent: meya.keyword
+    settings:
+        keyword: imagereply
 -   flow: z_exit_flow
     intent: meya.regex
     settings:
@@ -491,3 +495,19 @@
     intent: meya.keyword
     settings:
         keyword: z_submit_test_drive_request_ar
+-   flow: zz_test_fb_bug
+    intent: meya.keyword
+    settings:
+        keyword: testfbbug
+-   flow: zz_testheight
+    intent: meya.keyword
+    settings:
+        keyword: testheight
+-   flow: zz_testlocation
+    intent: meya.keyword
+    settings:
+        keyword: testlocation
+-   flow: zz_testshare
+    intent: meya.keyword
+    settings:
+        keyword: testshare

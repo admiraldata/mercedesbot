@@ -1,0 +1,16 @@
+name: zz_testlocation
+states:
+    location:
+        component: meya.text_buttons
+        properties:
+            text: Where are you?
+            output: button_click
+            mode: quick_reply
+            buttons:
+            -   type: location
+            -   text: No, thanks
+                action: next
+    done:
+        component: meya.text
+        properties:
+            text: You're entitled to your privacy.
