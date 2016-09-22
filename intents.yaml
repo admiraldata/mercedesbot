@@ -15,7 +15,7 @@
 -   flow: a_ar_start_sure
     intent: meya.keyword
     settings:
-        keyword: a_ar_start_sure
+        keyword: القائمة‎
 -   flow: a_ar_start_unsure
     intent: meya.keyword
     settings:
@@ -145,7 +145,7 @@
 -   flow: b_unsubscribe_ar
     intent: meya.keyword
     settings:
-        keyword: b_unsubscribe_ar
+        keyword: الغاء
 -   flow: c_which_suv_ar
     intent: meya.keyword
     settings:

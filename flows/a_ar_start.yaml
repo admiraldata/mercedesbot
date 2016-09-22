@@ -3,8 +3,8 @@ states:
     text_buttons_state:
         component: meya.text_buttons
         properties:
-            text: مرحبا {{ user.first_name }} لقد وصلت مرسيدس-بنز الشرق الأوسط. جاهز
-                للبدء؟
+            text: مرحبا {{ user.first_name }}، لقد وصلت إلى مرسيدس-بنز الشرق الأوسط‎.
+                هل أنت مستعد للتحدث معي؟
             output: button_click
             mode: quick_reply
             buttons:

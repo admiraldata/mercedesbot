@@ -5,8 +5,8 @@ states:
         properties:
             output: button_click
             elements:
-            -   title: الفئة A
-                text: جرب قوة وتحكما لا مثيل لهم.
+            -   title: A-الفئة
+                text: جرب قوة وتحكما لا مثيل لهم
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/a_class.jpg
                 buttons:
                 -   text: احجز تجربة قيادة
@@ -15,7 +15,7 @@ states:
                         test_drive_car_confirmed: a_class_sedan
                     scope: flow
             -   title: CLA
-                text: البطل الحقيقي لهندسة السيارات الحديثة.
+                text: البطل الحقيقي لهندسة السيارات الحديثة
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/cla.jpg
                 buttons:
                 -   text: احجز تجربة قيادة
@@ -23,8 +23,8 @@ states:
                     data:
                         test_drive_car_confirmed: cla_coupe
                     scope: flow
-            -   title: الفئة C
-                text: تفرض عليك احترامها.
+            -   title: C-الفئة
+                text: تفرض عليك احترامها
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/c_class_group.jpg
                 buttons:
                 -   text: جرب قيادة سيدان
@@ -37,8 +37,8 @@ states:
                     data:
                         test_drive_car_confirmed: c_class_coupe
                     scope: flow
-            -   title: الفئة E
-                text: تخطى مقاييس جديدة في كل مرة.
+            -   title: E-الفئة
+                text: تخطى مقاييس جديدة في كل مرة
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/e_class_group.jpg
                 buttons:
                 -   text: جرب قيادة سيدان
@@ -57,7 +57,7 @@ states:
                         test_drive_car_confirmed: e_class_cabriolet
                     scope: flow
             -   title: CLS
-                text: منسابة و راقية، لكن بقوة متميزة.
+                text: منسابة و راقية، لكن بقوة متميزة
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/cls.jpg
                 buttons:
                 -   text: احجز تجربة قيادة
@@ -65,8 +65,8 @@ states:
                     data:
                         test_drive_car_confirmed: cls_coupe
                     scope: flow
-            -   title: الفئة S
-                text: أيقونة! إنها الفئة S بلا منازع.
+            -   title: S-الفئة
+                text: أيقونة بلا منازع
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/s_class_group.jpg
                 buttons:
                 -   text: جرب قيادة سيدان

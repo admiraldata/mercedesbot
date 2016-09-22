@@ -8,7 +8,7 @@ states:
             buttons:
             -   text: احجز تجربة قيادة
                 flow: b_explore_cars_ar
-            -   text: استكشف الـSUV
+            -   text: سيارات الدفع الرباعي
                 flow: b_explore_suv_ar
             -   text: أية خدمة أخرى؟
                 flow: b_other_ar

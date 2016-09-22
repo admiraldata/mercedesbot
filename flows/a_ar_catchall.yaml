@@ -3,7 +3,7 @@ states:
     sorry_didnt_understand:
         component: meya.text
         properties:
-            text: عذرا، لم أفهم قصدك. اطبع كلمة ‘human’ إن أردت التحدث مع شخص من فريقنا.
+            text: عذرا، لم أفهم قصدك. اطبع كلمة "شخص"‎ إن أردت التحدث مع شخص من فريقنا.
     text_buttons_state:
         component: meya.text_buttons
         properties:
@@ -12,7 +12,7 @@ states:
             buttons:
             -   text: احجز تجربة قيادة
                 flow: b_explore_cars_ar
-            -   text: استكشف طرازاتنا للـ SUV
+            -   text: سيارات الدفع الرباعي
                 flow: b_explore_suv_ar
             -   text: ماذا أيضا؟
                 flow: b_other_ar

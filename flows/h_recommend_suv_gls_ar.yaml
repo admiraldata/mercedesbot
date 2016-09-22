@@ -13,7 +13,7 @@ states:
             output: button_click
             elements:
             -   title: GLS
-                text: شموخ. الريادة. أينما تذهب.‎
+                text: شموخ. الريادة. أينما تذهب
                 item_url: http://mercedesbenzme.com/me/en/suvs/gls/
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/gls.jpg
                 buttons:

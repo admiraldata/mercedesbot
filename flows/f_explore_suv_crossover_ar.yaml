@@ -6,7 +6,7 @@ states:
             output: button_click
             elements:
             -   title: GLA
-                text: صغيرة وسريعة، إنها الأفضل في كل شيء.
+                text: صغيرة وسريعة، إنها الأفضل في كل شيء
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/gla.jpg
                 buttons:
                 -   text: احجز تجربة قيادة
@@ -15,7 +15,7 @@ states:
                         test_drive_car_confirmed: gla_suv
                     scope: flow
             -   title: GLC
-                text: نصعد بمعايير فخامة سيارات الدفع الرباعي في كل مكان.
+                text: نصعد بمعايير فخامة سيارات الدفع الرباعي في كل مكان
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/glc.jpg
                 buttons:
                 -   text: احجز تجربة قيادة
@@ -24,7 +24,7 @@ states:
                         test_drive_car_confirmed: glc_suv
                     scope: flow
             -   title: GLE
-                text: لا وجود للسرعة المحدودة مع الـ GLE.
+                text: لا وجود للسرعة المحدودة
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/gle_group.jpg
                 buttons:
                 -   text: جرب قيادة GLE
@@ -33,7 +33,7 @@ states:
                         test_drive_car_confirmed: gle_suv
                     scope: flow
             -   title: GLE Coupé
-                text: لا ترضى بالمقاييس، حددها!
+                text: لا ترضى بالمقاييس، حددها
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/gle_coupe.jpg
                 buttons:
                 -   text: جرب قيادة كوبيه
@@ -42,7 +42,7 @@ states:
                         test_drive_car_confirmed: gle_coupe
                     scope: flow
             -   title: GLS
-                text: شموخ. الريادة. أينما تذهب.‎
+                text: شموخ. الريادة. أينما تذهب
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/gls.jpg
                 buttons:
                 -   text: احجز تجربة قيادة
@@ -51,7 +51,7 @@ states:
                         test_drive_car_confirmed: gls_suv
                     scope: flow
             -   title: الفئة G
-                text: لأولئك الذين يشقون طريقهم الخاص.
+                text: لأولئك الذين يشقون طريقهم الخاص
                 image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/g_class.jpg
                 buttons:
                 -   text: احجز تجربة قيادة
