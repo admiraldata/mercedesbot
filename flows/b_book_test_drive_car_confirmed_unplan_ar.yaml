@@ -46,11 +46,11 @@ states:
     test_drive_contact_num:
         component: meya.input_integer
         properties:
-            text: شكراً لك. يرجى تذويدنا برقم الجوال الذي تفضله.‎
+            text: شكراً لك. يرجى تزويدنا برقم الجوال الذي تفضله.‎
             output: test_drive_contact
             scope: flow
             require_match: true
-            error_message: عفواً، الرقم الذي قمت بإدخاله غير صحيح، يرجو تذويدنا برقم
+            error_message: عفواً، الرقم الذي قمت بإدخاله غير صحيح، يرجو تزويدنا برقم
                 صحيح لنتمكن من الاتصال بك.‎
     check_cont_small_exit:
         component: meya.conditional_equal
