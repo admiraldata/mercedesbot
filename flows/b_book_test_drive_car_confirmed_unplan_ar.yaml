@@ -1,82 +1,97 @@
 name: b_book_test_drive_car_confirmed_unplan_ar
 states:
-    contact_email:
-        component: meya.input_pattern
-        properties:
-            text: ربما تقوم بتغيير رأيك بعد تجربة القيادة. على أي بريد إلكتروني يمكننا
-                إرسال تأكيد الحجز؟
-            pattern: (^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)
-            output: test_drive_email
-            scope: flow
-            require_match: false
-        transitions:
-            next: test_drive_contact_num
-            no_match: ambiguous_email_answer
-    ambiguous_email_answer:
-        component: meya.input_string
-        properties:
-            text: عفوا، لم أفهم. للاستمرار، يرجى إدخال بريد إلكتروني سليم. أو اطبع
-                كلمة 'خروج'.
-            output: test_drive_email
-            scope: flow
-    check_email_small_exit:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_email }}'
-            value2: exit
-        transitions:
-            equal: exit_bot
-            notequal: check_email_proper_exit
-    check_email_proper_exit:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_email }}'
-            value2: Exit
-        transitions:
-            equal: exit_bot
-            notequal: check_email_caps_exit
-    check_email_caps_exit:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_email }}'
-            value2: EXIT
-        transitions:
-            equal: exit_bot
-            notequal: test_drive_contact_num
-    test_drive_contact_num:
-        component: meya.input_integer
-        properties:
-            text: شكراً لك. يرجى تزويدنا برقم الجوال الذي تفضله.‎
-            output: test_drive_contact
-            scope: flow
-            require_match: true
-            error_message: عفواً، الرقم الذي قمت بإدخاله غير صحيح، يرجو تزويدنا برقم
-                صحيح لنتمكن من الاتصال بك.‎
-    check_cont_small_exit:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_contact }}'
-            value2: exit
-        transitions:
-            equal: exit_bot
-            notequal: check_cont_proper_exit
-    check_cont_proper_exit:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_contact }}'
-            value2: Exit
-        transitions:
-            equal: exit_bot
-            notequal: check_cont_caps_exit
-    check_cont_caps_exit:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_contact }}'
-            value2: EXIT
-        transitions:
-            equal: exit_bot
-            notequal: test_location
-    test_location:
-        flow: b_test_drive_location_ar
-    exit_bot:
-        flow: z_exit_flow_ar
+  contact_email:
+    component: meya.input_pattern
+    properties:
+      text: "\u0631\u0628\u0645\u0627 \u062A\u0642\u0648\u0645 \u0628\u062A\u063A\u064A\
+        \u064A\u0631 \u0631\u0623\u064A\u0643 \u0628\u0639\u062F \u062A\u062C\u0631\
+        \u0628\u0629 \u0627\u0644\u0642\u064A\u0627\u062F\u0629. \u0639\u0644\u0649\
+        \ \u0623\u064A \u0628\u0631\u064A\u062F \u0625\u0644\u0643\u062A\u0631\u0648\
+        \u0646\u064A \u064A\u0645\u0643\u0646\u0646\u0627 \u0625\u0631\u0633\u0627\
+        \u0644 \u062A\u0623\u0643\u064A\u062F \u0627\u0644\u062D\u062C\u0632\u061F"
+      pattern: (^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)
+      output: test_drive_email
+      scope: flow
+      require_match: false
+    transitions:
+      next: test_drive_contact_num
+      no_match: ambiguous_email_answer
+  ambiguous_email_answer:
+    component: meya.input_string
+    properties:
+      text: "\u0639\u0641\u0648\u0627\u060C \u0644\u0645 \u0623\u0641\u0647\u0645\
+        . \u0644\u0644\u0627\u0633\u062A\u0645\u0631\u0627\u0631\u060C \u064A\u0631\
+        \u062C\u0649 \u0625\u062F\u062E\u0627\u0644 \u0628\u0631\u064A\u062F \u0625\
+        \u0644\u0643\u062A\u0631\u0648\u0646\u064A \u0633\u0644\u064A\u0645. \u0623\
+        \u0648 \u0627\u0637\u0628\u0639 \u0643\u0644\u0645\u0629 '\u062E\u0631\u0648\
+        \u062C'."
+      output: test_drive_email
+      scope: flow
+  check_email_small_exit:
+    component: meya.conditional_equal
+    properties:
+      value1: '{{ flow.test_drive_email }}'
+      value2: exit
+    transitions:
+      equal: exit_bot
+      notequal: check_email_proper_exit
+  check_email_proper_exit:
+    component: meya.conditional_equal
+    properties:
+      value1: '{{ flow.test_drive_email }}'
+      value2: Exit
+    transitions:
+      equal: exit_bot
+      notequal: check_email_caps_exit
+  check_email_caps_exit:
+    component: meya.conditional_equal
+    properties:
+      value1: '{{ flow.test_drive_email }}'
+      value2: EXIT
+    transitions:
+      equal: exit_bot
+      notequal: test_drive_contact_num
+  test_drive_contact_num:
+    component: meya.input_integer
+    properties:
+      text: "\u0634\u0643\u0631\u0627\u064B \u0644\u0643. \u064A\u0631\u062C\u0649\
+        \ \u062A\u0632\u0648\u064A\u062F\u0646\u0627 \u0628\u0631\u0642\u0645 \u0627\
+        \u0644\u062C\u0648\u0627\u0644 \u0627\u0644\u0630\u064A \u062A\u0641\u0636\
+        \u0644\u0647.\u200E"
+      output: test_drive_contact
+      scope: flow
+      require_match: true
+      error_message: "\u0639\u0641\u0648\u0627\u064B\u060C \u0627\u0644\u0631\u0642\
+        \u0645 \u0627\u0644\u0630\u064A \u0642\u0645\u062A \u0628\u0625\u062F\u062E\
+        \u0627\u0644\u0647 \u063A\u064A\u0631 \u0635\u062D\u064A\u062D\u060C \u064A\
+        \u0631\u062C\u0648 \u062A\u0632\u0648\u064A\u062F\u0646\u0627 \u0628\u0631\
+        \u0642\u0645 \u0635\u062D\u064A\u062D \u0644\u0646\u062A\u0645\u0643\u0646\
+        \ \u0645\u0646 \u0627\u0644\u0627\u062A\u0635\u0627\u0644 \u0628\u0643.\u200E"
+  check_cont_small_exit:
+    component: meya.conditional_equal
+    properties:
+      value1: '{{ flow.test_drive_contact }}'
+      value2: exit
+    transitions:
+      equal: exit_bot
+      notequal: check_cont_proper_exit
+  check_cont_proper_exit:
+    component: meya.conditional_equal
+    properties:
+      value1: '{{ flow.test_drive_contact }}'
+      value2: Exit
+    transitions:
+      equal: exit_bot
+      notequal: check_cont_caps_exit
+  check_cont_caps_exit:
+    component: meya.conditional_equal
+    properties:
+      value1: '{{ flow.test_drive_contact }}'
+      value2: EXIT
+    transitions:
+      equal: exit_bot
+      notequal: test_location
+  test_location:
+    flow: b_test_drive_location_ar
+  exit_bot:
+    flow: z_exit_flow_ar

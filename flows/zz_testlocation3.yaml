@@ -1,0 +1,8 @@
+name: zz_testlocation3
+states:
+
+
+    report_output_stat:
+        component: meya.text
+        properties:
+            text: Your lat-long is {{ flow.lat }},{{ flow.lng }}. Timezone is {{ flow.timezone }}. City is {{ flow.city }}. State is {{ flow.state }}. Country is {{ flow.country }}.

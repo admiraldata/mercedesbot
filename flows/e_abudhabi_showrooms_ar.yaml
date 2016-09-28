@@ -1,57 +1,79 @@
 name: e_abudhabi_showrooms_ar
 states:
-    welcome:
-        component: meya.text
-        properties:
-            text: يرجى اختيار صالة العرض التي تناسبك أكثر
-    multi_card_state:
-        component: meya.cards
-        properties:
-            output: button_click
-            elements:
-            -   title: شركة الإمارات للسيارات
-                text: أبوظبي، المصفح، M4 شارع 10 (+971  2656 7777)
-                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/abu_dhabi_mussafah.jpg
-                buttons:
-                -   text: اختر هذه الصالة
-                    action: next
-                    data:
-                        test_drive_gdid: 15636
-                    scope: flow
-                -   text: شاهدها على الخريطة
-                    url: https://www.google.ae/maps?q=24.3675823087063,54.5180416474122&z=17
-            -   title: شركة الإمارات للسيارات
-                text: شارع المطار، الشارع الثاني بجوار كارفور (+971  2444 3171)
-                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/abu_dhabi_airport_road.jpg
-                buttons:
-                -   text: اختر هذه الصالة
-                    action: next
-                    data:
-                        test_drive_gdid: 15707
-                    scope: flow
-                -   text: شاهدها على الخريطة
-                    url: https://www.google.ae/maps?q=24.4247421043535,54.4480273323846&z=17
-            -   title: شركة الإمارات للسيارات
-                text: شارع خليفة بن زايد الأول، شارع 122 (+971  3715 7444)
-                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/abu_dhabi_al_ain.jpg
-                buttons:
-                -   text: اختر هذه الصالة
-                    action: next
-                    data:
-                        test_drive_gdid: 15901
-                    scope: flow
-                -   text: شاهدها على الخريطة
-                    url: https://www.google.ae/maps?q=24.1818365154628,55.7556842280682&z=17
-            -   title: شركة الإمارات للسيارات
-                text: المرسى، مارينا مول، أبوظبي (+971  2403 7777 )
-                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/abu_dhabi_al_marina.jpg
-                buttons:
-                -   text: اختر هذه الصالة
-                    action: next
-                    data:
-                        test_drive_gdid: 15902
-                    scope: flow
-                -   text: شاهدها على الخريطة
-                    url: https://www.google.ae/maps?q=24.4754108924645,54.3199201674244&z=17
-    submit_test_drive:
-        flow: z_submit_test_drive_request_ar
+  welcome:
+    component: meya.text
+    properties:
+      text: "\u064A\u0631\u062C\u0649 \u0627\u062E\u062A\u064A\u0627\u0631 \u0635\u0627\
+        \u0644\u0629 \u0627\u0644\u0639\u0631\u0636 \u0627\u0644\u062A\u064A \u062A\
+        \u0646\u0627\u0633\u0628\u0643 \u0623\u0643\u062B\u0631"
+  multi_card_state:
+    component: meya.cards
+    properties:
+      output: button_click
+      elements:
+      - title: "\u0634\u0631\u0643\u0629 \u0627\u0644\u0625\u0645\u0627\u0631\u0627\
+          \u062A \u0644\u0644\u0633\u064A\u0627\u0631\u0627\u062A"
+        text: "\u0623\u0628\u0648\u0638\u0628\u064A\u060C \u0627\u0644\u0645\u0635\
+          \u0641\u062D\u060C M4 \u0634\u0627\u0631\u0639 10 (+971  2656 7777)"
+        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/abu_dhabi_mussafah.jpg
+        buttons:
+        - text: "\u0627\u062E\u062A\u0631 \u0647\u0630\u0647 \u0627\u0644\u0635\u0627\
+            \u0644\u0629"
+          action: next
+          data:
+            test_drive_gdid: 15636
+          scope: flow
+        - text: "\u0634\u0627\u0647\u062F\u0647\u0627 \u0639\u0644\u0649 \u0627\u0644\
+            \u062E\u0631\u064A\u0637\u0629"
+          url: https://www.google.ae/maps?q=24.3675823087063,54.5180416474122&z=17
+      - title: "\u0634\u0631\u0643\u0629 \u0627\u0644\u0625\u0645\u0627\u0631\u0627\
+          \u062A \u0644\u0644\u0633\u064A\u0627\u0631\u0627\u062A"
+        text: "\u0634\u0627\u0631\u0639 \u0627\u0644\u0645\u0637\u0627\u0631\u060C\
+          \ \u0627\u0644\u0634\u0627\u0631\u0639 \u0627\u0644\u062B\u0627\u0646\u064A\
+          \ \u0628\u062C\u0648\u0627\u0631 \u0643\u0627\u0631\u0641\u0648\u0631 (+971\
+          \  2444 3171)"
+        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/abu_dhabi_airport_road.jpg
+        buttons:
+        - text: "\u0627\u062E\u062A\u0631 \u0647\u0630\u0647 \u0627\u0644\u0635\u0627\
+            \u0644\u0629"
+          action: next
+          data:
+            test_drive_gdid: 15707
+          scope: flow
+        - text: "\u0634\u0627\u0647\u062F\u0647\u0627 \u0639\u0644\u0649 \u0627\u0644\
+            \u062E\u0631\u064A\u0637\u0629"
+          url: https://www.google.ae/maps?q=24.4247421043535,54.4480273323846&z=17
+      - title: "\u0634\u0631\u0643\u0629 \u0627\u0644\u0625\u0645\u0627\u0631\u0627\
+          \u062A \u0644\u0644\u0633\u064A\u0627\u0631\u0627\u062A"
+        text: "\u0634\u0627\u0631\u0639 \u062E\u0644\u064A\u0641\u0629 \u0628\u0646\
+          \ \u0632\u0627\u064A\u062F \u0627\u0644\u0623\u0648\u0644\u060C \u0634\u0627\
+          \u0631\u0639 122 (+971  3715 7444)"
+        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/abu_dhabi_al_ain.jpg
+        buttons:
+        - text: "\u0627\u062E\u062A\u0631 \u0647\u0630\u0647 \u0627\u0644\u0635\u0627\
+            \u0644\u0629"
+          action: next
+          data:
+            test_drive_gdid: 15901
+          scope: flow
+        - text: "\u0634\u0627\u0647\u062F\u0647\u0627 \u0639\u0644\u0649 \u0627\u0644\
+            \u062E\u0631\u064A\u0637\u0629"
+          url: https://www.google.ae/maps?q=24.1818365154628,55.7556842280682&z=17
+      - title: "\u0634\u0631\u0643\u0629 \u0627\u0644\u0625\u0645\u0627\u0631\u0627\
+          \u062A \u0644\u0644\u0633\u064A\u0627\u0631\u0627\u062A"
+        text: "\u0627\u0644\u0645\u0631\u0633\u0649\u060C \u0645\u0627\u0631\u064A\
+          \u0646\u0627 \u0645\u0648\u0644\u060C \u0623\u0628\u0648\u0638\u0628\u064A\
+          \ (+971  2403 7777 )"
+        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/abu_dhabi_al_marina.jpg
+        buttons:
+        - text: "\u0627\u062E\u062A\u0631 \u0647\u0630\u0647 \u0627\u0644\u0635\u0627\
+            \u0644\u0629"
+          action: next
+          data:
+            test_drive_gdid: 15902
+          scope: flow
+        - text: "\u0634\u0627\u0647\u062F\u0647\u0627 \u0639\u0644\u0649 \u0627\u0644\
+            \u062E\u0631\u064A\u0637\u0629"
+          url: https://www.google.ae/maps?q=24.4754108924645,54.3199201674244&z=17
+  submit_test_drive:
+    flow: z_submit_test_drive_request_ar

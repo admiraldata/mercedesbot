@@ -1,20 +1,20 @@
 name: zz_testheight
 states:
-    compact:
-        component: meya.text_buttons
-        properties:
-            text: Testing different webview heights...
-            mode: quick_reply
-            buttons:
-            -   text: Compact
-                url: https://meya.ai
-                type: link
-                webview_height_ratio: compact
-            -   text: Tall
-                url: https://meya.ai
-                type: link
-                webview_height_ratio: tall
-            -   text: Full
-                url: https://meya.ai
-                type: link
-                webview_height_ratio: full
+  compact:
+    component: meya.text_buttons
+    properties:
+      text: Testing different webview heights...
+      mode: quick_reply
+      buttons:
+      - text: Compact
+        url: http://www.bostonglobe.com/
+        type: link
+        webview_height_ratio: compact
+      - text: Tall
+        url: http://www.bostonglobe.com/
+        type: link
+        webview_height_ratio: tall
+      - text: Full
+        url: http://www.bostonglobe.com/
+        type: link
+        webview_height_ratio: full

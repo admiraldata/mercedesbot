@@ -1,16 +1,29 @@
 name: zz_testlocation
 states:
-    location:
+
+    welcome:
+        component: meya.text
+        properties:
+            text: Let's get your location
+
+
+    location_space:
         component: meya.text_buttons
         properties:
             text: Where are you?
             output: button_click
             mode: quick_reply
             buttons:
-            -   type: location
-            -   text: No, thanks
-                action: next
-    done:
+                - type: location
+                - text: Type my location
+                  flow: zz_testlocation2
+
+
+    report_output_stat:
         component: meya.text
         properties:
-            text: You're entitled to your privacy.
+            text: Your lat-long is {{ user.lat }},{{ user.lng }}. Timezone is {{ user.timezone }}. City is {{ user.city }}. State is {{ user.state }}. Country is {{ user.country }}.
+
+
+
+

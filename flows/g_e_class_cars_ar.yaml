@@ -1,46 +1,54 @@
 name: g_e_class_cars_ar
 states:
-    sedan_options:
-        component: meya.cards
-        properties:
-            output: button_click
-            elements:
-            -   title: الفئة E - سيدان
-                text: السرعة جوهر أدائها و تصميمها.
-                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/e_sedan.jpg
-                buttons:
-                -   text: احجز تجربة قيادة
-                    flow: b_book_test_drive_car_confirmed_ar
-                    data:
-                        test_drive_car_confirmed: e_class_sedan
-                    scope: flow
-            -   title: الفئة E - كوبيه
-                text: لكل باحث عن السرعة.
-                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/e_coupe.jpg
-                buttons:
-                -   text: احجز تجربة قيادة
-                    flow: b_book_test_drive_car_confirmed_ar
-                    data:
-                        test_drive_car_confirmed: e_class_coupe
-                    scope: flow
-            -   title: الفئة E - كابريوليه
-                text: تجربة ثورية في فئة E.
-                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/e_cabriolet.jpg
-                buttons:
-                -   text: احجز تجربة قيادة
-                    flow: b_book_test_drive_car_confirmed_ar
-                    data:
-                        test_drive_car_confirmed: e_class_cabriolet
-                    scope: flow
-    confirm_car_selected:
-        component: meya.conditional_exists
-        properties:
-            scope: flow
-            key: test_drive_car_confirmed
-        transitions:
-            exists: submit_test_drive_if_needed
-            notexists: notexists_state
-    notexists_state:
-        flow: a_ar_catchall
-    submit_test_drive_if_needed:
-        flow: b_book_test_drive_car_confirmed_ar
+  sedan_options:
+    component: meya.cards
+    properties:
+      output: button_click
+      elements:
+      - title: "\u0627\u0644\u0641\u0626\u0629 E - \u0633\u064A\u062F\u0627\u0646"
+        text: "\u0627\u0644\u0633\u0631\u0639\u0629 \u062C\u0648\u0647\u0631 \u0623\
+          \u062F\u0627\u0626\u0647\u0627 \u0648 \u062A\u0635\u0645\u064A\u0645\u0647\
+          \u0627."
+        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/e_sedan.jpg
+        buttons:
+        - text: "\u0627\u062D\u062C\u0632 \u062A\u062C\u0631\u0628\u0629 \u0642\u064A\
+            \u0627\u062F\u0629"
+          flow: b_book_test_drive_car_confirmed_ar
+          data:
+            test_drive_car_confirmed: e_class_sedan
+          scope: flow
+      - title: "\u0627\u0644\u0641\u0626\u0629 E - \u0643\u0648\u0628\u064A\u0647"
+        text: "\u0644\u0643\u0644 \u0628\u0627\u062D\u062B \u0639\u0646 \u0627\u0644\
+          \u0633\u0631\u0639\u0629."
+        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/e_coupe.jpg
+        buttons:
+        - text: "\u0627\u062D\u062C\u0632 \u062A\u062C\u0631\u0628\u0629 \u0642\u064A\
+            \u0627\u062F\u0629"
+          flow: b_book_test_drive_car_confirmed_ar
+          data:
+            test_drive_car_confirmed: e_class_coupe
+          scope: flow
+      - title: "\u0627\u0644\u0641\u0626\u0629 E - \u0643\u0627\u0628\u0631\u064A\u0648\
+          \u0644\u064A\u0647"
+        text: "\u062A\u062C\u0631\u0628\u0629 \u062B\u0648\u0631\u064A\u0629 \u0641\
+          \u064A \u0641\u0626\u0629 E."
+        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/e_cabriolet.jpg
+        buttons:
+        - text: "\u0627\u062D\u062C\u0632 \u062A\u062C\u0631\u0628\u0629 \u0642\u064A\
+            \u0627\u062F\u0629"
+          flow: b_book_test_drive_car_confirmed_ar
+          data:
+            test_drive_car_confirmed: e_class_cabriolet
+          scope: flow
+  confirm_car_selected:
+    component: meya.conditional_exists
+    properties:
+      scope: flow
+      key: test_drive_car_confirmed
+    transitions:
+      exists: submit_test_drive_if_needed
+      notexists: notexists_state
+  notexists_state:
+    flow: a_ar_catchall
+  submit_test_drive_if_needed:
+    flow: b_book_test_drive_car_confirmed_ar

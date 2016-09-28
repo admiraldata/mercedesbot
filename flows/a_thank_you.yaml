@@ -1,7 +1,7 @@
 name: a_thank_you
 states:
-    random_thank_you:
-        component: meya.random_text
-        properties:
-            responses:
-            - You’re most welcome, {{ user.first_name }}.
+  random_thank_you:
+    component: meya.random_text
+    properties:
+      responses:
+      - "You\u2019re most welcome, {{ user.first_name }}."

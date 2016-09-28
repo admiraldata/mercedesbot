@@ -1,6 +1,6 @@
 name: a_live_chat
 states:
-    live_chat:
-        component: live_chat
-    pausing_bot:
-        component: pause_bot
+  live_chat:
+    component: live_chat
+  pausing_bot:
+    component: pause_bot

@@ -1,12 +1,11 @@
 name: zz_testshare
 states:
-    card_state:
-        component: meya.card
-        properties:
-            title: 'Breaking News: Wicked bear on the loose!'
-            text: Don't worry, Kodiak bears aren't that dangerous. Just keep your
-                distance.
-            image_url: https://upload.wikimedia.org/wikipedia/commons/7/71/2010-kodiak-bear-1.jpg
-            output: button_click
-            buttons:
-            -   type: share
+  card_state:
+    component: meya.card
+    properties:
+      title: 'Breaking News: Wicked bear on the loose!'
+      text: Don't worry, Kodiak bears aren't that dangerous. Just keep your distance.
+      image_url: https://upload.wikimedia.org/wikipedia/commons/7/71/2010-kodiak-bear-1.jpg
+      output: button_click
+      buttons:
+      - type: share

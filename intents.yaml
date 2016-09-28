@@ -507,6 +507,12 @@
     intent: meya.keyword
     settings:
         keyword: testlocation
+-   flow: zz_testlocation2
+    intent: meya.keyword
+    settings:
+        keyword: kljaskdj8981h3dhaiouhaodsad
+-   flow: zz_testlocation3
+    intent: meya.location
 -   flow: zz_testshare
     intent: meya.keyword
     settings:

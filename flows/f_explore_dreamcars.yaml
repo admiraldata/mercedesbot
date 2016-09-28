@@ -1,46 +1,46 @@
 name: f_explore_dreamcars
 states:
-    sedan_options:
-        component: meya.cards
-        properties:
-            output: button_click
-            elements:
-            -   title: SLC
-                text: The embodiment of power.
-                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/slc.jpg
-                buttons:
-                -   text: Book a Test-Drive
-                    flow: b_book_test_drive_car_confirmed
-                    data:
-                        test_drive_car_confirmed: slc
-                    scope: flow
-            -   title: SL
-                text: Sleek, luxurious and unstoppably powerful.
-                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/sl.jpg
-                buttons:
-                -   text: Book a Test-Drive
-                    flow: b_book_test_drive_car_confirmed
-                    data:
-                        test_drive_car_confirmed: sl
-                    scope: flow
-            -   title: AMG-GT
-                text: Turn heads at every turn.
-                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/amt_gt.jpg
-                buttons:
-                -   text: Book a Test-Drive
-                    flow: b_book_test_drive_car_confirmed
-                    data:
-                        test_drive_car_confirmed: amg_gt
-                    scope: flow
-    confirm_car_selected:
-        component: meya.conditional_exists
-        properties:
-            scope: flow
-            key: test_drive_car_confirmed
-        transitions:
-            exists: submit_test_drive_if_needed
-            notexists: notexists_state
-    notexists_state:
-        flow: a_en_catchall
-    submit_test_drive_if_needed:
-        flow: b_book_test_drive_car_confirmed
+  sedan_options:
+    component: meya.cards
+    properties:
+      output: button_click
+      elements:
+      - title: SLC
+        text: The embodiment of power.
+        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/slc.jpg
+        buttons:
+        - text: Book a Test-Drive
+          flow: b_book_test_drive_car_confirmed
+          data:
+            test_drive_car_confirmed: slc
+          scope: flow
+      - title: SL
+        text: Sleek, luxurious and unstoppably powerful.
+        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/sl.jpg
+        buttons:
+        - text: Book a Test-Drive
+          flow: b_book_test_drive_car_confirmed
+          data:
+            test_drive_car_confirmed: sl
+          scope: flow
+      - title: AMG-GT
+        text: Turn heads at every turn.
+        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/amt_gt.jpg
+        buttons:
+        - text: Book a Test-Drive
+          flow: b_book_test_drive_car_confirmed
+          data:
+            test_drive_car_confirmed: amg_gt
+          scope: flow
+  confirm_car_selected:
+    component: meya.conditional_exists
+    properties:
+      scope: flow
+      key: test_drive_car_confirmed
+    transitions:
+      exists: submit_test_drive_if_needed
+      notexists: notexists_state
+  notexists_state:
+    flow: a_en_catchall
+  submit_test_drive_if_needed:
+    flow: b_book_test_drive_car_confirmed

@@ -1,13 +1,16 @@
 name: c_wsuv_d_l_off_ar
 states:
-    question:
-        component: meya.text_buttons
-        properties:
-            text: هل تحب الاستكشاف والقيادة على‎ الطرق‎ الوعرة؟
-            mode: quick_reply
-            output: button_click
-            buttons:
-            -   text: نعم
-                flow: h_recommend_suv_g_class_ar
-            -   text: لا
-                flow: h_recommend_suv_gle_ar
+  question:
+    component: meya.text_buttons
+    properties:
+      text: "\u0647\u0644 \u062A\u062D\u0628 \u0627\u0644\u0627\u0633\u062A\u0643\u0634\
+        \u0627\u0641 \u0648\u0627\u0644\u0642\u064A\u0627\u062F\u0629 \u0639\u0644\
+        \u0649\u200E \u0627\u0644\u0637\u0631\u0642\u200E \u0627\u0644\u0648\u0639\
+        \u0631\u0629\u061F"
+      mode: quick_reply
+      output: button_click
+      buttons:
+      - text: "\u0646\u0639\u0645"
+        flow: h_recommend_suv_g_class_ar
+      - text: "\u0644\u0627"
+        flow: h_recommend_suv_gle_ar

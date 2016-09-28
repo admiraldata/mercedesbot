@@ -1,46 +1,53 @@
 name: f_explore_dreamcars_ar
 states:
-    sedan_options:
-        component: meya.cards
-        properties:
-            output: button_click
-            elements:
-            -   title: SLC
-                text: تجسيد القوة والأداء
-                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/slc.jpg
-                buttons:
-                -   text: احجز تجربة قيادة
-                    flow: b_book_test_drive_car_confirmed_ar
-                    data:
-                        test_drive_car_confirmed: slc
-                    scope: flow
-            -   title: SL
-                text: منسابة، فخمة وقوتها لا تضاهى
-                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/sl.jpg
-                buttons:
-                -   text: احجز تجربة قيادة
-                    flow: b_book_test_drive_car_confirmed_ar
-                    data:
-                        test_drive_car_confirmed: sl
-                    scope: flow
-            -   title: AMG-GT
-                text: اجذب الأنظار في كل زاوية
-                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/amt_gt.jpg
-                buttons:
-                -   text: احجز تجربة قيادة
-                    flow: b_book_test_drive_car_confirmed_ar
-                    data:
-                        test_drive_car_confirmed: amg_gt
-                    scope: flow
-    confirm_car_selected:
-        component: meya.conditional_exists
-        properties:
-            scope: flow
-            key: test_drive_car_confirmed
-        transitions:
-            exists: submit_test_drive_if_needed
-            notexists: notexists_state
-    notexists_state:
-        flow: a_ar_catchall
-    submit_test_drive_if_needed:
-        flow: b_book_test_drive_car_confirmed_ar
+  sedan_options:
+    component: meya.cards
+    properties:
+      output: button_click
+      elements:
+      - title: SLC
+        text: "\u062A\u062C\u0633\u064A\u062F \u0627\u0644\u0642\u0648\u0629 \u0648\
+          \u0627\u0644\u0623\u062F\u0627\u0621"
+        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/slc.jpg
+        buttons:
+        - text: "\u0627\u062D\u062C\u0632 \u062A\u062C\u0631\u0628\u0629 \u0642\u064A\
+            \u0627\u062F\u0629"
+          flow: b_book_test_drive_car_confirmed_ar
+          data:
+            test_drive_car_confirmed: slc
+          scope: flow
+      - title: SL
+        text: "\u0645\u0646\u0633\u0627\u0628\u0629\u060C \u0641\u062E\u0645\u0629\
+          \ \u0648\u0642\u0648\u062A\u0647\u0627 \u0644\u0627 \u062A\u0636\u0627\u0647\
+          \u0649"
+        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/sl.jpg
+        buttons:
+        - text: "\u0627\u062D\u062C\u0632 \u062A\u062C\u0631\u0628\u0629 \u0642\u064A\
+            \u0627\u062F\u0629"
+          flow: b_book_test_drive_car_confirmed_ar
+          data:
+            test_drive_car_confirmed: sl
+          scope: flow
+      - title: AMG-GT
+        text: "\u0627\u062C\u0630\u0628 \u0627\u0644\u0623\u0646\u0638\u0627\u0631\
+          \ \u0641\u064A \u0643\u0644 \u0632\u0627\u0648\u064A\u0629"
+        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/amt_gt.jpg
+        buttons:
+        - text: "\u0627\u062D\u062C\u0632 \u062A\u062C\u0631\u0628\u0629 \u0642\u064A\
+            \u0627\u062F\u0629"
+          flow: b_book_test_drive_car_confirmed_ar
+          data:
+            test_drive_car_confirmed: amg_gt
+          scope: flow
+  confirm_car_selected:
+    component: meya.conditional_exists
+    properties:
+      scope: flow
+      key: test_drive_car_confirmed
+    transitions:
+      exists: submit_test_drive_if_needed
+      notexists: notexists_state
+  notexists_state:
+    flow: a_ar_catchall
+  submit_test_drive_if_needed:
+    flow: b_book_test_drive_car_confirmed_ar

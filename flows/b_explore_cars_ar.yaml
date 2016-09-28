@@ -1,52 +1,65 @@
 name: b_explore_cars_ar
 states:
-    welcome_state:
-        component: meya.text
-        properties:
-            text: هيا نبدأ باختيار الطراز الذي تفضله.
-    card_state:
-        component: meya.cards
-        properties:
-            output: button_click
-            elements:
-            -   title: السيدان والكوبيه
-                text: سيطر على الطريق بثقة تامة
-                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/sedan_coupe.jpg
-                buttons:
-                -   text: اختار
-                    flow: f_explore_sedan_coupes_ar
-            -   title: سيارات الدفع الرباعي و الكروس أوفر
-                text: لقاء الفخامة مع الراحة والسيطرة
-                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/suv_crossover.jpg
-                buttons:
-                -   text: أية SUV تناسبني؟
-                    flow: c_which_suv_ar
-                -   text: اختار
-                    flow: f_explore_suv_crossover_ar
-            -   title: سيارات الحلم
-                text: رمز القوة والأداء
-                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/dreamcars.jpg
-                buttons:
-                -   text: اختار
-                    flow: f_explore_dreamcars_ar
-            -   title: المركبات المتعددة الأغراض
-                text: حيث تزدهر الراحة والثقة
-                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/mpvs.jpg
-                buttons:
-                -   text: احجز تجربة قيادة
-                    action: next
-                    data:
-                        test_drive_car_confirmed: v_class
-                    scope: flow
-    confirm_car_selected:
-        component: meya.conditional_exists
-        properties:
-            scope: flow
-            key: test_drive_car_confirmed
-        transitions:
-            exists: submit_test_drive_if_needed
-            notexists: notexists_state
-    notexists_state:
-        flow: a_ar_catchall
-    submit_test_drive_if_needed:
-        flow: b_book_test_drive_car_confirmed_ar
+  welcome_state:
+    component: meya.text
+    properties:
+      text: "\u0647\u064A\u0627 \u0646\u0628\u062F\u0623 \u0628\u0627\u062E\u062A\u064A\
+        \u0627\u0631 \u0627\u0644\u0637\u0631\u0627\u0632 \u0627\u0644\u0630\u064A\
+        \ \u062A\u0641\u0636\u0644\u0647."
+  card_state:
+    component: meya.cards
+    properties:
+      output: button_click
+      elements:
+      - title: "\u0627\u0644\u0633\u064A\u062F\u0627\u0646 \u0648\u0627\u0644\u0643\
+          \u0648\u0628\u064A\u0647"
+        text: "\u0633\u064A\u0637\u0631 \u0639\u0644\u0649 \u0627\u0644\u0637\u0631\
+          \u064A\u0642 \u0628\u062B\u0642\u0629 \u062A\u0627\u0645\u0629"
+        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/sedan_coupe.jpg
+        buttons:
+        - text: "\u0627\u062E\u062A\u0627\u0631"
+          flow: f_explore_sedan_coupes_ar
+      - title: "\u0633\u064A\u0627\u0631\u0627\u062A \u0627\u0644\u062F\u0641\u0639\
+          \ \u0627\u0644\u0631\u0628\u0627\u0639\u064A \u0648 \u0627\u0644\u0643\u0631\
+          \u0648\u0633 \u0623\u0648\u0641\u0631"
+        text: "\u0644\u0642\u0627\u0621 \u0627\u0644\u0641\u062E\u0627\u0645\u0629\
+          \ \u0645\u0639 \u0627\u0644\u0631\u0627\u062D\u0629 \u0648\u0627\u0644\u0633\
+          \u064A\u0637\u0631\u0629"
+        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/suv_crossover.jpg
+        buttons:
+        - text: "\u0623\u064A\u0629 SUV \u062A\u0646\u0627\u0633\u0628\u0646\u064A\
+            \u061F"
+          flow: c_which_suv_ar
+        - text: "\u0627\u062E\u062A\u0627\u0631"
+          flow: f_explore_suv_crossover_ar
+      - title: "\u0633\u064A\u0627\u0631\u0627\u062A \u0627\u0644\u062D\u0644\u0645"
+        text: "\u0631\u0645\u0632 \u0627\u0644\u0642\u0648\u0629 \u0648\u0627\u0644\
+          \u0623\u062F\u0627\u0621"
+        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/dreamcars.jpg
+        buttons:
+        - text: "\u0627\u062E\u062A\u0627\u0631"
+          flow: f_explore_dreamcars_ar
+      - title: "\u0627\u0644\u0645\u0631\u0643\u0628\u0627\u062A \u0627\u0644\u0645\
+          \u062A\u0639\u062F\u062F\u0629 \u0627\u0644\u0623\u063A\u0631\u0627\u0636"
+        text: "\u062D\u064A\u062B \u062A\u0632\u062F\u0647\u0631 \u0627\u0644\u0631\
+          \u0627\u062D\u0629 \u0648\u0627\u0644\u062B\u0642\u0629"
+        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/mpvs.jpg
+        buttons:
+        - text: "\u0627\u062D\u062C\u0632 \u062A\u062C\u0631\u0628\u0629 \u0642\u064A\
+            \u0627\u062F\u0629"
+          action: next
+          data:
+            test_drive_car_confirmed: v_class
+          scope: flow
+  confirm_car_selected:
+    component: meya.conditional_exists
+    properties:
+      scope: flow
+      key: test_drive_car_confirmed
+    transitions:
+      exists: submit_test_drive_if_needed
+      notexists: notexists_state
+  notexists_state:
+    flow: a_ar_catchall
+  submit_test_drive_if_needed:
+    flow: b_book_test_drive_car_confirmed_ar

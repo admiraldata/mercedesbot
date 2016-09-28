@@ -1,4 +1,4 @@
 name: b_exit_ar
 states:
-    nothing_state:
-        flow: z_exit_flow_ar
+  nothing_state:
+    flow: z_exit_flow_ar

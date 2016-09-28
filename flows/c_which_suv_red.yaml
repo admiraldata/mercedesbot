@@ -1,8 +1,8 @@
 name: c_which_suv_red
 states:
-    great:
-        component: meya.text
-        properties:
-            text: Great.
-    start_questions:
-        flow: c_wsuv_freq
+  great:
+    component: meya.text
+    properties:
+      text: Great.
+  start_questions:
+    flow: c_wsuv_freq

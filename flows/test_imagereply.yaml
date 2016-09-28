@@ -1,19 +1,19 @@
 name: test_imagereply
 states:
-    text_buttons_state:
-        component: meya.text_buttons
-        properties:
-            text: What's your favorite currency?
-            output: currency
-            mode: quick_reply
-            buttons:
-            -   text: Bitcoin
-                image_url: https://bitstickers.net/wp-content/uploads/2013/12/btc-mono1.jpg
-                action: next
-            -   text: US Dollar
-                image_url: http://forexsignalsdirect.com/wp-content/uploads/2015/03/dollar.jpg
-                action: next
-    next_state:
-        component: meya.text
-        properties:
-            text: Me too! {{ flow.currency }} is my favorite.
+  text_buttons_state:
+    component: meya.text_buttons
+    properties:
+      text: What's your favorite currency?
+      output: currency
+      mode: quick_reply
+      buttons:
+      - text: Bitcoin
+        image_url: https://bitstickers.net/wp-content/uploads/2013/12/btc-mono1.jpg
+        action: next
+      - text: US Dollar
+        image_url: http://forexsignalsdirect.com/wp-content/uploads/2015/03/dollar.jpg
+        action: next
+  next_state:
+    component: meya.text
+    properties:
+      text: Me too! {{ flow.currency }} is my favorite.

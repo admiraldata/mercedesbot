@@ -1,88 +1,87 @@
 name: b_test_drive_location
 states:
-    test_drive_location:
-        component: meya.input_string
-        properties:
-            text: Lastly, in which Middle Eastern country would you like to book your
-                test-drive?
-            output: test_drive_country
-            scope: flow
-    pass_info_to_component:
-        component: test_drive_country_lkup
-        transitions:
-            next: check_if_we_got_gdid
-            notspecified: country_not_known
-    check_if_we_got_gdid:
-        component: meya.conditional_exists
-        properties:
-            scope: flow
-            key: test_drive_gdid
-        transitions:
-            exists: submit_test_drive
-            notexists: check_uae
-    check_uae:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_country }}'
-            value2: uae
-        transitions:
-            equal: country_uae
-            notequal: check_iraq
-    check_iraq:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_country }}'
-            value2: iraq
-        transitions:
-            equal: country_iraq
-            notequal: check_ksa
-    check_ksa:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_country }}'
-            value2: ksa
-        transitions:
-            equal: country_ksa
-            notequal: check_lebanon
-    check_lebanon:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_country }}'
-            value2: lebanon
-        transitions:
-            equal: country_lebanon
-            notequal: check_dxb
-    check_dxb:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_country }}'
-            value2: dubai
-        transitions:
-            equal: city_dxb
-            notequal: check_abudhabi
-    check_abudhabi:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_country }}'
-            value2: abudhabi
-        transitions:
-            equal: city_abudhabi
-            notequal: country_not_known
-    country_uae:
-        flow: d_uae_showroom_selection
-    city_dxb:
-        flow: e_dubai_showrooms
-    city_abudhabi:
-        flow: e_abudhabi_showrooms
-    country_lebanon:
-        flow: e_lebanon_showrooms
-    country_ksa:
-        flow: d_ksa_showroom_selection
-    country_iraq:
-        flow: e_iraq_showrooms
-    country_not_known:
-        flow: b_test_drive_location_restart
-        return: true
-    submit_test_drive:
-        flow: z_submit_test_drive_request
-        return: true
+  test_drive_location:
+    component: meya.input_string
+    properties:
+      text: Lastly, in which Middle Eastern country would you like to book your test-drive?
+      output: test_drive_country
+      scope: flow
+  pass_info_to_component:
+    component: test_drive_country_lkup
+    transitions:
+      next: check_if_we_got_gdid
+      notspecified: country_not_known
+  check_if_we_got_gdid:
+    component: meya.conditional_exists
+    properties:
+      scope: flow
+      key: test_drive_gdid
+    transitions:
+      exists: submit_test_drive
+      notexists: check_uae
+  check_uae:
+    component: meya.conditional_equal
+    properties:
+      value1: '{{ flow.test_drive_country }}'
+      value2: uae
+    transitions:
+      equal: country_uae
+      notequal: check_iraq
+  check_iraq:
+    component: meya.conditional_equal
+    properties:
+      value1: '{{ flow.test_drive_country }}'
+      value2: iraq
+    transitions:
+      equal: country_iraq
+      notequal: check_ksa
+  check_ksa:
+    component: meya.conditional_equal
+    properties:
+      value1: '{{ flow.test_drive_country }}'
+      value2: ksa
+    transitions:
+      equal: country_ksa
+      notequal: check_lebanon
+  check_lebanon:
+    component: meya.conditional_equal
+    properties:
+      value1: '{{ flow.test_drive_country }}'
+      value2: lebanon
+    transitions:
+      equal: country_lebanon
+      notequal: check_dxb
+  check_dxb:
+    component: meya.conditional_equal
+    properties:
+      value1: '{{ flow.test_drive_country }}'
+      value2: dubai
+    transitions:
+      equal: city_dxb
+      notequal: check_abudhabi
+  check_abudhabi:
+    component: meya.conditional_equal
+    properties:
+      value1: '{{ flow.test_drive_country }}'
+      value2: abudhabi
+    transitions:
+      equal: city_abudhabi
+      notequal: country_not_known
+  country_uae:
+    flow: d_uae_showroom_selection
+  city_dxb:
+    flow: e_dubai_showrooms
+  city_abudhabi:
+    flow: e_abudhabi_showrooms
+  country_lebanon:
+    flow: e_lebanon_showrooms
+  country_ksa:
+    flow: d_ksa_showroom_selection
+  country_iraq:
+    flow: e_iraq_showrooms
+  country_not_known:
+    flow: b_test_drive_location_restart
+    return: true
+  submit_test_drive:
+    flow: z_submit_test_drive_request
+    return: true

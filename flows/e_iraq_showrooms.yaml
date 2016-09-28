@@ -1,35 +1,35 @@
 name: e_iraq_showrooms
 states:
-    welcome:
-        component: meya.text
-        properties:
-            text: Please select the showroom most convenient for you
-    multi_card_state:
-        component: meya.cards
-        properties:
-            output: button_click
-            elements:
-            -   title: BrightCastle Motors
-                text: 100 Meter Road,Erbil, Iraq (+964 750 1000 100)
-                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/iraq_100_meter_road.jpg
-                buttons:
-                -   text: Pick this showroom
-                    action: next
-                    data:
-                        test_drive_gdid: 36271
-                    scope: flow
-                -   text: View on Map
-                    url: https://www.google.ae/maps?q=36.1604047625373,43.9702118331352&z=17
-            -   title: BrightCastle Motors
-                text: Sulaimaniya Kurdistan, Iraq
-                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/iraq_sulaimaniya.jpg
-                buttons:
-                -   text: Pick this showroom
-                    action: next
-                    data:
-                        test_drive_gdid: 47433
-                    scope: flow
-                -   text: View on Map
-                    url: https://www.google.ae/maps?q=35.550681728405,45.4074933248535&z=17
-    submit_test_drive:
-        flow: z_submit_test_drive_request
+  welcome:
+    component: meya.text
+    properties:
+      text: Please select the showroom most convenient for you
+  multi_card_state:
+    component: meya.cards
+    properties:
+      output: button_click
+      elements:
+      - title: BrightCastle Motors
+        text: 100 Meter Road,Erbil, Iraq (+964 750 1000 100)
+        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/iraq_100_meter_road.jpg
+        buttons:
+        - text: Pick this showroom
+          action: next
+          data:
+            test_drive_gdid: 36271
+          scope: flow
+        - text: View on Map
+          url: https://www.google.ae/maps?q=36.1604047625373,43.9702118331352&z=17
+      - title: BrightCastle Motors
+        text: Sulaimaniya Kurdistan, Iraq
+        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/iraq_sulaimaniya.jpg
+        buttons:
+        - text: Pick this showroom
+          action: next
+          data:
+            test_drive_gdid: 47433
+          scope: flow
+        - text: View on Map
+          url: https://www.google.ae/maps?q=35.550681728405,45.4074933248535&z=17
+  submit_test_drive:
+    flow: z_submit_test_drive_request

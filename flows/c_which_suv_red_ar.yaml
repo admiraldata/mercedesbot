@@ -1,8 +1,8 @@
 name: c_which_suv_red_ar
 states:
-    great:
-        component: meya.text
-        properties:
-            text: عظيم‎
-    start_questions:
-        flow: c_wsuv_freq_ar
+  great:
+    component: meya.text
+    properties:
+      text: "\u0639\u0638\u064A\u0645\u200E"
+  start_questions:
+    flow: c_wsuv_freq_ar

@@ -1,0 +1,15 @@
+name: zz_testlocation2
+states:
+
+    input_location_state:
+        component: meya.input_location
+        properties:
+            text: Where do you want this?
+            output: usrlocinp
+            scope: user
+
+
+    report_text:
+        component: meya.text
+        properties:
+            text: You entered {{ user.usrlocinp }}. Your lat-long is {{ user.lat }},{{ user.lng }}. Timezone is {{ user.timezone }}. City is {{ user.city }}. State is {{ user.state }}. Country is {{ user.country }}.

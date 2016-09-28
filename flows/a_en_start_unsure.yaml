@@ -1,7 +1,7 @@
 name: a_en_start_unsure
 states:
-    no_state:
-        component: meya.text
-        properties:
-            text: If you change your mind, you can view my chat options anytime by
-                typing ‘Menu’.
+  no_state:
+    component: meya.text
+    properties:
+      text: "If you change your mind, you can view my chat options anytime by typing\
+        \ \u2018Menu\u2019."

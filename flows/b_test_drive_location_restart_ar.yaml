@@ -1,127 +1,138 @@
 name: b_test_drive_location_restart_ar
 states:
-    text_state:
-        component: meya.text
-        properties:
-            text: خيار خاطئ. يمكن حجز تجربة قيادة في:الإمارات، قطر، البحرين، الكويت،
-                لبنان، الأردن أو السعودية.‎
-    test_drive_location:
-        component: meya.input_string
-        properties:
-            text: نرجو اختيار واحدة أو طباعة كلمة ’خروج ‘.
-            output: test_drive_country
-            scope: flow
-    check_small_exit:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_country }}'
-            value2: exit
-        transitions:
-            equal: exit_flow
-            notequal: check_caps_exit
-    check_caps_exit:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_country }}'
-            value2: EXIT
-        transitions:
-            equal: exit_flow
-            notequal: check_proper_exit
-    check_proper_exit:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_country }}'
-            value2: Exit
-        transitions:
-            equal: exit_flow
-            notequal: pass_info_to_component
-    pass_info_to_component:
-        component: test_drive_country_lkup
-        transitions:
-            next: check_if_we_got_gdid
-            notspecified: country_not_known
-    check_if_we_got_gdid:
-        component: meya.conditional_exists
-        properties:
-            scope: flow
-            key: test_drive_gdid
-        transitions:
-            exists: submit_test_drive
-            notexists: check_uae
-    check_uae:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_country }}'
-            value2: uae
-        transitions:
-            equal: country_uae
-            notequal: check_iraq
-    check_iraq:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_country }}'
-            value2: iraq
-        transitions:
-            equal: country_iraq
-            notequal: check_ksa
-    check_ksa:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_country }}'
-            value2: ksa
-        transitions:
-            equal: country_ksa
-            notequal: check_lebanon
-    check_lebanon:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_country }}'
-            value2: lebanon
-        transitions:
-            equal: country_lebanon
-            notequal: check_dxb
-    check_dxb:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_country }}'
-            value2: dubai
-        transitions:
-            equal: city_dxb
-            notequal: check_abudhabi
-    check_abudhabi:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_country }}'
-            value2: abudhabi
-        transitions:
-            equal: city_abudhabi
-            notequal: country_not_known
-    country_uae:
-        flow: d_uae_showroom_selection_ar
-    city_dxb:
-        flow: e_dubai_showrooms_ar
-    city_abudhabi:
-        flow: e_abudhabi_showrooms_ar
-    country_lebanon:
-        flow: e_lebanon_showrooms_ar
-    country_ksa:
-        flow: d_ksa_showroom_selection_ar
-    country_iraq:
-        flow: e_iraq_showrooms_ar
-    submit_test_drive:
-        flow: z_submit_test_drive_request_ar
-        return: true
-    country_not_known:
-        component: meya.text_buttons
-        properties:
-            text: عفوا، يبدو أني معطل.أبلغت مبرمجي بهذا الخطأ.هل يمكنني أخذك للقائمة
-                الرئيسية؟
-            mode: quick_reply
-            output: button_click
-            buttons:
-            -   text: 'Yes'
-                flow: a_ar_restart
-            -   text: 'No'
-                flow: z_exit_flow_ar
-    exit_flow:
+  text_state:
+    component: meya.text
+    properties:
+      text: "\u062E\u064A\u0627\u0631 \u062E\u0627\u0637\u0626. \u064A\u0645\u0643\
+        \u0646 \u062D\u062C\u0632 \u062A\u062C\u0631\u0628\u0629 \u0642\u064A\u0627\
+        \u062F\u0629 \u0641\u064A:\u0627\u0644\u0625\u0645\u0627\u0631\u0627\u062A\
+        \u060C \u0642\u0637\u0631\u060C \u0627\u0644\u0628\u062D\u0631\u064A\u0646\
+        \u060C \u0627\u0644\u0643\u0648\u064A\u062A\u060C \u0644\u0628\u0646\u0627\
+        \u0646\u060C \u0627\u0644\u0623\u0631\u062F\u0646 \u0623\u0648 \u0627\u0644\
+        \u0633\u0639\u0648\u062F\u064A\u0629.\u200E"
+  test_drive_location:
+    component: meya.input_string
+    properties:
+      text: "\u0646\u0631\u062C\u0648 \u0627\u062E\u062A\u064A\u0627\u0631 \u0648\u0627\
+        \u062D\u062F\u0629 \u0623\u0648 \u0637\u0628\u0627\u0639\u0629 \u0643\u0644\
+        \u0645\u0629 \u2019\u062E\u0631\u0648\u062C \u2018."
+      output: test_drive_country
+      scope: flow
+  check_small_exit:
+    component: meya.conditional_equal
+    properties:
+      value1: '{{ flow.test_drive_country }}'
+      value2: exit
+    transitions:
+      equal: exit_flow
+      notequal: check_caps_exit
+  check_caps_exit:
+    component: meya.conditional_equal
+    properties:
+      value1: '{{ flow.test_drive_country }}'
+      value2: EXIT
+    transitions:
+      equal: exit_flow
+      notequal: check_proper_exit
+  check_proper_exit:
+    component: meya.conditional_equal
+    properties:
+      value1: '{{ flow.test_drive_country }}'
+      value2: Exit
+    transitions:
+      equal: exit_flow
+      notequal: pass_info_to_component
+  pass_info_to_component:
+    component: test_drive_country_lkup
+    transitions:
+      next: check_if_we_got_gdid
+      notspecified: country_not_known
+  check_if_we_got_gdid:
+    component: meya.conditional_exists
+    properties:
+      scope: flow
+      key: test_drive_gdid
+    transitions:
+      exists: submit_test_drive
+      notexists: check_uae
+  check_uae:
+    component: meya.conditional_equal
+    properties:
+      value1: '{{ flow.test_drive_country }}'
+      value2: uae
+    transitions:
+      equal: country_uae
+      notequal: check_iraq
+  check_iraq:
+    component: meya.conditional_equal
+    properties:
+      value1: '{{ flow.test_drive_country }}'
+      value2: iraq
+    transitions:
+      equal: country_iraq
+      notequal: check_ksa
+  check_ksa:
+    component: meya.conditional_equal
+    properties:
+      value1: '{{ flow.test_drive_country }}'
+      value2: ksa
+    transitions:
+      equal: country_ksa
+      notequal: check_lebanon
+  check_lebanon:
+    component: meya.conditional_equal
+    properties:
+      value1: '{{ flow.test_drive_country }}'
+      value2: lebanon
+    transitions:
+      equal: country_lebanon
+      notequal: check_dxb
+  check_dxb:
+    component: meya.conditional_equal
+    properties:
+      value1: '{{ flow.test_drive_country }}'
+      value2: dubai
+    transitions:
+      equal: city_dxb
+      notequal: check_abudhabi
+  check_abudhabi:
+    component: meya.conditional_equal
+    properties:
+      value1: '{{ flow.test_drive_country }}'
+      value2: abudhabi
+    transitions:
+      equal: city_abudhabi
+      notequal: country_not_known
+  country_uae:
+    flow: d_uae_showroom_selection_ar
+  city_dxb:
+    flow: e_dubai_showrooms_ar
+  city_abudhabi:
+    flow: e_abudhabi_showrooms_ar
+  country_lebanon:
+    flow: e_lebanon_showrooms_ar
+  country_ksa:
+    flow: d_ksa_showroom_selection_ar
+  country_iraq:
+    flow: e_iraq_showrooms_ar
+  submit_test_drive:
+    flow: z_submit_test_drive_request_ar
+    return: true
+  country_not_known:
+    component: meya.text_buttons
+    properties:
+      text: "\u0639\u0641\u0648\u0627\u060C \u064A\u0628\u062F\u0648 \u0623\u0646\u064A\
+        \ \u0645\u0639\u0637\u0644.\u0623\u0628\u0644\u063A\u062A \u0645\u0628\u0631\
+        \u0645\u062C\u064A \u0628\u0647\u0630\u0627 \u0627\u0644\u062E\u0637\u0623\
+        .\u0647\u0644 \u064A\u0645\u0643\u0646\u0646\u064A \u0623\u062E\u0630\u0643\
+        \ \u0644\u0644\u0642\u0627\u0626\u0645\u0629 \u0627\u0644\u0631\u0626\u064A\
+        \u0633\u064A\u0629\u061F"
+      mode: quick_reply
+      output: button_click
+      buttons:
+      - text: 'Yes'
+        flow: a_ar_restart
+      - text: 'No'
         flow: z_exit_flow_ar
+  exit_flow:
+    flow: z_exit_flow_ar

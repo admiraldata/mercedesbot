@@ -1,7 +1,7 @@
 name: a_live_chat_ar
 states:
-    live_chat:
-        component: live_chat_ar
-        return: true
-    pausing_bot:
-        component: pause_bot
+  live_chat:
+    component: live_chat_ar
+    return: true
+  pausing_bot:
+    component: pause_bot
