@@ -1,0 +1,14 @@
+name: zz_2mb_vid
+states:
+
+
+    welcome:
+        component: meya.text
+        properties:
+            text: 'Now loading 2mb video'
+
+
+    video_attachment_state:
+        component: meya.video
+        properties:
+            url: 'https://socialize-bots.s3.amazonaws.com/mercedes/videos/2mb.mp4'

@@ -1,0 +1,20 @@
+name: zz_3mb_vid
+states:
+
+
+    welcome:
+        component: meya.text
+        properties:
+            text: 'Now loading 3mb video'
+
+
+    video_attachment_state:
+        component: meya.video
+        properties:
+            url: 'https://socialize-bots.s3.amazonaws.com/mercedes/videos/3mb.mp4'
+
+
+    complete:
+        component: meya.text
+        properties:
+            text: 'Video load complete'

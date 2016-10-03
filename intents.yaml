@@ -495,10 +495,34 @@
     intent: meya.keyword
     settings:
         keyword: z_submit_test_drive_request_ar
+-   flow: zz_1mb_vid
+    intent: meya.keyword
+    settings:
+        keyword: zz1mb
+-   flow: zz_2mb_vid
+    intent: meya.keyword
+    settings:
+        keyword: zz2mb
+-   flow: zz_3mb_vid
+    intent: meya.keyword
+    settings:
+        keyword: zz3mb
+-   flow: zz_4mb_vid
+    intent: meya.keyword
+    settings:
+        keyword: zz4mb
 -   flow: zz_test_fb_bug
     intent: meya.keyword
     settings:
         keyword: testfbbug
+-   flow: zz_test_video
+    intent: meya.keyword
+    settings:
+        keyword: testvideo
+-   flow: zz_test_video_embed
+    intent: meya.keyword
+    settings:
+        keyword: testvideoembed
 -   flow: zz_testheight
     intent: meya.keyword
     settings:

@@ -1,0 +1,73 @@
+name: zz_test_video
+states:
+
+
+    select_size:
+        component: meya.cards
+        properties:
+            output: button_click
+            elements:
+                - title: '1 MB Video'
+                  text: '1 MB Video'
+                  image_url: "http://www.iconsdb.com/icons/preview/gray/video-play-3-xxl.png"
+                  buttons:
+                    - text: '1.2 MB'
+                      flow: zz_1mb_vid
+                - title: '2 MB Video'
+                  text: '2 MB Video'
+                  image_url: "http://www.iconsdb.com/icons/preview/gray/video-play-3-xxl.png"
+                  buttons:
+                    - text: '2.1 MB'
+                      flow: zz_2mb_vid
+                - title: '3 MB Video'
+                  text: '3 MB Video'
+                  image_url: "http://www.iconsdb.com/icons/preview/gray/video-play-3-xxl.png"
+                  buttons:
+                    - text: '3.3 MB'
+                      flow: zz_3mb_vid
+                - title: '4 MB Video'
+                  text: '4 MB Video'
+                  image_url: "http://www.iconsdb.com/icons/preview/gray/video-play-3-xxl.png"
+                  buttons:
+                    - text: '4.2 MB'
+                      flow: zz_4mb_vid
+                - title: 'Larger'
+                  text: 'Larger Videos'
+                  image_url: "http://www.iconsdb.com/icons/preview/gray/video-play-3-xxl.png"
+                  buttons:
+                    - text: 'Larger'
+                      action: next
+
+    start1:
+        component: meya.text_buttons
+        properties:
+            text: 'Click next to load 360p video'
+            output: button_click
+            buttons:
+                - text: 'Next 5.4mb'
+                  action: next
+
+    low_res:
+        component: meya.video
+        properties:
+            url: 'https://socialize-bots.s3.amazonaws.com/mercedes/videos/360p.mp4'
+
+
+    start2:
+        component: meya.text_buttons
+        properties:
+            text: 'Click next to load 720p video'
+            output: button_click
+            buttons:
+                - text: 'Next 12.8mb'
+                  action: next
+
+    low_res:
+        component: meya.video
+        properties:
+            url: 'https://socialize-bots.s3.amazonaws.com/mercedes/videos/720p.mp4'
+
+
+
+
+
