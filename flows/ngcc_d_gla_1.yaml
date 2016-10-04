@@ -28,13 +28,13 @@ states:
         properties:
             text: 'Your in-vehicle navigation system has mapped out 2 possible routes for the mission. Which would you like to take?'
 
-    image_buttons_state:
+    which_missions:
         component: meya.image_buttons
         properties:
             image_url: "https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/gla_navigation.png"
             output: button_click
             buttons:
                 - text: 'The rocky route!'
-                  action: ngcc_d_gla_2_rocky
+                  flow: ngcc_d_gla_2_rocky
                 - text: 'The city streets'
-                  action: ngcc_d_gla_2_city
+                  flow: ngcc_d_gla_2_city

@@ -1,0 +1,12 @@
+name: ngcc_e_aclass_3c
+states:
+    threec_img:
+        component: meya.image
+        properties:
+            image_url: 'https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/aclass_brake_reverse.png'
+    threec_text:
+        component: meya.text
+        properties:
+            text: 'Whoa, you really are the dangerous type! Luckily the A-Class Reversing Camera made your dangerous feat a little easier. Risky call but great job nonetheless.'
+    continuetofour:
+        flow: ngcc_e_aclass_4

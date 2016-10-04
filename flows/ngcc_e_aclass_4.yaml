@@ -1,0 +1,35 @@
+name: ngcc_e_aclass_4
+states:
+
+    ready_to_go:
+        component: meya.text_buttons
+        properties:
+            text: 'There’s a catch though, your followers now know which car you’re in! Do you want to resume in the A-Class or request another vehicle?'
+            output: button_click
+            buttons:
+                - text: 'Risk it'
+                  action: next
+                - text: 'Pick new car'
+                  flow: ngcc_c_ride
+
+
+    trust_gut:
+        component: meya.text
+        properties:
+            text: 'A driver who trusts their gut! No wonder they picked you for the job.'
+
+    unknown_call_image:
+        component: meya.image
+        properties:
+            image_url: 'https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/gla_phone.jpg'
+
+    unknown_call_question:
+        component: meya.text_buttons
+        properties:
+            text: 'You receive a call from an unknown number. It could be from the client? Then again, someone could be tracking your phone. Will you pick up?'
+            output: button_click
+            buttons:
+                - text: 'Yes'
+                  flow: ngcc_e_aclass_5a
+                - text: 'No'
+                  flow: ngcc_e_aclass_5b

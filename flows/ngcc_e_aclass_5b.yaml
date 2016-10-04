@@ -1,0 +1,11 @@
+name: ngcc_e_aclass_5b
+states:
+
+    5b_first:
+        component: meya.text
+        properties:
+            text: 'Smart choice, you’ve only just lost them, probably best to keep your position a secret.'
+
+    5b_options:
+        flow: ngcc_e_aclass_6
+        return: true

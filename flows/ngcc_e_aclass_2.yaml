@@ -1,0 +1,48 @@
+name: ngcc_e_aclass_2
+states:
+
+    city_start:
+        component: meya.text
+        properties:
+            text: 'Smart choice, the A-Class truly is the king of the streets. You’ve got a long ride ahead and a killer Harman Kardon® Logic 7® 12 speaker surround sound system to pass the time.'
+
+
+    aclass_surround:
+        component: meya.image
+        properties:
+            image_url: 'https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/aclass_surround.png'
+
+
+    ready_to_accelerate:
+        component: meya.text_buttons
+        properties:
+            text: 'Today seems like a fitting day to push your speed to the limit, want to see how fast you can go?'
+            output: button_click
+            buttons:
+                - text: 'Accelerate' 
+                  action: next
+
+    accelerate_image:
+        component: meya.image
+        properties:
+            image_url: 'https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/aclass_accelerate.gif'
+
+
+    box_you_in:
+        component: meya.text
+        properties:
+            text: 'Now that’s how you do it! Don’t get too distracted though, it looks like your Blind Spot Assist is flashing on both sides! Someone’s trying to box you in, what do you want to do?'
+
+
+    what_action_for_boxin:
+        component: meya.image_buttons
+        properties:
+            image_url: "https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/aclass_blindspot.png"
+            output: button_click
+            buttons:
+                - text: 'Go faster!'
+                  flow: ngcc_e_aclass_3a
+                - text: 'Out manoeuvre them'
+                  flow: ngcc_e_aclass_3b
+                - text: 'Brake and reverse!'
+                  flow: ngcc_e_aclass_3c

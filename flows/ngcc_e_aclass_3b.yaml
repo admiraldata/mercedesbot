@@ -1,0 +1,12 @@
+name: ngcc_e_aclass_3b
+states:
+    threeb_img:
+        component: meya.image
+        properties:
+            image_url: 'https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/aclass_manoeuvre.jpg'
+    threeb_text:
+        component: meya.text
+        properties:
+            text: 'This model’s Sports Direct-Steer System gives you control like no other. Your driving skills are truly remarkable, you lost them with ease!'
+    continuetofour:
+        flow: ngcc_e_aclass_4

@@ -562,6 +562,38 @@
     intent: meya.keyword
     settings:
         keyword: _ngcc_e_aclass_1
+-   flow: ngcc_e_aclass_2
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_e_aclass_2
+-   flow: ngcc_e_aclass_3a
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_e_aclass_3a
+-   flow: ngcc_e_aclass_3b
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_e_aclass_3b
+-   flow: ngcc_e_aclass_3c
+    intent: meya.keyword
+    settings:
+        keyword: ngcc_e_aclass_3c
+-   flow: ngcc_e_aclass_4
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_e_aclass_4
+-   flow: ngcc_e_aclass_5a
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_e_aclass_5a
+-   flow: ngcc_e_aclass_5b
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_e_aclass_5b
+-   flow: ngcc_e_aclass_6
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_e_aclass_6
 -   flow: test_imagereply
     intent: meya.keyword
     settings:
