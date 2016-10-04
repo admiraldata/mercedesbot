@@ -1,49 +1,40 @@
 name: h_recommend_suv_gle_coupe_ar
 states:
-  recommended_text:
-    component: meya.text
-    properties:
-      text: "\u0644\u0643\u0644 \u0645\u0646 \u062A\u0645\u062A\u0639\u0647 \u0627\
-        \u0644\u0642\u0648\u0629 \u0648 \u0627\u0644\u0641\u062E\u0627\u0645\u0629\
-        \u060C \u0646\u0646\u0635\u062D\u0643 \u0628\u0633\u064A\u0627\u0631\u0629\
-        \ \u0645\u062B\u064A\u0631\u0629 \u0628\u062A\u0645\u064A\u0632\u0647\u0627\
-        . \u0633\u062A\u062C\u062F \u0645\u0631\u0622\u062A\u0643 \u0641\u064A \u0645\
-        \u0631\u0633\u064A\u062F\u0633-\u0628\u0646\u0632 GLE \u0643\u0648\u0628\u064A\
-        \u0647 \u0628\u062A\u0635\u0645\u064A\u0645\u0647\u0627 \u0627\u0644\u062E\
-        \u064A\u0627\u0644\u064A \u0627\u0644\u062C\u062F\u064A\u062F."
-    delay:
-      relative: 5
-  car_options:
-    component: meya.cards
-    properties:
-      output: button_click
-      elements:
-      - title: "GLE \u0643\u0648\u0628\u064A\u0647"
-        text: "\u0644\u0627 \u062A\u0642\u0628\u0644 \u0627\u0644\u0645\u0642\u0627\
-          \u064A\u064A\u0633\u060C \u062D\u062F\u062F\u0647\u0627"
-        item_url: http://mercedesbenzme.com/me/en/suvs/gle/mercedes-amg-gle-63/
-        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/gle_coupe.jpg
-        buttons:
-        - text: "\u0627\u062D\u062C\u0632 \u062A\u062C\u0631\u0628\u0629 \u0642\u064A\
-            \u0627\u062F\u0629"
-          flow: b_book_test_drive_car_confirmed_ar
-          data:
-            test_drive_car_confirmed: gle_coupe
-          scope: bot
-        - text: "\u0632\u0631 \u0645\u0648\u0642\u0639\u0646\u0627 \u0627\u0644\u0625\
-            \u0644\u0643\u062A\u0631\u0648\u0646\u064A"
-          url: http://mercedesbenzme.com/me/en/suvs/gle/mercedes-amg-gle-63/
-        - text: "\u062D\u0627\u0648\u0644 \u062B\u0627\u0646\u064A\u0629"
-          flow: c_which_suv_redo_ar
-  confirm_car_selected:
-    component: meya.conditional_exists
-    properties:
-      scope: user
-      key: test_drive_car_confirmed
-    transitions:
-      exists: submit_test_drive_if_needed
-      notexists: notexists_state
-  notexists_state:
-    flow: a_ar_catchall
-  submit_test_drive_if_needed:
-    flow: b_book_test_drive_car_confirmed_ar
+    recommended_text:
+        component: meya.text
+        properties:
+            text: لكل من تمتعه القوة و الفخامة، ننصحك بسيارة مثيرة بتميزها. ستجد مرآتك
+                في مرسيدس-بنز GLE كوبيه بتصميمها الخيالي الجديد.
+        delay:
+            relative: 5
+    car_options:
+        component: meya.cards
+        properties:
+            output: button_click
+            elements:
+            -   title: GLE كوبيه
+                text: لا تقبل المقاييس، حددها
+                item_url: http://mercedesbenzme.com/me/en/suvs/gle/mercedes-amg-gle-63/
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/gle_coupe.jpg
+                buttons:
+                -   text: احجز تجربة قيادة
+                    flow: b_book_test_drive_car_confirmed_ar
+                    data:
+                        test_drive_car_confirmed: gle_coupe
+                    scope: bot
+                -   text: زر موقعنا الإلكتروني
+                    url: http://mercedesbenzme.com/me/en/suvs/gle/mercedes-amg-gle-63/
+                -   text: حاول ثانية
+                    flow: c_which_suv_redo_ar
+    confirm_car_selected:
+        component: meya.conditional_exists
+        properties:
+            scope: user
+            key: test_drive_car_confirmed
+        transitions:
+            exists: submit_test_drive_if_needed
+            notexists: notexists_state
+    notexists_state:
+        flow: a_ar_catchall
+    submit_test_drive_if_needed:
+        flow: b_book_test_drive_car_confirmed_ar

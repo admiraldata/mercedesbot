@@ -1,46 +1,44 @@
 name: d_ksa_showroom_selection_ar
 states:
-  check_uae_city:
-    component: meya.text_buttons
-    properties:
-      text: "\u0641\u064A \u0623\u064A \u0645\u062F\u064A\u0646\u0629 \u062A\u0648\
-        \u062F \u0623\u0646 \u062A\u062C\u0631\u0628 \u0642\u064A\u0627\u062F\u0629\
-        \ \u0627\u0644\u0633\u064A\u0627\u0631\u0629\u061F"
-      mode: quick_reply
-      output: button_click
-      buttons:
-      - text: "\u062C\u062F\u0629"
-        action: next
-        data:
-          ksa_loc: jeddah
-      - text: "\u0627\u0644\u0631\u064A\u0627\u0636"
-        action: next
-        data:
-          ksa_loc: riyadh
-      - text: "\u0627\u0644\u062F\u0645\u0627\u0645"
-        action: next
-        data:
-          test_drive_gdid: 32569
-        scope: flow
-  check_jeddah:
-    component: meya.conditional_equal
-    properties:
-      value1: '{{ flow.ksa_loc }}'
-      value2: jeddah
-    transitions:
-      equal: select_jeddah
-      notequal: check_riyadh_damman
-  check_riyadh_damman:
-    component: meya.conditional_equal
-    properties:
-      value1: '{{ flow.ksa_loc }}'
-      value2: riyadh
-    transitions:
-      equal: select_riyadh
-      notequal: submit_damman
-  select_jeddah:
-    flow: e_jeddah_showrooms_ar
-  select_riyadh:
-    flow: e_riyadh_showrooms_ar
-  submit_damman:
-    flow: z_submit_test_drive_request
+    check_uae_city:
+        component: meya.text_buttons
+        properties:
+            text: في أي مدينة تود أن تجرب قيادة السيارة؟
+            mode: quick_reply
+            output: button_click
+            buttons:
+            -   text: جدة
+                action: next
+                data:
+                    ksa_loc: jeddah
+            -   text: الرياض
+                action: next
+                data:
+                    ksa_loc: riyadh
+            -   text: الدمام
+                action: next
+                data:
+                    test_drive_gdid: 32569
+                scope: flow
+    check_jeddah:
+        component: meya.conditional_equal
+        properties:
+            value1: '{{ flow.ksa_loc }}'
+            value2: jeddah
+        transitions:
+            equal: select_jeddah
+            notequal: check_riyadh_damman
+    check_riyadh_damman:
+        component: meya.conditional_equal
+        properties:
+            value1: '{{ flow.ksa_loc }}'
+            value2: riyadh
+        transitions:
+            equal: select_riyadh
+            notequal: submit_damman
+    select_jeddah:
+        flow: e_jeddah_showrooms_ar
+    select_riyadh:
+        flow: e_riyadh_showrooms_ar
+    submit_damman:
+        flow: z_submit_test_drive_request

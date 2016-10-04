@@ -1,0 +1,47 @@
+name: ngcc_c_outfit_init
+states:
+
+    outfit_start:
+        component: meya.text
+        properties:
+            text: 'Let’s start off easy. If you’re going to be an agent, you’d best look the part! Here’s some top looks from the Hugo Boss catalogue, let’s pick your outfit.'
+            
+
+    check_male:
+        component: meya.conditional_equal
+        properties:
+            value1: '{{ user.gender }}'
+            value2: male
+        transitions:
+            equal: identified_male
+            notequal: check_female
+
+    check_female:
+        component: meya.conditional_equal
+        properties:
+            value1: '{{ user.gender }}'
+            value2: female
+        transitions:
+            equal: identified_female
+            notequal: unidentified_gender
+
+
+    unidentified_gender:
+        component: meya.text_buttons
+        properties:
+            text: 'But first, help us find the right looks for you!'
+            output: button_click
+            buttons:
+                - text: 'I’m Male'
+                  flow: ngcc_c_outfit_male
+                - text: 'I’m Female'
+                  flow: ngcc_c_outfit_female
+
+
+    identified_male:
+        flow: ngcc_c_outfit_male
+
+    identified_female:
+        flow: ngcc_c_outfit_female
+
+

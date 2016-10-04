@@ -1,0 +1,21 @@
+name: ngcc_b_codename
+states:
+    collect_codename:
+        component: meya.input_string
+        properties:
+            text: 'You’re in for the ride of your life! For this adventure, you’re going to need a top secret codename. You can call me Agent MB, what’s yours?'
+            output: ngcc_agent_code
+            scope: user
+
+
+    lets_get_started:
+        component: meya.text_buttons
+        properties:
+            text: 'Good choice! Are you ready to get this show on the road?'
+            output: button_click
+            buttons:
+                - text: 'Yes'
+                  flow: ngcc_b_mission_sel
+                - text: 'No'
+                  flow: ngcc_b_show_road_unready
+

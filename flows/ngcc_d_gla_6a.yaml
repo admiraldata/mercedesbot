@@ -1,0 +1,22 @@
+name: ngcc_d_gla_6a
+states:
+
+    6a_first:
+        component: meya.text
+        properties:
+            text: 'Good choice, it was the client! You’ve been warned that there may be someone on your tail'
+
+    6a_options:
+        component: meya.text_buttons
+        properties:
+            text: 'How will you reply:'
+            output: button_click
+            buttons:
+                - text: 'Understood'
+                  flow: ngcc_d_gla_7
+                - text: 'Nothing I can’t handle.'
+                  flow: ngcc_d_gla_7
+                - text: 'A little late but thanks.'
+                  flow: ngcc_d_gla_7
+
+

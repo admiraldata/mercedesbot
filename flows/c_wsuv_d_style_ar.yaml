@@ -1,19 +1,16 @@
 name: c_wsuv_d_style_ar
 states:
-  question:
-    component: meya.text_buttons
-    properties:
-      text: "\u0634\u0643\u0631\u0627 \u0644\u0643 {{ user.first_name }}. \u0623\u064A\
-        \ \u0627\u0644\u062E\u064A\u0627\u0631\u0627\u062A \u0627\u0644\u062A\u0627\
-        \u0644\u064A\u0629 \u062A\u0639\u0628\u0651\u0631 \u0639\u0646 \u0634\u062E\
-        \u0635\u064A\u062A\u0643 \u0648 \u0645\u064A\u0648\u0644\u0643 \u0623\u0643\
-        \u062B\u0631\u061F "
-      mode: quick_reply
-      output: button_click
-      buttons:
-      - text: "\u0627\u0644\u0641\u062E\u0627\u0645\u0629"
-        flow: c_wsuv_d_l_pax_ar
-      - text: "\u0627\u0644\u0631\u064A\u0627\u0636\u064A\u0629"
-        flow: c_wsuv_d_s_pax_ar
-      - text: "\u0627\u0644\u0639\u0645\u0644\u064A\u0629"
-        flow: c_wsuv_d_p_pax_ar
+    question:
+        component: meya.text_buttons
+        properties:
+            text: 'شكرا لك {{ user.first_name }}. أي الخيارات التالية تعبّر عن شخصيتك
+                و ميولك أكثر؟ '
+            mode: quick_reply
+            output: button_click
+            buttons:
+            -   text: الفخامة
+                flow: c_wsuv_d_l_pax_ar
+            -   text: الرياضية
+                flow: c_wsuv_d_s_pax_ar
+            -   text: العملية
+                flow: c_wsuv_d_p_pax_ar

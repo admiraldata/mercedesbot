@@ -474,6 +474,94 @@
     intent: meya.keyword
     settings:
         keyword: h_recommend_suv_gls_ar
+-   flow: ngcc_a_start
+    intent: meya.keyword
+    settings:
+        keyword: iamasecretagent
+-   flow: ngcc_a_unready_start
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_a_unready_start
+-   flow: ngcc_b_codename
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_b_codename
+-   flow: ngcc_b_danger_unready
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_b_danger_unready
+-   flow: ngcc_b_mission_sel
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_b_mission_sel
+-   flow: ngcc_b_show_road_unready
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_b_show_road_unready
+-   flow: ngcc_c_outfit_female
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_c_outfit_female
+-   flow: ngcc_c_outfit_init
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_c_outfit_init
+-   flow: ngcc_c_outfit_male
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_c_outfit_male
+-   flow: ngcc_c_ride
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_c_ride
+-   flow: ngcc_d_gla_1
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_d_gla_1
+-   flow: ngcc_d_gla_2_city
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_d_gla_2_city
+-   flow: ngcc_d_gla_2_rocky
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_d_gla_2_rocky
+-   flow: ngcc_d_gla_3
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_d_gla_3
+-   flow: ngcc_d_gla_4_full
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_d_gla_4_full
+-   flow: ngcc_d_gla_4_rocky
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_d_gla_4_rocky
+-   flow: ngcc_d_gla_4_uturn
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_d_gla_4_uturn
+-   flow: ngcc_d_gla_5
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_d_gla_5
+-   flow: ngcc_d_gla_6a
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_d_gla_6a
+-   flow: ngcc_d_gla_6b
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_d_gla_6b
+-   flow: ngcc_d_gla_7
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_d_gla_7
+-   flow: ngcc_e_aclass_1
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_e_aclass_1
 -   flow: test_imagereply
     intent: meya.keyword
     settings:

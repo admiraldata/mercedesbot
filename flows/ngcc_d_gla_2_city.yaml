@@ -1,0 +1,17 @@
+name: ngcc_d_gla_2_city
+states:
+
+    answer_2b:
+        component: meya.text
+        properties:
+            text: 'Smart choice, good luck going unnoticed. You’ve got a long ride ahead and a killer Harman Kardon® Logic 7® 12 speaker surround sound system to pass the time.'
+
+
+    surround_sound:
+        component: meya.image
+        properties:
+            image_url: 'https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/gla_surround_sound.png'
+
+    continue_with_gla:
+        flow: ngcc_d_gla_3
+        return: true

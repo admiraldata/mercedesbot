@@ -1,0 +1,13 @@
+name: ngcc_a_unready_start
+states:
+
+
+    start_now:
+        component: meya.text_buttons
+        properties:
+            text: 'Well we all have to start somewhere, let’s get you into the fast lane!'
+            output: button_click
+            buttons:
+                - text: 'Start now'
+                  flow: ngcc_b_codename
+

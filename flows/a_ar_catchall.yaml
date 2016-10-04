@@ -1,25 +1,18 @@
 name: a_ar_catchall
 states:
-  sorry_didnt_understand:
-    component: meya.text
-    properties:
-      text: "\u0639\u0630\u0631\u0627\u060C \u0644\u0645 \u0623\u0641\u0647\u0645\
-        \ \u0642\u0635\u062F\u0643. \u0627\u0637\u0628\u0639 \u0643\u0644\u0645\u0629\
-        \ \"\u0634\u062E\u0635\"\u200E \u0625\u0646 \u0623\u0631\u062F\u062A \u0627\
-        \u0644\u062A\u062D\u062F\u062B \u0645\u0639 \u0634\u062E\u0635 \u0645\u0646\
-        \ \u0641\u0631\u064A\u0642\u0646\u0627."
-  text_buttons_state:
-    component: meya.text_buttons
-    properties:
-      text: "\u064A\u0645\u0643\u0646\u0646\u064A \u0645\u0633\u0627\u0639\u062A\u062F\
-        \u0643:"
-      output: button_click
-      buttons:
-      - text: "\u0627\u062D\u062C\u0632 \u062A\u062C\u0631\u0628\u0629 \u0642\u064A\
-          \u0627\u062F\u0629"
-        flow: b_explore_cars_ar
-      - text: "\u0633\u064A\u0627\u0631\u0627\u062A \u0627\u0644\u062F\u0641\u0639\
-          \ \u0627\u0644\u0631\u0628\u0627\u0639\u064A"
-        flow: b_explore_suv_ar
-      - text: "\u0645\u0627\u0630\u0627 \u0623\u064A\u0636\u0627\u061F"
-        flow: b_other_ar
+    sorry_didnt_understand:
+        component: meya.text
+        properties:
+            text: عذرا، لم أفهم قصدك. اطبع كلمة "شخص"‎ إن أردت التحدث مع شخص من فريقنا.
+    text_buttons_state:
+        component: meya.text_buttons
+        properties:
+            text: 'يمكنني مساعتدك:'
+            output: button_click
+            buttons:
+            -   text: احجز تجربة قيادة
+                flow: b_explore_cars_ar
+            -   text: سيارات الدفع الرباعي
+                flow: b_explore_suv_ar
+            -   text: ماذا أيضا؟
+                flow: b_other_ar

@@ -1,0 +1,28 @@
+name: ngcc_c_ride
+states:
+
+    pick_ride:
+        component: meya.cards
+        properties:
+            output: button_click
+            elements:
+                - title: 'When even the toughest journeys are filled with adventure.' #A Class
+                  text: ''
+                  image_url: "https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/ride_a_class.png"
+                  buttons:
+                    - text: 'Select'
+                      flow: ngcc_e_aclass_1
+                - title: 'Lights. Camera. Action! When sharp style is your secret weapon.' #CLA
+                  text: ''
+                  image_url: "https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/ride_cla.png"
+                  buttons:
+                    - text: 'Select'
+                      flow: ngcc_f_cla_1
+                - title: 'Grit, power and performance, all at your command.' #GLA
+                  text: ''
+                  image_url: "https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/ride_gla.png"
+                  buttons:
+                    - text: 'Select'
+                      flow: ngcc_d_gla_1
+
+

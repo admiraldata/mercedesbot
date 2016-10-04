@@ -1,0 +1,20 @@
+name: ngcc_d_gla_4_full
+states:
+
+    full_speed_text:
+        component: meya.text
+        properties:
+            text: 'With up to 211 horsepower at the push of your pedal, they never stood a chance. Before you know it, they’re but a spec in your rear view. Good job!'
+
+
+    full_speed_image:
+        component: meya.image
+        properties:
+            image_url: 'https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/gla_full_speed.png'
+
+
+    full_speed_next:
+        flow: ngcc_d_gla_5
+        return: true
+
+

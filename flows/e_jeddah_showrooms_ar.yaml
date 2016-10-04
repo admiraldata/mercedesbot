@@ -1,45 +1,36 @@
 name: e_jeddah_showrooms_ar
 states:
-  welcome:
-    component: meya.text
-    properties:
-      text: "\u064A\u0631\u062C\u0649 \u0627\u062E\u062A\u064A\u0627\u0631 \u0635\u0627\
-        \u0644\u0629 \u0627\u0644\u0639\u0631\u0636 \u0627\u0644\u062A\u064A \u062A\
-        \u0646\u0627\u0633\u0628\u0643 \u0623\u0643\u062B\u0631"
-  multi_card_state:
-    component: meya.cards
-    properties:
-      output: button_click
-      elements:
-      - title: "\u0634\u0631\u0643\u0629 \u0627\u0644\u062C\u0641\u0627\u0644\u064A\
-          \ \u0644\u0644\u0633\u064A\u0627\u0631\u0627\u062A"
-        text: "\u0634\u0627\u0631\u0639 \u0627\u0644\u0645\u062F\u064A\u0646\u0629\
-          \u060C \u0645\u062E\u0631\u062C 7\u060C \u062D\u064A \u0627\u0644\u0639\u0632\
-          \u064A\u0632\u064A\u0629 (+966 12 661 3000)"
-        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/ksa_jeddah_madinah_rd.jpg
-        buttons:
-        - text: "\u0627\u062E\u062A\u0631 \u0647\u0630\u0647 \u0627\u0644\u0635\u0627\
-            \u0644\u0629"
-          action: next
-          data:
-            test_drive_gdid: 32565
-          scope: flow
-        - text: "\u0634\u0627\u0647\u062F\u0647\u0627 \u0639\u0644\u0649 \u0627\u0644\
-            \u062E\u0631\u064A\u0637\u0629"
-          url: https://www.google.ae/maps?q=21.5482527158475,39.175904725166&z=17
-      - title: "\u0634\u0631\u0643\u0629 \u0627\u0644\u062C\u0641\u0627\u0644\u064A\
-          \ \u0644\u0644\u0633\u064A\u0627\u0631\u0627\u062A"
-        text: Auto Mall, Malek Rd, Al Basateen District, Jeddah (+966 12 215 0050)
-        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/ksa_jeddah_auto_mall.jpg
-        buttons:
-        - text: "\u0627\u062E\u062A\u0631 \u0647\u0630\u0647 \u0627\u0644\u0635\u0627\
-            \u0644\u0629"
-          action: next
-          data:
-            test_drive_gdid: 32566
-          scope: flow
-        - text: "\u0634\u0627\u0647\u062F\u0647\u0627 \u0639\u0644\u0649 \u0627\u0644\
-            \u062E\u0631\u064A\u0637\u0629"
-          url: https://www.google.ae/maps?q=21.6485918742919,39.1133865613075&z=17
-  submit_test_drive:
-    flow: z_submit_test_drive_request_ar
+    welcome:
+        component: meya.text
+        properties:
+            text: يرجى اختيار صالة العرض التي تناسبك أكثر
+    multi_card_state:
+        component: meya.cards
+        properties:
+            output: button_click
+            elements:
+            -   title: شركة الجفالي للسيارات
+                text: شارع المدينة، مخرج 7، حي العزيزية (+966 12 661 3000)
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/ksa_jeddah_madinah_rd.jpg
+                buttons:
+                -   text: اختر هذه الصالة
+                    action: next
+                    data:
+                        test_drive_gdid: 32565
+                    scope: flow
+                -   text: شاهدها على الخريطة
+                    url: https://www.google.ae/maps?q=21.5482527158475,39.175904725166&z=17
+            -   title: شركة الجفالي للسيارات
+                text: Auto Mall, Malek Rd, Al Basateen District, Jeddah (+966 12 215
+                    0050)
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/ksa_jeddah_auto_mall.jpg
+                buttons:
+                -   text: اختر هذه الصالة
+                    action: next
+                    data:
+                        test_drive_gdid: 32566
+                    scope: flow
+                -   text: شاهدها على الخريطة
+                    url: https://www.google.ae/maps?q=21.6485918742919,39.1133865613075&z=17
+    submit_test_drive:
+        flow: z_submit_test_drive_request_ar

@@ -1,48 +1,35 @@
 name: e_lebanon_showrooms_ar
 states:
-  welcome:
-    component: meya.text
-    properties:
-      text: "\u064A\u0631\u062C\u0649 \u0627\u062E\u062A\u064A\u0627\u0631 \u0635\u0627\
-        \u0644\u0629 \u0627\u0644\u0639\u0631\u0636 \u0627\u0644\u062A\u064A \u062A\
-        \u0646\u0627\u0633\u0628\u0643 \u0623\u0643\u062B\u0631"
-  multi_card_state:
-    component: meya.cards
-    properties:
-      output: button_click
-      elements:
-      - title: "\u0634\u0631\u0643\u0629 \u062A\u0648\u0641\u064A\u0642 \u062C\u0631\
-          \u062C\u0648\u0631 \u0648\u0623\u0628\u0646\u0627\u0626\u0647 "
-        text: "\u0637\u0631\u064A\u0642 \u0627\u0644\u062F\u0648\u0631\u0629\u060C\
-          \ \u0628\u064A\u0631\u0648\u062A\u060C \u0645\u0628\u0646\u0649 \u0645\u0631\
-          \u0633\u064A\u062F\u0633-\u0628\u0646\u0632 \u0635.\u0628: 110371 (+961\
-          \ 1 255366)"
-        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/lebanon_dora.jpg
-        buttons:
-        - text: "\u0627\u062E\u062A\u0631 \u0647\u0630\u0647 \u0627\u0644\u0635\u0627\
-            \u0644\u0629"
-          action: next
-          data:
-            test_drive_gdid: 24390
-          scope: flow
-        - text: "\u0634\u0627\u0647\u062F\u0647\u0627 \u0639\u0644\u0649 \u0627\u0644\
-            \u062E\u0631\u064A\u0637\u0629"
-          url: https://www.google.ae/maps?q=33.8943368477594,35.5554751728776&z=17
-      - title: "\u0634\u0631\u0643\u0629 \u062A\u0648\u0641\u064A\u0642 \u062C\u0631\
-          \u062C\u0648\u0631 \u0648\u0623\u0628\u0646\u0627\u0626\u0647 "
-        text: "\u0628\u0648\u0631\u060C \u0637\u0631\u064A\u0642 \u0637\u0631\u0627\
-          \u0628\u0644\u0633\u060C \u0645\u0628\u0646\u0649 \u0645\u0631\u0633\u064A\
-          \u062F\u0633-\u0628\u0646\u0632 (+961 9 446222)"
-        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/lebanon_bouar.jpg
-        buttons:
-        - text: "\u0627\u062E\u062A\u0631 \u0647\u0630\u0647 \u0627\u0644\u0635\u0627\
-            \u0644\u0629"
-          action: next
-          data:
-            test_drive_gdid: 24391
-          scope: flow
-        - text: "\u0634\u0627\u0647\u062F\u0647\u0627 \u0639\u0644\u0649 \u0627\u0644\
-            \u062E\u0631\u064A\u0637\u0629"
-          url: https://www.google.ae/maps?q=34.0465993111492,35.6356127729656&z=17
-  submit_test_drive:
-    flow: z_submit_test_drive_request_ar
+    welcome:
+        component: meya.text
+        properties:
+            text: يرجى اختيار صالة العرض التي تناسبك أكثر
+    multi_card_state:
+        component: meya.cards
+        properties:
+            output: button_click
+            elements:
+            -   title: 'شركة توفيق جرجور وأبنائه '
+                text: 'طريق الدورة، بيروت، مبنى مرسيدس-بنز ص.ب: 110371 (+961 1 255366)'
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/lebanon_dora.jpg
+                buttons:
+                -   text: اختر هذه الصالة
+                    action: next
+                    data:
+                        test_drive_gdid: 24390
+                    scope: flow
+                -   text: شاهدها على الخريطة
+                    url: https://www.google.ae/maps?q=33.8943368477594,35.5554751728776&z=17
+            -   title: 'شركة توفيق جرجور وأبنائه '
+                text: بور، طريق طرابلس، مبنى مرسيدس-بنز (+961 9 446222)
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/lebanon_bouar.jpg
+                buttons:
+                -   text: اختر هذه الصالة
+                    action: next
+                    data:
+                        test_drive_gdid: 24391
+                    scope: flow
+                -   text: شاهدها على الخريطة
+                    url: https://www.google.ae/maps?q=34.0465993111492,35.6356127729656&z=17
+    submit_test_drive:
+        flow: z_submit_test_drive_request_ar

@@ -1,91 +1,68 @@
 name: e_dubai_showrooms_ar
 states:
-  welcome:
-    component: meya.text
-    properties:
-      text: "\u064A\u0631\u062C\u0649 \u0627\u062E\u062A\u064A\u0627\u0631 \u0635\u0627\
-        \u0644\u0629 \u0627\u0644\u0639\u0631\u0636 \u0627\u0644\u062A\u064A \u062A\
-        \u0646\u0627\u0633\u0628\u0643 \u0623\u0643\u062B\u0631"
-  multi_card_state:
-    component: meya.cards
-    properties:
-      output: button_click
-      elements:
-      - title: "\u0645\u0634\u0627\u0631\u064A\u0639 \u0642\u0631\u0642\u0627\u0634\
-          \ \u0630.\u0645.\u0645"
-        text: "\u0634\u0627\u0631\u0639 \u0627\u0644\u0627\u062A\u062D\u0627\u062F\
-          \u060C \u062F\u0628\u064A (+971 4 2099777)"
-        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/dubai_deira.jpg
-        buttons:
-        - text: "\u0627\u062E\u062A\u0631 \u0647\u0630\u0647 \u0627\u0644\u0635\u0627\
-            \u0644\u0629"
-          action: next
-          data:
-            test_drive_gdid: 14549
-          scope: flow
-        - text: "\u0634\u0627\u0647\u062F\u0647\u0627 \u0639\u0644\u0649 \u0627\u0644\
-            \u062E\u0631\u064A\u0637\u0629"
-          url: https://www.google.ae/maps?q=25.2661607303508,55.3377631294998&z=17
-      - title: "\u0645\u0634\u0627\u0631\u064A\u0639 \u0642\u0631\u0642\u0627\u0634\
-          \ \u0630.\u0645.\u0645"
-        text: "\u0634\u0627\u0631\u0639 \u0627\u0644\u0634\u064A\u062E \u0632\u0627\
-          \u064A\u062F\u060C \u0635.\u0628: 1418 (+971 4 5153838 )"
-        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/dubai_szr_new_cars_al_qouz.jpg
-        buttons:
-        - text: "\u0627\u062E\u062A\u0631 \u0647\u0630\u0647 \u0627\u0644\u0635\u0627\
-            \u0644\u0629"
-          action: next
-          data:
-            test_drive_gdid: 14550
-          scope: flow
-        - text: "\u0634\u0627\u0647\u062F\u0647\u0627 \u0639\u0644\u0649 \u0627\u0644\
-            \u062E\u0631\u064A\u0637\u0629"
-          url: https://www.google.ae/maps?q=25.1386517567337,55.2185613294304&z=17
-      - title: "\u0645\u0634\u0627\u0631\u064A\u0639 \u0642\u0631\u0642\u0627\u0634\
-          \ \u0630.\u0645.\u0645"
-        text: "\u0627\u0644\u0645\u0646\u0637\u0642\u0629 \u0627\u0644\u0635\u0646\
-          \u0627\u0639\u064A\u0629 6\u060C \u0627\u0644\u0634\u0627\u0631\u0642\u0629\
-          \ (+971 6 5385222)"
-        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/dubai_sharjah.jpg
-        buttons:
-        - text: "\u0627\u062E\u062A\u0631 \u0647\u0630\u0647 \u0627\u0644\u0635\u0627\
-            \u0644\u0629"
-          action: next
-          data:
-            test_drive_gdid: 14551
-          scope: flow
-        - text: "\u0634\u0627\u0647\u062F\u0647\u0627 \u0639\u0644\u0649 \u0627\u0644\
-            \u062E\u0631\u064A\u0637\u0629"
-          url: https://www.google.ae/maps?q=25.3212462403917,55.4293516514164&z=17
-      - title: "\u0645\u0634\u0627\u0631\u064A\u0639 \u0642\u0631\u0642\u0627\u0634\
-          \ \u0630.\u0645.\u0645"
-        text: "\u0634\u0627\u0631\u0639 \u0627\u0644\u0627\u062A\u062D\u0627\u062F\
-          \u060C \u0631\u0623\u0633 \u0627\u0644\u062E\u064A\u0645\u0629 (+971 7 2355888)"
-        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/dubai_ras_al_khaimah.jpg
-        buttons:
-        - text: "\u0627\u062E\u062A\u0631 \u0647\u0630\u0647 \u0627\u0644\u0635\u0627\
-            \u0644\u0629"
-          action: next
-          data:
-            test_drive_gdid: 14552
-          scope: flow
-        - text: "\u0634\u0627\u0647\u062F\u0647\u0627 \u0639\u0644\u0649 \u0627\u0644\
-            \u062E\u0631\u064A\u0637\u0629"
-          url: https://www.google.ae/maps?q=25.7489285283547,55.9056158375397&z=17
-      - title: "\u0645\u0634\u0627\u0631\u064A\u0639 \u0642\u0631\u0642\u0627\u0634\
-          \ \u0630.\u0645.\u0645"
-        text: "\u0634\u0627\u0631\u0639 \u0645\u062D\u0645\u062F \u0628\u0646 \u0645\
-          \u0637\u0631\u060C \u0627\u0644\u0641\u062C\u064A\u0631\u0629 (+971 9 2233999)"
-        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/dubai_fujairah.jpg
-        buttons:
-        - text: "\u0627\u062E\u062A\u0631 \u0647\u0630\u0647 \u0627\u0644\u0635\u0627\
-            \u0644\u0629"
-          action: next
-          data:
-            test_drive_gdid: 14554
-          scope: flow
-        - text: "\u0634\u0627\u0647\u062F\u0647\u0627 \u0639\u0644\u0649 \u0627\u0644\
-            \u062E\u0631\u064A\u0637\u0629"
-          url: https://www.google.ae/maps?q=25.1318249088204,56.3303941845516&z=17
-  submit_test_drive:
-    flow: z_submit_test_drive_request_ar
+    welcome:
+        component: meya.text
+        properties:
+            text: يرجى اختيار صالة العرض التي تناسبك أكثر
+    multi_card_state:
+        component: meya.cards
+        properties:
+            output: button_click
+            elements:
+            -   title: مشاريع قرقاش ذ.م.م
+                text: شارع الاتحاد، دبي (+971 4 2099777)
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/dubai_deira.jpg
+                buttons:
+                -   text: اختر هذه الصالة
+                    action: next
+                    data:
+                        test_drive_gdid: 14549
+                    scope: flow
+                -   text: شاهدها على الخريطة
+                    url: https://www.google.ae/maps?q=25.2661607303508,55.3377631294998&z=17
+            -   title: مشاريع قرقاش ذ.م.م
+                text: 'شارع الشيخ زايد، ص.ب: 1418 (+971 4 5153838 )'
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/dubai_szr_new_cars_al_qouz.jpg
+                buttons:
+                -   text: اختر هذه الصالة
+                    action: next
+                    data:
+                        test_drive_gdid: 14550
+                    scope: flow
+                -   text: شاهدها على الخريطة
+                    url: https://www.google.ae/maps?q=25.1386517567337,55.2185613294304&z=17
+            -   title: مشاريع قرقاش ذ.م.م
+                text: المنطقة الصناعية 6، الشارقة (+971 6 5385222)
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/dubai_sharjah.jpg
+                buttons:
+                -   text: اختر هذه الصالة
+                    action: next
+                    data:
+                        test_drive_gdid: 14551
+                    scope: flow
+                -   text: شاهدها على الخريطة
+                    url: https://www.google.ae/maps?q=25.3212462403917,55.4293516514164&z=17
+            -   title: مشاريع قرقاش ذ.م.م
+                text: شارع الاتحاد، رأس الخيمة (+971 7 2355888)
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/dubai_ras_al_khaimah.jpg
+                buttons:
+                -   text: اختر هذه الصالة
+                    action: next
+                    data:
+                        test_drive_gdid: 14552
+                    scope: flow
+                -   text: شاهدها على الخريطة
+                    url: https://www.google.ae/maps?q=25.7489285283547,55.9056158375397&z=17
+            -   title: مشاريع قرقاش ذ.م.م
+                text: شارع محمد بن مطر، الفجيرة (+971 9 2233999)
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/maps/dubai_fujairah.jpg
+                buttons:
+                -   text: اختر هذه الصالة
+                    action: next
+                    data:
+                        test_drive_gdid: 14554
+                    scope: flow
+                -   text: شاهدها على الخريطة
+                    url: https://www.google.ae/maps?q=25.1318249088204,56.3303941845516&z=17
+    submit_test_drive:
+        flow: z_submit_test_drive_request_ar

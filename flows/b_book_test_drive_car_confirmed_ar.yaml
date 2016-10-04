@@ -1,78 +1,67 @@
 name: b_book_test_drive_car_confirmed_ar
 states:
-  welcome_block:
-    component: test_drive_car_print_ar
-  continue_check:
-    component: meya.text_buttons
-    properties:
-      text: "\u0647\u0644 \u0623\u0646\u062A \u062C\u0627\u0647\u0632 \u0644\u0644\
-        \u0627\u0633\u062A\u0645\u0631\u0627\u0631 \u0641\u064A \u062D\u062C\u0632\
-        \ \u062A\u062C\u0631\u0628\u0629 \u0627\u0644\u0642\u064A\u0627\u062F\u0629\
-        \u061F"
-      mode: quick_reply
-      output: button_click
-      buttons:
-      - text: "\u0646\u0639\u0645"
-        action: next
-      - text: "\u0644\u0627"
-        flow: b_other_ar
-  start_booking:
-    component: meya.text
-    properties:
-      text: "\u0644\u062F\u064A\u0646\u0627 \u0628\u0639\u0636 \u0627\u0644\u0623\u0633\
-        \u0626\u0644\u0629 \u0627\u0644\u0633\u0631\u064A\u0639\u0629."
-  preferred_name:
-    component: meya.input_pattern
-    properties:
-      text: "\u0645\u0627 \u0647\u0648 \u0627\u0633\u0645\u0643 \u0627\u0644\u0643\
-        \u0627\u0645\u0644\u061F"
-      output: test_drive_name
-      scope: user
-  text_state:
-    component: meya.text
-    properties:
-      text: "\u0645\u062A\u0649 \u062A\u0646\u0648\u064A \u0634\u0631\u0627\u0621\
-        \ \u0633\u064A\u0627\u0631\u062A\u0643 \u0627\u0644\u062A\u0627\u0644\u064A\
-        \u0629\u061F"
-  when_buy_car:
-    component: meya.cards
-    properties:
-      output: button_click
-      text: "\u0645\u062A\u0649 \u062A\u0646\u0648\u064A \u0634\u0631\u0627\u0621\
-        \ \u0633\u064A\u0627\u0631\u062A\u0643 \u0627\u0644\u062A\u0627\u0644\u064A\
-        \u0629\u061F"
-      elements:
-      - title: "\u0623\u062B\u0646\u0627\u0621 \u0647\u0630\u0627 \u0627\u0644\u0631\
-          \u0628\u0639 \u0645\u0646 \u0627\u0644\u0633\u0646\u0629\u061F"
-        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/when_buy/0_3.png
-        buttons:
-        - text: "\u0627\u062E\u062A\u0627\u0631"
-          flow: b_book_test_drive_car_confirmed_plan_ar
-          data:
-            test_drive_purchase: 0_to_3
-          scope: flow
-      - title: "\u0641\u064A \u063A\u0636\u0648\u0646 6 \u0623\u0634\u0647\u0631\u061F"
-        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/when_buy/3_6.png
-        buttons:
-        - text: "\u0627\u062E\u062A\u0627\u0631"
-          flow: b_book_test_drive_car_confirmed_plan_ar
-          data:
-            test_drive_purchase: 3_to_6
-          scope: flow
-      - title: "\u0623\u062B\u0646\u0627\u0621 \u0627\u0644\u0633\u0646\u0629\u061F"
-        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/when_buy/over_6.png
-        buttons:
-        - text: "\u0627\u062E\u062A\u0627\u0631"
-          flow: b_book_test_drive_car_confirmed_plan_ar
-          data:
-            test_drive_purchase: over_6
-          scope: flow
-      - title: "\u0644\u064A\u0633 \u0641\u064A \u0648\u0642\u062A \u0642\u0631\u064A\
-          \u0628\u061F"
-        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/when_buy/not_plan.png
-        buttons:
-        - text: "\u0627\u062E\u062A\u0627\u0631"
-          flow: b_book_test_drive_car_confirmed_unplan_ar
-          data:
-            test_drive_purchase: not_planning
-          scope: flow
+    welcome_block:
+        component: test_drive_car_print_ar
+    continue_check:
+        component: meya.text_buttons
+        properties:
+            text: هل أنت جاهز للاستمرار في حجز تجربة القيادة؟
+            mode: quick_reply
+            output: button_click
+            buttons:
+            -   text: نعم
+                action: next
+            -   text: لا
+                flow: b_other_ar
+    start_booking:
+        component: meya.text
+        properties:
+            text: لدينا بعض الأسئلة السريعة.
+    preferred_name:
+        component: meya.input_pattern
+        properties:
+            text: ما هو اسمك الكامل؟
+            output: test_drive_name
+            scope: user
+    text_state:
+        component: meya.text
+        properties:
+            text: متى تنوي شراء سيارتك التالية؟
+    when_buy_car:
+        component: meya.cards
+        properties:
+            output: button_click
+            text: متى تنوي شراء سيارتك التالية؟
+            elements:
+            -   title: أثناء هذا الربع من السنة؟
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/when_buy/0_3.png
+                buttons:
+                -   text: اختار
+                    flow: b_book_test_drive_car_confirmed_plan_ar
+                    data:
+                        test_drive_purchase: 0_to_3
+                    scope: flow
+            -   title: في غضون 6 أشهر؟
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/when_buy/3_6.png
+                buttons:
+                -   text: اختار
+                    flow: b_book_test_drive_car_confirmed_plan_ar
+                    data:
+                        test_drive_purchase: 3_to_6
+                    scope: flow
+            -   title: أثناء السنة؟
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/when_buy/over_6.png
+                buttons:
+                -   text: اختار
+                    flow: b_book_test_drive_car_confirmed_plan_ar
+                    data:
+                        test_drive_purchase: over_6
+                    scope: flow
+            -   title: ليس في وقت قريب؟
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/when_buy/not_plan.png
+                buttons:
+                -   text: اختار
+                    flow: b_book_test_drive_car_confirmed_unplan_ar
+                    data:
+                        test_drive_purchase: not_planning
+                    scope: flow

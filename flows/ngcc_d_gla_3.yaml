@@ -1,0 +1,16 @@
+name: ngcc_d_gla_3
+states:
+
+    tailing_choice:
+        component: meya.text_buttons
+        properties:
+            text: 'You notice a black sedan has been tailing you for a while now. What do you want to do next?'
+            output: button_click
+            buttons:
+                - text: 'Go full speed'
+                  flow: ngcc_d_gla_4_full
+                - text: 'Take the rocky road'
+                  flow: ngcc_d_gla_4_rocky
+                - text: 'Make a fast U-turn'
+                  flow: ngcc_d_gla_4_uturn
+

@@ -1,0 +1,25 @@
+name: ngcc_c_outfit_male
+states:
+    male_style:
+        component: meya.cards
+        properties:
+            output: button_click
+            elements:
+                - title: Sophisticated
+                  text: ''
+                  image_url: "https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/male_sophisticated.png"
+                  buttons:
+                    - text: 'Select'
+                      flow: ngcc_c_ride
+                - title: Sleek
+                  text: ''
+                  image_url: "https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/male_sleek.png"
+                  buttons:
+                    - text: 'Select'
+                      flow: ngcc_c_ride
+                - title: Comfortable
+                  text: ''
+                  image_url: "https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/male_comfortable.png"
+                  buttons:
+                    - text: 'Select'
+                      flow: ngcc_c_ride

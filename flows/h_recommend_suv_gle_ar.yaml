@@ -1,50 +1,40 @@
 name: h_recommend_suv_gle_ar
 states:
-  recommended_text:
-    component: meya.text
-    properties:
-      text: "\u0644\u0643\u0644 \u0645\u0646 \u064A\u0628\u062F\u0623 \u0631\u062D\
-        \u0644\u0629 \u062C\u062F\u064A\u062F\u0629 \u0641\u064A \u0643\u0644 \u064A\
-        \u0648\u0645\u060C \u0639\u0644\u0649 \u0633\u064A\u0627\u0631\u062A\u0643\
-        \ \u0627\u0644\u0645\u062B\u0627\u0644\u064A\u0629 \u0623\u0646 \u062A\u0643\
-        \u0648\u0646 \u0628\u0645\u0631\u0648\u0646\u062A\u0643 \u0648 \u062C\u0631\
-        \u0623\u062A\u0643. \u0645\u0639 \u0645\u0631\u0633\u064A\u062F\u0633-\u0628\
-        \u0646\u0632 GLE \u0633\u062A\u0634\u0639\u0631 \u0628\u0627\u0644\u0631\u0627\
-        \u062D\u0629 \u0627\u0644\u0645\u0637\u0644\u0642\u0629\u060C \u0643\u064A\
-        \u0641\u0645\u0627 \u0643\u0627\u0646 \u062F\u0631\u0628\u0643."
-    delay:
-      relative: 5
-  car_options:
-    component: meya.cards
-    properties:
-      output: button_click
-      elements:
-      - title: GLE
-        text: "GLE \u0643\u0646 \u0641\u064A \u0627\u0644\u0645\u0642\u062F\u0645\u0629\
-          \ \u0645\u0639"
-        item_url: http://mercedesbenzme.com/me/en/suvs/gle/gle/
-        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/gle_suv.jpg
-        buttons:
-        - text: "\u0627\u062D\u062C\u0632 \u062A\u062C\u0631\u0628\u0629 \u0642\u064A\
-            \u0627\u062F\u0629"
-          flow: b_book_test_drive_car_confirmed_ar
-          data:
-            test_drive_car_confirmed: gle_suv
-          scope: bot
-        - text: "\u0632\u0631 \u0645\u0648\u0642\u0639\u0646\u0627 \u0627\u0644\u0625\
-            \u0644\u0643\u062A\u0631\u0648\u0646\u064A"
-          url: http://mercedesbenzme.com/me/en/suvs/gle/gle/
-        - text: "\u062D\u0627\u0648\u0644 \u062B\u0627\u0646\u064A\u0629"
-          flow: c_which_suv_redo_ar
-  confirm_car_selected:
-    component: meya.conditional_exists
-    properties:
-      scope: user
-      key: test_drive_car_confirmed
-    transitions:
-      exists: submit_test_drive_if_needed
-      notexists: notexists_state
-  notexists_state:
-    flow: a_ar_catchall
-  submit_test_drive_if_needed:
-    flow: b_book_test_drive_car_confirmed_ar
+    recommended_text:
+        component: meya.text
+        properties:
+            text: لكل من يبدأ رحلة جديدة في كل يوم، على سيارتك المثالية أن تكون بمرونتك
+                و جرأتك. مع مرسيدس-بنز GLE ستشعر بالراحة المطلقة، كيفما كان دربك.
+        delay:
+            relative: 5
+    car_options:
+        component: meya.cards
+        properties:
+            output: button_click
+            elements:
+            -   title: GLE
+                text: GLE كن في المقدمة مع
+                item_url: http://mercedesbenzme.com/me/en/suvs/gle/gle/
+                image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/cars/gle_suv.jpg
+                buttons:
+                -   text: احجز تجربة قيادة
+                    flow: b_book_test_drive_car_confirmed_ar
+                    data:
+                        test_drive_car_confirmed: gle_suv
+                    scope: bot
+                -   text: زر موقعنا الإلكتروني
+                    url: http://mercedesbenzme.com/me/en/suvs/gle/gle/
+                -   text: حاول ثانية
+                    flow: c_which_suv_redo_ar
+    confirm_car_selected:
+        component: meya.conditional_exists
+        properties:
+            scope: user
+            key: test_drive_car_confirmed
+        transitions:
+            exists: submit_test_drive_if_needed
+            notexists: notexists_state
+    notexists_state:
+        flow: a_ar_catchall
+    submit_test_drive_if_needed:
+        flow: b_book_test_drive_car_confirmed_ar

@@ -1,0 +1,7 @@
+name: ngcc_e_aclass_1
+states:
+
+    text_state:
+        component: meya.text
+        properties:
+            text: Your text here

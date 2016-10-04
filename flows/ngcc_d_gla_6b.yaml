@@ -1,0 +1,11 @@
+name: ngcc_d_gla_6b
+states:
+
+    6b_first:
+        component: meya.text
+        properties:
+            text: 'Smart choice, you’ve only just lost them, probably best to keep your position a secret.'
+
+    6b_options:
+        flow: ngcc_d_gla_7
+        return: true
