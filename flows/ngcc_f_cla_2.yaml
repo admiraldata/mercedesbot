@@ -1,0 +1,31 @@
+name: ngcc_f_cla_2
+states: 
+
+    city_start:
+        component: meya.text
+        properties:
+            text: 'Smart choice, the CLA reigns the streets as its kingdom. You’ve got a long ride ahead and a killer Harman Kardon® Logic 7® 12 speaker surround sound system to pass the time.'
+
+
+    aclass_surround:
+        component: meya.image
+        properties:
+            image_url: 'https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/aclass_surround.png'
+
+
+    brake_needed:
+        component: meya.text
+        properties:
+            text: 'Everything’s going smoothly so far… almost too smoothly. A black sedan swerves in front of you quickly cutting you off. If it wasn’t for your Active Brake Assist you would have surely crashed. When forward is no longer an option, what will you do next?'
+
+
+    what_action_for_boxin:
+        component: meya.image_buttons
+        properties:
+            image_url: "https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/cla_brake.png"
+            output: button_click
+            buttons:
+                - text: 'Reverse quickly!'
+                  flow: ngcc_f_cla_3a
+                - text: 'Cut around him'
+                  flow: ngcc_f_cla_3b

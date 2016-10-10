@@ -1,0 +1,17 @@
+name: a_enar_start
+states:
+    welcome_in_en:
+        component: meya.text
+        properties:
+            text: 'Hello {{user.first_name}}, you’re through to Mercedes-Benz Middle East. Please select your preferred language to continue.'
+
+    welcome_in_ar:
+        component: meya.text_buttons
+        properties:
+            text: 'مرحبا {{user.first_name}}، لقد وصلت إلى مرسيدس-بنز الشرق الأوسط‎. الرجاء إختيار اللغة للإستمرار.‎‎'
+            output: button_click
+            buttons:
+            - text: 'English'
+              flow: a_en_start_sure
+            - text: 'اللغة العربية‎'
+              flow: a_ar_start_sure

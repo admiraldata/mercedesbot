@@ -1,0 +1,19 @@
+name: zz_vini_testing
+states:
+
+
+    before:
+        component: meya.text
+        properties:
+            text: 'Calling component now'
+
+
+    send_to_db:
+        component: add_to_master_list
+
+    confirmation:
+        component: meya.text
+        properties:
+            text: 'already sent'
+
+

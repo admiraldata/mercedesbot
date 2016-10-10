@@ -1,0 +1,13 @@
+name: zz_a_ar_catchall
+states:
+
+  sorry_didnt_understand_en:
+    component: meya.text
+    properties:
+      text: "Sorry, I did not understand what you meant. You can type \u2018human\u2019\
+        \ at any time to speak to someone from our team."
+
+  sorry_didnt_understand_ar:
+    component: meya.text
+    properties:
+      text: عذرا، لم أفهم قصدك. اطبع كلمة "شخص"‎ إن أردت التحدث مع شخص من فريقنا.

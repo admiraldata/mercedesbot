@@ -5,7 +5,7 @@ states:
     info_text:
         component: meya.text
         properties:
-            text: 'You’ve got 3 missions to choose from Agent Ali. Each will take you down a very different, yet equally treacherous, path. It’s time to choose your adventure:'
+            text: 'You’ve got 3 missions to choose from {{user.ngcc_agent_code}}. Each will take you down a very different, yet equally treacherous, path. It’s time to choose your adventure:'
 
 
     select_a_mission:
@@ -15,19 +15,19 @@ states:
             elements:
                 - title: 'Deliver confidential national information'
                   text: ''
-                  image_url: "https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/mission_confidential.jpg"
+                  image_url: "https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/mission_confidential.png"
                   buttons:
                     - text: 'I’m ready'
                       action: next
                 - title: 'Courier royal jewels valued at AED 50 million'
                   text: ''
-                  image_url: "https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/mission_courier.jpg"
+                  image_url: "https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/mission_courier.png"
                   buttons:
                     - text: 'I’m ready'
                       action: next
                 - title: 'Interpol needs you to escort a VIP witness'
                   text: ''
-                  image_url: "https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/mission_interpol.jpg"
+                  image_url: "https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/mission_interpol.png"
                   buttons:
                     - text: 'I’m ready'
                       action: next

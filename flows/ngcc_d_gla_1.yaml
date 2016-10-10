@@ -11,7 +11,7 @@ states:
     second:
         component: meya.text
         properties:
-            text: 'What’s wrong Agent Ali? Can’t find your key? It’s probably in your pocket. Not a problem, click the start engine button and let’s Keyless Go!'
+            text: 'What’s wrong {{user.ngcc_agent_code}}? Can’t find your key? It’s probably in your pocket. Not a problem, click the start engine button and let’s Keyless Go!'
 
     start_engine_button:
         component: meya.image

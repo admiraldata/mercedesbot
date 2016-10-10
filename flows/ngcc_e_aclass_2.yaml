@@ -19,7 +19,7 @@ states:
             text: 'Today seems like a fitting day to push your speed to the limit, want to see how fast you can go?'
             output: button_click
             buttons:
-                - text: 'Accelerate' 
+                - text: 'Accelerate'
                   action: next
 
     accelerate_image:
