@@ -8,5 +8,7 @@ states:
         component: meya.text
         properties:
             text: 'This model’s Sports Direct-Steer System gives you control like no other. Your driving skills are truly remarkable, you lost them with ease!'
+        delay:
+            relative: 5
     continuetofour:
         flow: ngcc_e_aclass_4

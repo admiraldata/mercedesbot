@@ -4,8 +4,9 @@ states:
     outfit_start:
         component: meya.text
         properties:
-            text: 'Let’s start off easy. If you’re going to be an agent, you’d best look the part! Here’s some top looks from the Hugo Boss catalogue, let’s pick your outfit.'
-            
+            text: 'Let’s start off easy. If you’re going to be an agent, you’d best look the part! Here’s some top looks from the HUGO BOSS catalogue, let’s pick your outfit.'
+        delay:
+            relative: 5
 
     check_male:
         component: meya.conditional_equal

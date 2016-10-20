@@ -1,7 +1,0 @@
-name: a_ar_start_unsure
-states:
-    no_state:
-        component: meya.text
-        properties:
-            text: إن غيرت رأيك، فيمكنك رؤية خيارات الدردشة معي وقتما أردت من خلال
-                طباعة كلمة القائمة‎.

@@ -1,0 +1,12 @@
+name: ngcc_b_mission_sel_b
+states:
+    are_you_ready:
+        component: meya.text_buttons
+        properties:
+            text: 'The path you’ve chosen is a dangerous one. Think you can handle it?'
+            output: button_click
+            buttons:
+                - text: 'Bring it on!'
+                  flow: ngcc_c_outfit_init
+                - text: 'I’m not sure.'
+                  flow: ngcc_b_danger_unready

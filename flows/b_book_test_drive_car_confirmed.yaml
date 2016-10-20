@@ -23,45 +23,25 @@ states:
       text: What is your full name?
       output: test_drive_name
       scope: user
-  text_state:
-    component: meya.text
-    properties:
-      text: When are you planning to buy your next car?
-  when_buy_car:
-    component: meya.cards
-    properties:
-      output: button_click
-      text: When are you planning to buy your next car?
-      elements:
-      - title: Within the quarter?
-        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/when_buy/0_3.png
-        buttons:
-        - text: Select
-          flow: b_book_test_drive_car_confirmed_plan
-          data:
-            test_drive_purchase: 0_to_3
-          scope: flow
-      - title: Within 6 months?
-        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/when_buy/3_6.png
-        buttons:
-        - text: Select
-          flow: b_book_test_drive_car_confirmed_plan
-          data:
-            test_drive_purchase: 3_to_6
-          scope: flow
-      - title: Within the year?
-        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/when_buy/over_6.png
-        buttons:
-        - text: Select
-          flow: b_book_test_drive_car_confirmed_plan
-          data:
-            test_drive_purchase: over_6
-          scope: flow
-      - title: Not anytime soon?
-        image_url: https://socialize-bots.s3.amazonaws.com/mercedes/images/when_buy/not_plan.png
-        buttons:
-        - text: Select
-          flow: b_book_test_drive_car_confirmed_unplan
-          data:
-            test_drive_purchase: not_planning
-          scope: flow
+  ask_with_buttons:
+        component: meya.text_buttons
+        properties:
+            text: When are you planning to buy your next car?
+            output: button_click
+            mode: quick_reply
+            buttons:
+                - text: '0 - 3 Months'
+                  flow: b_book_test_drive_car_confirmed_plan
+                  data:
+                    test_drive_purchase: 0_to_3
+                  scope: flow
+                - text: '3 - 6 Months'
+                  flow: b_book_test_drive_car_confirmed_plan
+                  data:
+                    test_drive_purchase: 3_to_6
+                  scope: flow
+                - text: 'Not Planning'
+                  flow: b_book_test_drive_car_confirmed_unplan
+                  data:
+                    test_drive_purchase: not_planning
+                  scope: flow

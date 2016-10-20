@@ -6,33 +6,48 @@ states:
         properties:
             text: 'The definition of power, control and fierce road presence. You’ve picked the Mercedes-Benz GLA. Let’s start the car.'
         delay:
-            relative: 5 #5 second delay.
+            relative: 5
 
     second:
         component: meya.text
         properties:
-            text: 'What’s wrong {{user.ngcc_agent_code}}? Can’t find your key? It’s probably in your pocket. Not a problem, click the start engine button and let’s Keyless Go!'
+            text: 'What’s wrong {{user.ngcc_agent_code}}? Can’t find your key? It’s probably in your pocket.'
 
-    start_engine_button:
+    start_engine_image:
         component: meya.image
         properties:
             image_url: 'https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/gla_engine_start.png'
-    
+
     start_engine_sound:
         component: meya.audio
         properties:
             url: 'https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/gla_engine_start.mp3'
 
+    start_engine_button:
+        component: meya.text_buttons
+        properties:
+            text: 'Not a problem, click the start engine button and let’s Keyless Go!'
+            output: button_click
+            buttons:
+                - text: 'Start Engine'
+                  action: next
+
     navigation_system:
         component: meya.text
         properties:
-            text: 'Your in-vehicle navigation system has mapped out 2 possible routes for the mission. Which would you like to take?'
+            text: 'Your in-vehicle navigation system has mapped out 2 possible routes for the mission.'
 
-    which_missions:
-        component: meya.image_buttons
+    navigation_image:
+        component: meya.image
         properties:
-            image_url: "https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/gla_navigation.png"
+            image_url: 'https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/gla_navigation.png'
+            
+    last:
+        component: meya.text_buttons
+        properties:
+            text: 'Which would you like to take?'
             output: button_click
+            mode: quick_reply
             buttons:
                 - text: 'The rocky route!'
                   flow: ngcc_d_gla_2_rocky

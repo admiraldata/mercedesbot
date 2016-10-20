@@ -1,6 +1,12 @@
 name: ngcc_c_ride
 states:
-
+    
+    first:
+        component: meya.text
+        properties:
+            text: 'Smart choice, you clearly have a great sense of style. Which leads us to our next question - it’s time to pick your ride.'
+        delay:
+            relative: 3
     pick_ride:
         component: meya.cards
         properties:
@@ -20,7 +26,7 @@ states:
                       flow: ngcc_f_cla_1
                 - title: 'Grit, power and performance, all at your command.' #GLA
                   text: ''
-                  image_url: "https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/ride_gla.png"
+                  image_url: "https://socialize-bots.s3.amazonaws.com/mercedes-ngcc/images/ride_gla.jpg"
                   buttons:
                     - text: 'Select'
                       flow: ngcc_d_gla_1

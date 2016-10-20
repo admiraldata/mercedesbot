@@ -1,33 +1,17 @@
--   flow: a_ar_catchall
-    intent: meya.keyword
-    settings:
-        keyword: a_ar_catchall
 -   flow: a_ar_restart
     intent: meya.keyword
     settings:
         keyword: a_ar_restart
--   flow: a_ar_start
-    intent: meya.regex
-    settings:
-        ignorecase: true
-        pattern: (\barabichello\b)|(\bمرحب\b)|(\b سلام \b)|(\bلام عل\b)|(\bيفك\b)|(\b
-            كيفك\b)
 -   flow: a_ar_start_sure
     intent: meya.keyword
     settings:
         keyword: القائمة‎
--   flow: a_ar_start_unsure
-    intent: meya.keyword
-    settings:
-        keyword: a_ar_start_unsure
 -   flow: a_en_catchall
     intent: meya.catchall
 -   flow: a_en_restart
     intent: meya.keyword
     settings:
         keyword: restart_from_other_flow
--   flow: a_en_start
-    intent: meya.greetings
 -   flow: a_en_start_sure
     intent: meya.keyword
     settings:
@@ -36,10 +20,8 @@
     intent: meya.keyword
     settings:
         keyword: a_en_start_unsure
--   flow: a_enar_get_started
-    intent: meya.keyword
-    settings:
-        keyword: a_enar_get_started
+-   flow: a_enar_start
+    intent: meya.greetings
 -   flow: a_live_chat
     intent: meya.regex
     settings:
@@ -48,7 +30,7 @@
 -   flow: a_live_chat_ar
     intent: meya.keyword
     settings:
-        keyword: a_live_chat_ar
+        keyword: شخص
 -   flow: a_thank_you
     intent: meya.regex
     settings:
@@ -494,6 +476,10 @@
     intent: meya.keyword
     settings:
         keyword: _ngcc_b_mission_sel
+-   flow: ngcc_b_mission_sel_b
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_b_mission_sel_b
 -   flow: ngcc_b_show_road_unready
     intent: meya.keyword
     settings:
@@ -558,6 +544,10 @@
     intent: meya.keyword
     settings:
         keyword: _ngcc_d_gla_7
+-   flow: ngcc_d_gla_7_b
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_d_gla_7_b
 -   flow: ngcc_e_aclass_1
     intent: meya.keyword
     settings:
@@ -594,6 +584,50 @@
     intent: meya.keyword
     settings:
         keyword: _ngcc_e_aclass_6
+-   flow: ngcc_e_aclass_6_b
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_e_aclass_6_b
+-   flow: ngcc_f_cla_1
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_f_cla_1
+-   flow: ngcc_f_cla_2
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_f_cla_2
+-   flow: ngcc_f_cla_3a
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_f_cla_3a
+-   flow: ngcc_f_cla_3b
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_f_cla_3b
+-   flow: ngcc_f_cla_4
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_f_cla_4
+-   flow: ngcc_f_cla_5a
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_f_cla_5a
+-   flow: ngcc_f_cla_5b
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_f_cla_5b
+-   flow: ngcc_f_cla_6
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_f_cla_6
+-   flow: ngcc_f_cla_6_a
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_f_cla_6_a
+-   flow: ngcc_f_cla_6_b
+    intent: meya.keyword
+    settings:
+        keyword: _ngcc_f_cla_6_b
 -   flow: test_imagereply
     intent: meya.keyword
     settings:
@@ -631,6 +665,24 @@
     intent: meya.keyword
     settings:
         keyword: zz4mb
+-   flow: zz_a_ar_catchall
+    intent: meya.keyword
+    settings:
+        keyword: a_ar_catchall
+-   flow: zz_a_ar_start
+    intent: meya.regex
+    settings:
+        ignorecase: true
+        pattern: (\barabichello\b)|(\bمرحب\b)|(\b سلام \b)|(\bلام عل\b)|(\bيفك\b)|(\b
+            كيفك\b)
+-   flow: zz_a_ar_start_unsure
+    intent: meya.keyword
+    settings:
+        keyword: a_ar_start_unsure
+-   flow: zz_a_enar_get_started
+    intent: meya.keyword
+    settings:
+        keyword: a_enar_get_started
 -   flow: zz_test_fb_bug
     intent: meya.keyword
     settings:
@@ -661,3 +713,7 @@
     intent: meya.keyword
     settings:
         keyword: testshare
+-   flow: zz_vini_testing
+    intent: meya.keyword
+    settings:
+        keyword: _zz_vini_testing

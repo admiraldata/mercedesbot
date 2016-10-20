@@ -12,9 +12,7 @@ states:
             text: 'How will you reply:'
             output: button_click
             buttons:
-                - text: 'Understood'
-                  flow: ngcc_f_cla_6
-                - text: 'Nothing I can’t handle.'
-                  flow: ngcc_f_cla_6
-                - text: 'A little late but thanks.'
-                  flow: ngcc_f_cla_6
+                - text: 'I can handle it.'
+                  flow: ngcc_f_cla_6_a
+                - text: 'A little late.'
+                  flow: ngcc_f_cla_6_b
