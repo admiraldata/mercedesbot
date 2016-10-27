@@ -460,6 +460,18 @@
     intent: meya.keyword
     settings:
         keyword: iamasecretagent
+-   flow: ngcc_a_start_keyword
+    intent: meya.keyword
+    settings:
+        keyword: Ready For Ignition
+-   flow: ngcc_a_start_keyword_variation_1
+    intent: meya.keyword
+    settings:
+        keyword: ready for ingition
+-   flow: ngcc_a_start_keyword_variation_2
+    intent: meya.keyword
+    settings:
+        keyword: redy for ignition
 -   flow: ngcc_a_unready_start
     intent: meya.keyword
     settings:

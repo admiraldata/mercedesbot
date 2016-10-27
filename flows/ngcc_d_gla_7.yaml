@@ -4,7 +4,7 @@ states:
     approach_end:
         component: meya.text
         properties:
-            text: 'Of course you can, that’s why we picked you for the job. You’re approaching your destination; some end of mission entertainment is never a bad idea. The CLA’s Apple CarPlay should come in handy. Click play!'
+            text: 'Of course you can, that’s why we picked you for the job. You’re approaching your destination; some end of mission entertainment is never a bad idea. The GLA’s Apple CarPlay should come in handy. Click play!'
 
 
     apple_car_play_img:

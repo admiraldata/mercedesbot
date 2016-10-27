@@ -4,7 +4,7 @@ states:
     approach_end:
         component: meya.text
         properties:
-            text: 'Can’t argue with that, where a lesser agent would fail, you were guaranteed to succeed. You’re approaching your destination; some end of mission entertainment is never a bad idea. The CLA’s Apple CarPlay should come in handy. Click play!'
+            text: 'Can’t argue with that, where a lesser agent would fail, you were guaranteed to succeed. You’re approaching your destination; some end of mission entertainment is never a bad idea. The A-Class’s Apple CarPlay should come in handy. Click play!'
 
 
     apple_car_play_img:

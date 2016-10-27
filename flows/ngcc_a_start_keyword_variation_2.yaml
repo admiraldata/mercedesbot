@@ -1,0 +1,4 @@
+name: ngcc_a_start_keyword_variation_2
+states:
+  start:
+    flow: ngcc_a_start
