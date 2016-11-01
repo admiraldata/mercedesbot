@@ -7,41 +7,8 @@ states:
             pattern: (^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)
             output: test_drive_email
             scope: flow
-            require_match: false
-        transitions:
-            next: test_drive_contact_num
-            no_match: ambiguous_email_answer
-    ambiguous_email_answer:
-        component: meya.input_string
-        properties:
-            text: عفوا، لم أفهم. للاستمرار، يرجى إدخال بريد إلكتروني سليم. أو اطبع
-                كلمة 'خروج'.
-            output: test_drive_email
-            scope: flow
-    check_email_small_exit:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_email }}'
-            value2: exit
-        transitions:
-            equal: exit_bot
-            notequal: check_email_proper_exit
-    check_email_proper_exit:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_email }}'
-            value2: Exit
-        transitions:
-            equal: exit_bot
-            notequal: check_email_caps_exit
-    check_email_caps_exit:
-        component: meya.conditional_equal
-        properties:
-            value1: '{{ flow.test_drive_email }}'
-            value2: EXIT
-        transitions:
-            equal: exit_bot
-            notequal: test_drive_contact_num
+            require_match: true
+            error_message: عفوا، لم أفهم. للاستمرار، يرجى إدخال بريد إلكتروني سليم.
     test_drive_contact_num:
         component: meya.input_integer
         properties:
