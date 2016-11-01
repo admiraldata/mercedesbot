@@ -9,7 +9,7 @@ states:
             output: test_drive_email
             scope: flow
             require_match: true
-            error_message: عفوا، لم أفهم. للاستمرار، يرجى إدخال بريد إلكتروني سليم.
+            error_message: 'عفوا، لم أفهم. للاستمرار، يرجى إدخال بريد إلكتروني صحيح.‎‎'
     test_drive_contact_num:
         component: meya.input_integer
         properties:
