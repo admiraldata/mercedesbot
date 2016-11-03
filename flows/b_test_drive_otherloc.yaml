@@ -1,0 +1,11 @@
+name: b_test_drive_otherloc
+states:
+
+    en_notification:
+        component: meya.text_buttons
+        properties:
+            text: 'Thank you for your interest. To book a test drive in your country, please proceed to the Global Mercedes-Benz website.'
+            output: button_click
+            buttons:
+                - text: 'Visit Website'
+                  url: https://www.mercedes-benz.com/

@@ -66,7 +66,15 @@ states:
             value2: abudhabi
         transitions:
             equal: city_abudhabi
-            notequal: country_not_known
+            notequal: check_invalid
+    check_invalid:
+        component: meya.conditional_equal
+        properties:
+          value1: '{{ flow.test_drive_country }}'
+          value2: invalid
+        transitions:
+          equal: country_invalid
+          notequal: country_not_known
     country_uae:
         flow: d_uae_showroom_selection_ar
     city_dxb:
@@ -79,6 +87,8 @@ states:
         flow: d_ksa_showroom_selection_ar
     country_iraq:
         flow: e_iraq_showrooms_ar
+    country_invalid:
+        flow: b_test_drive_otherloc_ar
     country_not_known:
         flow: b_test_drive_location_restart_ar
         return: true

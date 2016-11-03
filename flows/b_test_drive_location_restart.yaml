@@ -1,5 +1,6 @@
 name: b_test_drive_location_restart
 states:
+#check_invalid does not exist here because it should have been caught in the original. This is for revisionist GCC countries only  
   text_state:
     component: meya.text
     properties:

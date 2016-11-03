@@ -120,6 +120,14 @@
     intent: meya.keyword
     settings:
         keyword: b_test_drive_location_restart_ar
+-   flow: b_test_drive_otherloc
+    intent: meya.keyword
+    settings:
+        keyword: _b_test_drive_otherloc
+-   flow: b_test_drive_otherloc_ar
+    intent: meya.keyword
+    settings:
+        keyword: _b_test_drive_otherloc_ar
 -   flow: b_unsubscribe
     intent: meya.keyword
     settings:
