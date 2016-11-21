@@ -1,0 +1,16 @@
+name: mb_f1_2016_notification_ar
+states:
+    first:
+        component: meya.image
+        properties:
+            image_url: "http://socialize-bots.s3.amazonaws.com/mercedes/images/f1/theraceneverends.png"
+
+    second:
+        component: meya.text_buttons
+        properties:
+            text: 'بلدك يتسابق مع المنطقة كلها و يحتاجك لتحقيق الفوز! اختبر معلوماتك عن مرسيدس-بنز و انضم لسباق #MBraceF1 الآن. ‎'
+            output: button_click
+            buttons:
+                - text: 'سابق الآن!‎'
+                  url: 'http://www.theraceneverends.com/ar'
+                  type: link 
